@@ -5,3 +5,5 @@ This repo documents my solutions to Leetcode - programming questions. I wrote my
 ### 1. String
 
 ### 2. Array
+
+### 3. Matrix
