@@ -5,6 +5,7 @@ This repo documents my solutions to Leetcode - programming questions. I wrote my
 
 ## 1. String 
 
+| | |   |
 |-- | --|  -- |
 |**Question number** | **Question title**|  **Difficulty level**|
 | 1108 | Defanging an IP Address | Easy |
