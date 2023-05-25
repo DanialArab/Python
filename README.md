@@ -5,9 +5,8 @@ This repo documents my solutions to Leetcode - programming questions. I wrote my
 |1. String | |   |
 |-- | --|  -- |
 |**Question number** | **Question title**|  **Difficulty level**|
-| 1108 | Defanging an IP Address | Easy |
-| float32 (single-precision floating-point) |(-3.4028235 x 10^38 to 3.4028235 x 10^38) | 3.4028235 x 10^38 |
-| float64 (double-precision floating-point) | (-1.79 x 10^308 to 1.79 x 10^308) | 1.79 x 10^308 |
+|  1108 | Defanging an IP Address | Easy |
+|  | |  |
 
 
 ### 1. String
