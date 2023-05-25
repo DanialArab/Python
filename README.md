@@ -12,6 +12,14 @@ This repo documents my solutions to Leetcode - programming questions. I wrote my
 |2 | 2011 | Final Value of Variable After Performing Operations| Easy |
 |3 | 771| Jewels and Stones  | Easy |
 | | |   |  |
+| | |   |  |
+| | |   |  |
+| | |   |  |
+| | |   |  |
+| | |   |  |
+| | |   |  |
+| | |   |  |
+| | |   |  |
 
 
 ### 1. String
