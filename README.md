@@ -2,7 +2,7 @@
 
 This repo documents my solutions to Leetcode - programming questions. I wrote my solutions in Python, presented in the jupyter notebook file named **Leetcode_Programming_Questions** attached to this repo. Here is the questions'categories:
 
-|float | |   |
+|float   |
 |-- | --|  -- |
 |dtype | range of values|  **max value**|
 | float16 (half-precision floating-point) | (-65504 to 65504) | 65_504 |
