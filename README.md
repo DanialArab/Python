@@ -43,23 +43,27 @@ This repo documents my solutions to Leetcode - programming questions. I wrote my
 
 |**Index**|**Question ID** | **Question title**|  **Difficulty level**|
 | -- | --|  -- | -- |
-|30| |   |Easy |
-|31| |   |Easy |
-|32| |   |Easy |
-|33| |   |Easy |
-|34| |   |Easy |
-|35| |   |Easy |
-|36| |   |Easy |
-|37| |   |Easy |
-|38| |   |Easy |
-|39| |   |Easy |
-|40| |   |Easy |
-|41| |   |Easy |
-|42| |   |Easy |
-|43| |   |Easy |
-|44| |   |Easy |
-|45| |   |Easy |
+|1|1920 |  Build Array from Permutation |Easy |
+|2|1929 |  Concatenation of Array |Easy |
+|3| 1470|  Shuffle the Array |Easy |
+|4|1512 | Number of Good Pairs  |Easy |
+|5|2574 | Left and Right Sum Differences  |Easy |
 
-### 3. Matrix
 
-### 4. Singly Linked List 
+
+## 3. Matrix
+
+|**Index**|**Question ID** | **Question title**|  **Difficulty level**|
+| -- | --|  -- | -- |
+|1|1672 |Richest Customer Wealth  |Easy |
+|2| 2373| Largest Local Values in a Matrix |Easy |
+
+
+
+## 4. Singly Linked List 
+
+|**Index**|**Question ID** | **Question title**|  **Difficulty level**|
+| -- | --|  -- | -- |
+|1|1290 |Convert Binary Number in a Linked List to Integer  |Easy |
+|2| 876| Middle of the Linked List |Easy |
+|3|206|Reverse Linked List|Easy|
