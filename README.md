@@ -7,9 +7,9 @@ This repo documents my solutions to Leetcode - programming questions. I wrote my
 
 | | |   |
 |-- | --|  -- |
-|**Question number** | **Question title**|  **Difficulty level**|
-| 1108 | Defanging an IP Address | Easy |
-| 2011 | Final Value of Variable After Performing Operations| Easy |
+|**Index**||**Question ID** | **Question title**|  **Difficulty level**|
+|1 | 1108 | Defanging an IP Address | Easy |
+|2 | 2011 | Final Value of Variable After Performing Operations| Easy |
 
 
 ### 1. String
