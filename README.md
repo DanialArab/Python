@@ -1,6 +1,6 @@
 # Python 
 
-This repo documents my solutions to Leetcode - programming questions. I wrote my solutions in Python, presented in the jupyter notebook file named **Leetcode_Programming_Questions** attached to this repo. Here is the questions'details that I solved so far:
+This repo documents my solutions to Leetcode - programming questions. I wrote my solutions in Python, presented in the jupyter notebook file named **Leetcode_Programming_Questions** attached to this repo. Here is a table to detail the questions'info that I solved so far:
 
 
 ## 1. String 
