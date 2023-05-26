@@ -71,7 +71,7 @@ This repo documents my solutions to Leetcode - programming questions. I wrote my
 
 |        |**Index**|**Question ID** | **Question title**                 |  **Difficulty level**|
 |--------|---------|----------------|------------------------------------|---------------------|
-| Array  |||||||
+|   |||Array||||
 |        |1        |1920            |Build Array from Permutation        |Easy                 |
 |        |2        |1929            |Concatenation of Array              |Easy                 |
 |        |3        |1470            |Shuffle the Array                   |Easy                 |
