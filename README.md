@@ -37,6 +37,7 @@ This repo documents my solutions to Leetcode - programming questions. I wrote my
 |27| 2678|  Number of Senior Citizens |Easy |
 |28|1704 | Determine if String Halves Are Alike  |Easy |
 |29| 1812|  Determine Color of a Chessboard Square |Easy |
+|30|942|DI String Match|Easy|
 
 
 ## 2. Array
