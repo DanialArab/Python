@@ -38,6 +38,11 @@ This repo documents my solutions to Leetcode - programming questions. I wrote my
 |28|1704 | Determine if String Halves Are Alike  |Easy |
 |29| 1812|  Determine Color of a Chessboard Square |Easy |
 |30|942|DI String Match|Easy|
+|31|2185|Counting Words With a Given Prefix| Easy| 
+|32|344|Reverse String| Easy| 
+|33|2586| Count the Number of Vowel Strings in Range | Easy| 
+|34|  1332| Remove Palindromic Subsequences  | Easy| 
+
 
 
 ## 2. Array
