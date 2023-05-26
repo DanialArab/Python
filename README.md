@@ -43,6 +43,11 @@ This repo documents my solutions to Leetcode - programming questions. I wrote my
 |33|2586| Count the Number of Vowel Strings in Range | Easy| 
 |34|  1332| Remove Palindromic Subsequences  | Easy| 
 |35|657|Robot Return to Origin|Easy|
+|36|944| Delete Columns to Make Sorted|Easy|
+|37|2351|First Letter to Appear Twice|Easy|
+|38|2278|Percentage of Letter in String|Easy|
+|39|1880|Check if Word Equals Summation of Two Words|Easy|
+|40|1974|Minimum Time to Type Word Using Special Typewriter|Easy|
 
 
 ## 2. Array
