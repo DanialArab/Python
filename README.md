@@ -7,7 +7,7 @@ This repo documents my solutions to Leetcode - programming questions. I wrote my
 
 
 |**Index**|**Question ID** | **Question title**|  **Difficulty level**|
-| -- | --|  -- | -- |
+|--------|---------|----------------|------------------------------------|---------------------|
 |1 | 1108 | Defanging an IP Address | Easy |
 |2 | 2011 | Final Value of Variable After Performing Operations| Easy |
 |3 | 771| Jewels and Stones  | Easy |
@@ -42,7 +42,7 @@ This repo documents my solutions to Leetcode - programming questions. I wrote my
 ## 2. Array
 
 |**Index**|**Question ID** | **Question title**|  **Difficulty level**|
-| -- | --|  -- | -- |
+|--------|---------|----------------|------------------------------------|---------------------|
 |1|1920 |  Build Array from Permutation |Easy |
 |2|1929 |  Concatenation of Array |Easy |
 |3| 1470|  Shuffle the Array |Easy |
