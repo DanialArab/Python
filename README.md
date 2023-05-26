@@ -67,3 +67,23 @@ This repo documents my solutions to Leetcode - programming questions. I wrote my
 |1|1290 |Convert Binary Number in a Linked List to Integer  |Easy |
 |2| 876| Middle of the Linked List |Easy |
 |3|206|Reverse Linked List|Easy|
+
+
+
+## Array
+
+| Index | Question ID | Question title                 | Difficulty level |
+|-------|-------------|--------------------------------|------------------|
+| 1     | 1920        | Build Array from Permutation   | Easy             |
+| 2     | 1929        | Concatenation of Array         | Easy             |
+| 3     | 1470        | Shuffle the Array              | Easy             |
+| 4     | 1512        | Number of Good Pairs           | Easy             |
+| 5     | 2574        | Left and Right Sum Differences | Easy             |
+
+## Matrix
+
+| Index | Question ID | Question title                  | Difficulty level |
+|-------|-------------|---------------------------------|------------------|
+| 1     | 1672        | Richest Customer Wealth          | Easy             |
+| 2     | 2373        | Largest Local Values in a Matrix | Easy             |
+
