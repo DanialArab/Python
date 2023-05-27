@@ -48,7 +48,10 @@ This repo documents my solutions to Leetcode - programming questions. I wrote my
 |38|2278|Percentage of Letter in String|Easy|
 |39|1880|Check if Word Equals Summation of Two Words|Easy|
 |40|1974|Minimum Time to Type Word Using Special Typewriter|Easy|
-
+|41| 2255|Count Prefixes of a Given String | Easy|
+|42|2053|Kth Distinct String in an Array|Easy|
+|43|2496|Maximum Value of a String in an Array|Easy| 
+|44|1876 | Substrings of Size Three with Distinct Characters|Easy| 
 
 ## 2. Array
 
