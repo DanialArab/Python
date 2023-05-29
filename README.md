@@ -52,6 +52,12 @@ This repo documents my solutions to Leetcode - programming questions. I wrote my
 |42|2053|Kth Distinct String in an Array|Easy|
 |43|2496|Maximum Value of a String in an Array|Easy| 
 |44|1876 | Substrings of Size Three with Distinct Characters|Easy| 
+|45| 821|Shortest Distance to a Character |Easy |
+|46|2399|Check Distances Between Same Letters  |Easy |
+|47|412| Fizz Buzz |Easy |
+|48| 2506| Count Pairs Of Similar Strings|Easy |
+|49|2085| Count Common Words With One Occurrence |Easy |
+|50|500| Keyboard Row |Easy |
 
 ## 2. Array
 
