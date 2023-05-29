@@ -59,6 +59,7 @@ This repo documents my solutions to Leetcode - programming questions. I wrote my
 |49|2085| Count Common Words With One Occurrence |Easy |
 |50|500| Keyboard Row |Easy |
 |51|2309| Greatest English Letter in Upper and Lower Case|Easy|
+|52|1160| Find Words That Can Be Formed by Characters|Easy|
 
 will solve later:
 1002
