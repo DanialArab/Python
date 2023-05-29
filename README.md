@@ -59,6 +59,12 @@ This repo documents my solutions to Leetcode - programming questions. I wrote my
 |49|2085| Count Common Words With One Occurrence |Easy |
 |50|500| Keyboard Row |Easy |
 
+
+will solve later:
+1002
+1370
+2283
+
 ## 2. Array
 
 |**Index**|**Question ID** | **Question title**|  **Difficulty level**|
