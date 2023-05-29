@@ -64,6 +64,7 @@ will solve later:
 1002
 1370
 2283
+2696
 
 ## 2. Array
 
