@@ -68,7 +68,7 @@ will solve later:
 1370
 2283
 2696
-
+884
 
 
 ## 2. Array
