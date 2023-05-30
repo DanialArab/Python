@@ -60,12 +60,14 @@ This repo documents my solutions to Leetcode - programming questions. I wrote my
 |50|500| Keyboard Row |Easy |
 |51|2309| Greatest English Letter in Upper and Lower Case|Easy|
 |52|1160| Find Words That Can Be Formed by Characters|Easy|
-
+|53|929 |Unique Email Addresses|Easy|
 will solve later:
 1002
 1370
 2283
 2696
+806
+
 
 ## 2. Array
 
