@@ -2,14 +2,14 @@
 
 This repo documents my solutions to Leetcode - programming questions. I wrote my solutions in Python, presented in the jupyter notebook file named **Leetcode_Programming_Questions** attached to this repo. Here is a table to detail the questions' info that I solved so far:
 
-## 1.A String - Medium Questions
+## 1. A String - Medium Questions
 
 
 |**Index**|**Question ID** | **Question title**|  **Difficulty level**|
 | -- | --|  -- | -- |
 |1 | 1689 |Partitioning Into Minimum Number Of Deci-Binary Numbers | Medium |
 
-## 1.B String - Easy Questions
+## 1. B String - Easy Questions
 
 
 |**Index**|**Question ID** | **Question title**|  **Difficulty level**|
