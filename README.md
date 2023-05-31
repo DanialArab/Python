@@ -62,6 +62,7 @@ This repo documents my solutions to Leetcode - programming questions. I wrote my
 |52|1160| Find Words That Can Be Formed by Characters|Easy|
 |53|929 |Unique Email Addresses|Easy|
 |54|806| Number of Lines To Write String|Easy|
+|55|2243|Calculate Digit Sum of a String|Easy|
 
 will solve later:
 1002
@@ -69,6 +70,8 @@ will solve later:
 2283
 2696
 884
+2062
+
 
 
 ## 2. Array
