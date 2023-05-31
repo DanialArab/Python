@@ -67,6 +67,7 @@ This repo documents my solutions to Leetcode - programming questions. I wrote my
 |57|2224| Minimum Number of Operations to Convert Time|Easy|
 |58|1598 | Crawler Log Folder | Easy|
 |59|1455 | Check If a Word Occurs As a Prefix of Any Word in a Sentence|Easy|
+|60|2068| Check Whether Two Strings are Almost Equivalent|Easy|
 
 will solve later:
 1002
