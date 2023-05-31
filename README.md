@@ -126,6 +126,8 @@ will solve later:
 |**Index**|**Question ID** | **Question title**|  **Difficulty level**|
 | -- | --|  -- | -- |
 |1|2367| Number of Arithmetic Triplets |Easy |
+|2|2215| Find the Difference of Two Arrays|Easy| 
+
 
 will solve later:
 1656
