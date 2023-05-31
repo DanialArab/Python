@@ -4,6 +4,7 @@ This repo documents my solutions to Leetcode - programming questions. I wrote my
 
 
 ## 1. String 
+### Easy
 
 
 |**Index**|**Question ID** | **Question title**|  **Difficulty level**|
