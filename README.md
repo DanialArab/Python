@@ -72,7 +72,7 @@ will solve later:
 2696
 884
 2062
-
+696
 
 
 ## 2. Array
