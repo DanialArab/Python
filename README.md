@@ -64,6 +64,7 @@ This repo documents my solutions to Leetcode - programming questions. I wrote my
 |54|806| Number of Lines To Write String|Easy|
 |55|2243|Calculate Digit Sum of a String|Easy|
 |56|2138| Divide a String Into Groups of Size k|Easy|
+|57|2224| Minimum Number of Operations to Convert Time|Easy|
 
 will solve later:
 1002
