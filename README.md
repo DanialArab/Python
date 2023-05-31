@@ -70,6 +70,14 @@ This repo documents my solutions to Leetcode - programming questions. I wrote my
 |60|2068| Check Whether Two Strings are Almost Equivalent|Easy|
 |61|2490| Circular Sentence|Easy|
 
+
+## 1. String - Medium
+
+
+|**Index**|**Question ID** | **Question title**|  **Difficulty level**|
+| -- | --|  -- | -- |
+|1 | 1689 |Partitioning Into Minimum Number Of Deci-Binary Numbers | Medium |
+
 will solve later:
 1002
 1370
