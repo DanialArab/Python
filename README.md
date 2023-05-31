@@ -121,3 +121,11 @@ will solve later:
 |2| 876| Middle of the Linked List |Easy |
 |3|206|Reverse Linked List|Easy|
 
+## 5. Hash Table
+
+|**Index**|**Question ID** | **Question title**|  **Difficulty level**|
+| -- | --|  -- | -- |
+|1|2367| Number of Arithmetic Triplets |Easy |
+
+will solve later:
+1656
