@@ -10,6 +10,7 @@ This repo documents my solutions to Leetcode - programming questions. I wrote my
 |1 | 1689 |Partitioning Into Minimum Number Of Deci-Binary Numbers | Medium |
 |2|535| Encode and Decode TinyURL|Medium|
 
+
 ## A-2: String - Easy Questions
 
 
@@ -89,6 +90,7 @@ will solve later:
 2062
 696
 606
+1769
 
 ## 2. Array
 
