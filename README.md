@@ -75,7 +75,7 @@ will solve later:
 884
 2062
 696
-
+606
 
 ## 2. Array
 
