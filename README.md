@@ -134,6 +134,7 @@ will solve later:
 |6|2363| Merge Similar Items|Easy|
 |7|2032| Two Out of Three|Easy|
 |8|2418|Sort the People|Easy|
+|9|1436|Destination City|Easy|
 
 will solve later:
 1656
