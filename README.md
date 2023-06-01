@@ -120,6 +120,7 @@ will solve later:
 |1|1290 |Convert Binary Number in a Linked List to Integer  |Easy |
 |2| 876| Middle of the Linked List |Easy |
 |3|206|Reverse Linked List|Easy|
+|4|2341| Maximum Number of Pairs in Array|Easy|
 
 ## 5. Hash Table
 
