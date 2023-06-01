@@ -148,3 +148,9 @@ will solve later:
 will solve later:
 1656
 1370 (also in strings)
+
+## 6. Two Pointers
+
+|**Index**|**Question ID** | **Question title**|  **Difficulty level**|
+| -- | --|  -- | -- |
+|1|832| Flipping an Image|Easy |
