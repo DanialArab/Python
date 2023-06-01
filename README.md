@@ -136,6 +136,7 @@ will solve later:
 |8|2418|Sort the People|Easy|
 |9|1436|Destination City|Easy|
 |10|1941| Check if All Characters Have Equal Number of Occurrences|Easy|
+|11|1742| Maximum Number of Balls in a Box|Easy|
 
 will solve later:
 1656
