@@ -133,6 +133,7 @@ will solve later:
 |5|2341| Maximum Number of Pairs in Array|Easy|
 |6|2363| Merge Similar Items|Easy|
 |7|2032| Two Out of Three|Easy|
+|8|2418|Sort the People|Easy|
 
 will solve later:
 1656
