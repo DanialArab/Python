@@ -131,6 +131,8 @@ will solve later:
 |3|1748|Sum of Unique Elements|Easy|
 |4|961| N-Repeated Element in Size 2N Array|Easy|
 |5|2341| Maximum Number of Pairs in Array|Easy|
+|6|2363| Merge Similar Items|Easy|
+|7|2032| Two Out of Three|Easy|
 
 will solve later:
 1656
