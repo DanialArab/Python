@@ -149,7 +149,7 @@ will solve later:
 1656
 1370 (also in strings)
 
-## 5. Two Pointers
+## 6. Two Pointers
 
 |**Index**|**Question ID** | **Question title**|  **Difficulty level**|
 | -- | --|  -- | -- |
