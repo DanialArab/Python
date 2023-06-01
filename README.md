@@ -140,7 +140,10 @@ will solve later:
 |12|1935| Maximum Number of Words You Can Type|Easy|
 |13|2006| Count Number of Pairs With Absolute Difference K|Easy|
 |14|1365| How Many Numbers Are Smaller Than the Current Number|Easy|
-
+|15|2670| Find the Distinct Difference Array|Easy|
+|16|1207| Unique Number of Occurrences|Easy| 
+|17|2206| Divide Array Into Equal Pairs|Easy| 
+|18|2570| Merge Two 2D Arrays by Summing Values|Easy| 
 
 will solve later:
 1656
