@@ -137,6 +137,10 @@ will solve later:
 |9|1436|Destination City|Easy|
 |10|1941| Check if All Characters Have Equal Number of Occurrences|Easy|
 |11|1742| Maximum Number of Balls in a Box|Easy|
+|12|1935| Maximum Number of Words You Can Type|Easy|
+|13|2006| Count Number of Pairs With Absolute Difference K|Easy|
+|14|1365| How Many Numbers Are Smaller Than the Current Number|Easy|
+
 
 will solve later:
 1656
