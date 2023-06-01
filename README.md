@@ -154,3 +154,9 @@ will solve later:
 |**Index**|**Question ID** | **Question title**|  **Difficulty level**|
 | -- | --|  -- | -- |
 |1|832| Flipping an Image|Easy |
+|2|905| Sort Array By Parity|Easy|
+|3|977| Squares of a Sorted Array|Easy|
+|4|349| Intersection of Two Arrays|Easy|
+|5|922| Sort Array By Parity II|Easy|
+
+
