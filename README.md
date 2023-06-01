@@ -127,7 +127,7 @@ will solve later:
 | -- | --|  -- | -- |
 |1|2367| Number of Arithmetic Triplets |Easy |
 |2|2215| Find the Difference of Two Arrays|Easy| 
-
+|3|1748|Sum of Unique Elements|Easy|
 
 will solve later:
 1656
