@@ -135,6 +135,7 @@ will solve later:
 |7|2032| Two Out of Three|Easy|
 |8|2418|Sort the People|Easy|
 |9|1436|Destination City|Easy|
+|10|1941| Check if All Characters Have Equal Number of Occurrences|Easy|
 
 will solve later:
 1656
