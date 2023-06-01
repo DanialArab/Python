@@ -130,6 +130,7 @@ will solve later:
 |2|2215| Find the Difference of Two Arrays|Easy| 
 |3|1748|Sum of Unique Elements|Easy|
 |4|961| N-Repeated Element in Size 2N Array|Easy|
+|5|2341| Maximum Number of Pairs in Array|Easy|
 
 will solve later:
 1656
