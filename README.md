@@ -160,3 +160,6 @@ will solve later:
 |6|2562| Find the Array Concatenation Value|Easy|
 |7|2441| Largest Positive Integer That Exists With Its Negative|Easy|
 |8|1385| Find the Distance Value Between Two Arrays|Easy|
+
+will solve later:
+696
