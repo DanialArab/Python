@@ -165,6 +165,7 @@ will solve later:
 |11|202| Happy Number|Easy|
 |12|2540| Minimum Common Value|Easy|
 |13|345| Reverse Vowels of a String|Easy|
+|14|28| Find the Index of the First Occurrence in a String|Easy|
 
 
 will solve later:
