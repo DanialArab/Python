@@ -2,17 +2,25 @@
 
 This repo documents my solutions to Leetcode - programming questions. I wrote my solutions in Python, presented in the jupyter notebook file named **Leetcode_Programming_Questions** attached to this repo. Here is a table to detail the questions' info that I solved so far:
 
-## A-1: String - Medium Questions
+# Table of content
+
+1. [String](#1)
+2. [Array](#2)
+3. [Matrix](#3)
+4. [Singly Linked List ](#4)
+5. [Hash Table](#5)
+6. [Two Pointers](#6)
+7. [String Matching](#7)
+8. [](#8)
+
+<a name="1"></a>
+## 1: String 
 
 
 |**Index**|**Question ID** | **Question title**|  **Difficulty level**|
 | -- | --|  -- | -- |
 |1 | 1689 |Partitioning Into Minimum Number Of Deci-Binary Numbers | Medium |
 |2|535| Encode and Decode TinyURL|Medium|
-
-
-## A-2: String - Easy Questions
-
 
 |**Index**|**Question ID** | **Question title**|  **Difficulty level**|
 | -- | --|  -- | -- |
@@ -91,6 +99,7 @@ will solve later:
 606
 1769
 
+<a name="2"></a>
 ## 2. Array
 
 |**Index**|**Question ID** | **Question title**|  **Difficulty level**|
@@ -103,6 +112,7 @@ will solve later:
 
 
 
+<a name="3"></a>
 ## 3. Matrix
 
 |**Index**|**Question ID** | **Question title**|  **Difficulty level**|
@@ -112,6 +122,7 @@ will solve later:
 
 
 
+<a name="4"></a>
 ## 4. Singly Linked List 
 
 |**Index**|**Question ID** | **Question title**|  **Difficulty level**|
@@ -121,6 +132,7 @@ will solve later:
 |3|206|Reverse Linked List|Easy|
 |4|2341| Maximum Number of Pairs in Array|Easy|
 
+<a name="5"></a>
 ## 5. Hash Table
 
 |**Index**|**Question ID** | **Question title**|  **Difficulty level**|
@@ -148,6 +160,7 @@ will solve later:
 1656
 1370 (also in strings)
 
+<a name="6"></a>
 ## 6. Two Pointers
 
 |**Index**|**Question ID** | **Question title**|  **Difficulty level**|
@@ -174,6 +187,7 @@ will solve later:
 392
 160
 
+<a name="7"></a>
 ## 7. String Matching
 
 |**Index**|**Question ID** | **Question title**|  **Difficulty level**|
