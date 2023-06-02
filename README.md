@@ -182,5 +182,6 @@ will solve later:
 |2|796| Rotate String|Easy|
 |3|459| Repeated Substring Pattern|Easy|
 |4|28| Find the Index of the First Occurrence in a String|Easy|
+|5|1668| Maximum Repeating Substring|Easy|
 
 
