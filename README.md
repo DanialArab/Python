@@ -161,7 +161,10 @@ will solve later:
 |7|2441| Largest Positive Integer That Exists With Its Negative|Easy|
 |8|1385| Find the Distance Value Between Two Arrays|Easy|
 |9|283| Move Zeroes|Easy|
+|10|2465| Number of Distinct Averages|Easy|
+
 
 will solve later:
 696
 917
+653
