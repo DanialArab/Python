@@ -180,4 +180,6 @@ will solve later:
 | -- | --|  -- | -- |
 |1|1408|String Matching in an Array|Easy |
 |2|796| Rotate String|Easy|
+|3|459| Repeated Substring Pattern|Easy|
+
 
