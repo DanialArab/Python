@@ -2,7 +2,7 @@
 
 This repo documents my solutions to Leetcode - programming questions. I wrote my solutions in Python, presented in the jupyter notebook file named **Leetcode_Programming_Questions** attached to this repo. Here is a table to detail the questions' info that I solved so far:
 
-# Table of content
+# List of the Leetcoode questions
 
 1. [String](#1)
 2. [Array](#2)
