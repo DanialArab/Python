@@ -159,4 +159,5 @@ will solve later:
 |4|349| Intersection of Two Arrays|Easy|
 |5|922| Sort Array By Parity II|Easy|
 |6|2562| Find the Array Concatenation Value|Easy|
-
+|7|2441| Largest Positive Integer That Exists With Its Negative|Easy|
+|8|1385| Find the Distance Value Between Two Arrays|Easy|
