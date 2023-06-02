@@ -158,5 +158,5 @@ will solve later:
 |3|977| Squares of a Sorted Array|Easy|
 |4|349| Intersection of Two Arrays|Easy|
 |5|922| Sort Array By Parity II|Easy|
-
+|6|2562| Find the Array Concatenation Value|Easy|
 
