@@ -163,9 +163,12 @@ will solve later:
 |9|283| Move Zeroes|Easy|
 |10|2465| Number of Distinct Averages|Easy|
 |11|202| Happy Number|Easy|
+|12|2540| Minimum Common Value|Easy|
 
 
 will solve later:
 696
 917
 653
+392
+160
