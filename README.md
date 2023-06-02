@@ -173,3 +173,9 @@ will solve later:
 653
 392
 160
+
+## 7. String Matching
+
+|**Index**|**Question ID** | **Question title**|  **Difficulty level**|
+| -- | --|  -- | -- |
+|1|1408|String Matching in an Array|Easy |
