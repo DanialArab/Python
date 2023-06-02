@@ -162,6 +162,7 @@ will solve later:
 |8|1385| Find the Distance Value Between Two Arrays|Easy|
 |9|283| Move Zeroes|Easy|
 |10|2465| Number of Distinct Averages|Easy|
+|11|202| Happy Number|Easy|
 
 
 will solve later:
