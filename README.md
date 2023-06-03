@@ -105,6 +105,8 @@ will solve later:
 <a name="2"></a>
 ## 2. Array
 
+### Easy Difficulty Questions
+
 |**Index**|**Question ID** | **Question title**|  **Difficulty level**|
 | -- | --|  -- | -- |
 |1|1920 |  Build Array from Permutation |Easy |
@@ -119,6 +121,8 @@ will solve later:
 <a name="3"></a>
 ## 3. Matrix
 
+### Easy Difficulty Questions
+
 |**Index**|**Question ID** | **Question title**|  **Difficulty level**|
 | -- | --|  -- | -- |
 |1|1672 |Richest Customer Wealth  |Easy |
@@ -129,6 +133,8 @@ will solve later:
 <a name="4"></a>
 ## 4. Singly Linked List 
 
+### Easy Difficulty Questions
+
 |**Index**|**Question ID** | **Question title**|  **Difficulty level**|
 | -- | --|  -- | -- |
 |1|1290 |Convert Binary Number in a Linked List to Integer  |Easy |
@@ -138,6 +144,8 @@ will solve later:
 
 <a name="5"></a>
 ## 5. Hash Table
+
+### Easy Difficulty Questions
 
 |**Index**|**Question ID** | **Question title**|  **Difficulty level**|
 | -- | --|  -- | -- |
@@ -172,6 +180,8 @@ will solve later:
 <a name="6"></a>
 ## 6. Two Pointers
 
+### Easy Difficulty Questions
+
 |**Index**|**Question ID** | **Question title**|  **Difficulty level**|
 | -- | --|  -- | -- |
 |1|832| Flipping an Image|Easy |
@@ -198,6 +208,8 @@ will solve later:
 
 <a name="7"></a>
 ## 7. String Matching
+
+### Easy Difficulty Questions
 
 |**Index**|**Question ID** | **Question title**|  **Difficulty level**|
 | -- | --|  -- | -- |
