@@ -124,199 +124,136 @@ output:
 ##### BST: Contains
 
 With contains method we just want to see if a tree contains a particular value. 
-My first trial, I wrote it completely on my own which was fabulous:
-class Node:
-    def __init__(self, value):
-        self.value = value
-        self.left = None
-        self.right = None
 
-class BinarySearchTree:
-    def __init__(self):
-        self.root = None
+    class Node:
+        def __init__(self, value):
+            self.value = value
+            self.left = None
+            self.right = None
 
-    def insert(self, value):
-        new_node = Node(value)
-        if self.root is None:
-            self.root = new_node
-            return True
-        temp = self.root
-        while True:
-            if new_node.value == temp.value:
-                return False
-            if new_node.value < temp.value:
-                if temp.left is None:
-                    temp.left = new_node
+    class BinarySearchTree:
+        def __init__(self):
+            self.root = None
+
+        def insert(self, value):
+            new_node = Node(value)
+            if self.root is None:
+                self.root = new_node
+                return True
+            temp = self.root
+            while True:
+                if new_node.value == temp.value:
+                    return False
+                if new_node.value < temp.value:
+                    if temp.left is None:
+                        temp.left = new_node
+                        return True
+                    temp = temp.left
+                else:
+                    if temp.right is None:
+                        temp.right = new_node
+                        return True
+                    temp = temp.right
+
+        def contains(self, value):
+            temp = self.root
+            while temp:
+                if value < temp.value:
+                    temp = temp.left
+                elif value > temp.value:
+                    temp = temp.right
+                else:
                     return True
-                temp = temp.left
-            else:
-                if temp.right is None:
-                    temp.right = new_node
-                    return True
-                temp = temp.right
-
-    def contains(self, value):
-        if self.root is None:
             return False
-        temp = self.root
-        while temp:
-            if temp.value == value:
-                return True
-            if value < temp.value:
-                temp = temp.left
-            else:
-                temp = temp.right
-        return False
 
-my_tree = BinarySearchTree()
-my_tree.insert(47)
-my_tree.insert(21)
-my_tree.insert(76)
-my_tree.insert(18)
-my_tree.insert(27)
-my_tree.insert(52)
-my_tree.insert(82)
+    my_tree = BinarySearchTree()
+    my_tree.insert(47)
+    my_tree.insert(21)
+    my_tree.insert(76)
+    my_tree.insert(18)
+    my_tree.insert(27)
+    my_tree.insert(52)
+    my_tree.insert(82)
 
-print(my_tree.contains(27))
-print(my_tree.contains(17))
-
-output:
-True
-False
-
-But the more concise version would be:
-class Node:
-    def __init__(self, value):
-        self.value = value
-        self.left = None
-        self.right = None
-
-class BinarySearchTree:
-    def __init__(self):
-        self.root = None
-
-    def insert(self, value):
-        new_node = Node(value)
-        if self.root is None:
-            self.root = new_node
-            return True
-        temp = self.root
-        while True:
-            if new_node.value == temp.value:
-                return False
-            if new_node.value < temp.value:
-                if temp.left is None:
-                    temp.left = new_node
-                    return True
-                temp = temp.left
-            else:
-                if temp.right is None:
-                    temp.right = new_node
-                    return True
-                temp = temp.right
-
-    def contains(self, value):
-        temp = self.root
-        while temp:
-            if value < temp.value:
-                temp = temp.left
-            elif value > temp.value:
-                temp = temp.right
-            else:
-                return True
-        return False
-
-my_tree = BinarySearchTree()
-my_tree.insert(47)
-my_tree.insert(21)
-my_tree.insert(76)
-my_tree.insert(18)
-my_tree.insert(27)
-my_tree.insert(52)
-my_tree.insert(82)
-
-print(my_tree.contains(27))
-print(my_tree.contains(17))
+    print(my_tree.contains(27))
+    print(my_tree.contains(17))
 
 the output is the same as above.
-BST: Minimum Value 
+
+    True
+    False
+
+
+##### BST: Minimum Value 
+
 This method finds and returns the node with the minimum value in a tree or a subtree. So we write this method like it can be also applied in any subtree. 
-Awesome job, I wrote it completely on my own.
-class Node:
-    def __init__(self, value):
-        self.value = value
-        self.left = None
-        self.right = None
 
-class BinarySearchTree:
-    def __init__(self):
-        self.root = None
+    class Node:
+        def __init__(self, value):
+            self.value = value
+            self.left = None
+            self.right = None
 
-    def insert(self, value):
-        new_node = Node(value)
-        if self.root is None:
-            self.root = new_node
-            return True
-        temp = self.root
-        while True:
-            if new_node.value == temp.value:
-                return False
-            if new_node.value < temp.value:
-                if temp.left is None:
-                    temp.left = new_node
-                    return True
-                temp = temp.left
-            else:
-                if temp.right is None:
-                    temp.right = new_node
-                    return True
-                temp = temp.right
+    class BinarySearchTree:
+        def __init__(self):
+            self.root = None
 
-    def contains(self, value):
-        temp = self.root
-        while temp:
-            if value < temp.value:
-                temp = temp.left
-            elif value > temp.value:
-                temp = temp.right
-            else:
+        def insert(self, value):
+            new_node = Node(value)
+            if self.root is None:
+                self.root = new_node
                 return True
-        return False
+            temp = self.root
+            while True:
+                if new_node.value == temp.value:
+                    return False
+                if new_node.value < temp.value:
+                    if temp.left is None:
+                        temp.left = new_node
+                        return True
+                    temp = temp.left
+                else:
+                    if temp.right is None:
+                        temp.right = new_node
+                        return True
+                    temp = temp.right
 
-    def min_value_node(slef, current_node):
-        while current_node.left:
-            current_node = current_node.left
-        return current_node.value
+        def contains(self, value):
+            temp = self.root
+            while temp:
+                if value < temp.value:
+                    temp = temp.left
+                elif value > temp.value:
+                    temp = temp.right
+                else:
+                    return True
+            return False
 
-my_tree = BinarySearchTree()
-my_tree.insert(47)
-my_tree.insert(21)
-my_tree.insert(76)
-my_tree.insert(18)
-my_tree.insert(27)
-my_tree.insert(52)
-my_tree.insert(82)
+        def min_value_node(slef, current_node):
+            while current_node.left:
+                current_node = current_node.left
+            return current_node.value
 
-print(my_tree.min_value_node(my_tree.root))
-print(my_tree.min_value_node(my_tree.root.right))
+    my_tree = BinarySearchTree()
+    my_tree.insert(47)
+    my_tree.insert(21)
+    my_tree.insert(76)
+    my_tree.insert(18)
+    my_tree.insert(27)
+    my_tree.insert(52)
+    my_tree.insert(82)
+
+    print(my_tree.min_value_node(my_tree.root))
+    print(my_tree.min_value_node(my_tree.root.right))
 
 output:
-18
-52
+
+    18
+    52
 
 Quiz:
 1-	Adding an item to a Binary Search Tree is O(log n): False: Omega (best case) and Theta (average case) are both (log n). However, worst case is O(n) and Big O measures worst case.
 2-	Binary Search Trees always have a better Big O than Linked Lists: False: An insert into a Binary Search Tree is typically (log n). Appending an item onto the end of a Linked List is O(1).
-
-Data Structures: Hash Tables 
-Intro 
-Dictionaries are the built-in hash tables. 
-The way that hash tables work is like we have a hash function/method which performs a hash on the key so we take that key then run it through the hash and in addition to get the key value pair back we also get an address, where we store that key value pair. 
-Hash function/method has two characteristics:
-o	It is one way
-o	It is deterministic meaning for a particular hash function every time that we put the specific key in it we expect to get the same address back. 
-So the hash function embodies these two characteristics. As said, we have dictionaries as the python built-in hash tables but we are going to create our own: we create our own address space by creating a list then we create methods.
-
 
 
 
