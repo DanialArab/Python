@@ -30,7 +30,7 @@ The nodes in a binary tree should be laid out in a particular way to be called a
 
 
 ##### BST: Big O 
-The number of nodes in a BST can be calculated with 2^n -1 where n is the level of the tree, we can approximate it with 2^n to get the total number of nodes in a BST. 
+The total number of nodes in a BST can be calculated with **2^n -1** where n is the level of the tree, we can approximate it with 2^n to get the total number of nodes in a BST. 
 The steps we need to take to add/remove a node to/from the desired level in a BST is equal to the level of that node in a tree. This means that all of these have O(log n). Remember this is achieved by divide and conquer. In terms of time complexity a perfect tree gives us the best perfect scenario which is measured as Omega. The worst case is that when we have a tree growing like a straight line which never forks (a linked list actually) in this case the time complexity is O(n) so technically a big o of a BST is O(n). So if we assume that we don’t have a worst case possible scenario, i.e., the BST not to be a linked list, we treat it as if the big o is O(log n) and not O(n) data structure. (so in conclusion the big O of a BST is O(n) but if we assume that we can exclude the worst case scenario, which is a linked list, we can treat it as O(log n) data structure). So for the following we treat it as if O(log n):
 o	Lookup()
 o	Insert()
