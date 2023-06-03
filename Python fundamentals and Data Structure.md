@@ -8,7 +8,8 @@
 
 ### Data Structures: Trees 
 
-Intro and terminology 
+#### Intro and terminology 
+
 o	We have already seen a tree in this course: linked list. A linked list is a tree that does not fork. 
 o	Binary tree we have left and right values so if each node can only point to two other nodes it is a binary tree
 o	But trees don’t have to be a binary tree, in this course we deal with binary trees though 
@@ -20,6 +21,7 @@ o	Every node can only have one parent
 o	The child nodes which share a parent node are called siblings 
 o	Child nodes can also be parent nodes 
 o	A node that does not have any children is called leaf 
+
 Binary search tree (BST): example 
 The nodes in a binary tree should be laid out in a particular way to be called a binary search tree: if the value of the nodes to be added to the tree is greater than the parent node it will be positioned on the right and if it is less than that it will be placed in the left. To add a new node we always start the comparison with the node at the very top. 
 If you take any node in a binary search tree all the nodes below it to the right are greater than that node and everything on the left is going to be less than. 
