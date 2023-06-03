@@ -21,7 +21,6 @@ This repo documents my solutions to Leetcode - programming questions. I wrote my
 | -- | --|  -- | -- |
 |1 | 1689 |Partitioning Into Minimum Number Of Deci-Binary Numbers | Medium |
 |2|535| Encode and Decode TinyURL|Medium|
-#|59|1455 | Check If a Word Occurs As a Prefix of Any Word in a Sentence|Easy|
 
 |**Index**|**Question ID** | **Question title**|  **Difficulty level**|
 | -- | --|  -- | -- |
