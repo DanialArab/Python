@@ -85,7 +85,6 @@ This repo documents my solutions to Leetcode - programming questions. I wrote my
 |59|1455 | Check If a Word Occurs As a Prefix of Any Word in a Sentence|Easy|
 |60|2068| Check Whether Two Strings are Almost Equivalent|Easy|
 |61|2490| Circular Sentence|Easy|
-|1 | 1689 |Partitioning Into Minimum Number Of Deci-Binary Numbers | Medium|
 
 
 
