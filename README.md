@@ -17,8 +17,9 @@ This repo documents my solutions to Leetcode - programming questions. I wrote my
 ## 1: String 
 
 
-|**Index**|**Question ID** | **Question        title**|  **Difficulty level**|
+|**Index**|**Question ID** | **Question title**|  **Difficulty level**|
 | -- | --|  -- | -- |
+|59|1455 | C                                                        e|Easy|
 |1 | 1689 |Partitioning Into Minimum Number Of Deci-Binary Numbers | Medium |
 |2|535| Encode and Decode TinyURL|Medium|
 
