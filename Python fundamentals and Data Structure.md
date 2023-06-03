@@ -77,51 +77,52 @@ output:
 
 **Just remember we don’t have duplicates in BST.** 
 
+    class Node:
+        def __init__(self, value):
+            self.value = value
+            self.left = None
+            self.right = None
 
-class Node:
-    def __init__(self, value):
-        self.value = value
-        self.left = None
-        self.right = None
+    class BinarySearchTree:
+        def __init__(self):
+            self.root = None
 
-class BinarySearchTree:
-    def __init__(self):
-        self.root = None
+        def insert(self, value):
+            new_node = Node(value)
+            if self.root is None:
+                self.root = new_node
+                return True  
+            temp = self.root
+            while True:
+                if new_node.value == temp.value:
+                    return False
+                if new_node.value < temp.value:
+                    if temp.left is None:
+                        temp.left = new_node
+                        return True 
+                    temp = temp.left
+                else:
+                    if temp.right is None:
+                        temp.right = new_node
+                        return True
+                    temp = temp.right
 
-    def insert(self, value):
-        new_node = Node(value)
-        if self.root is None:
-            self.root = new_node
-            return True  # great point i do need this return otherwhise the function keeps executing
-        temp = self.root
-        while True:
-            if new_node.value == temp.value:
-                return False
-            if new_node.value < temp.value:
-                if temp.left is None:
-                    temp.left = new_node
-                    return True  # Why do i need this? I think this return True here stops the whole function execution meaning as soon as i place the node just jump out b/c I'm done with insertion
-                temp = temp.left
-            else:
-                if temp.right is None:
-                    temp.right = new_node
-                    return True
-                temp = temp.right
-
-my_tree = BinarySearchTree()
-my_tree.insert(2)
-my_tree.insert(1)
-my_tree.insert(3)
-print((my_tree.root.value))
-print((my_tree.root.left.value))
-print((my_tree.root.right.value))
+    my_tree = BinarySearchTree()
+    my_tree.insert(2)
+    my_tree.insert(1)
+    my_tree.insert(3)
+    print((my_tree.root.value))
+    print((my_tree.root.left.value))
+    print((my_tree.root.right.value))
 
 output:
-2
-1
-3
 
-BST: Contains
+    2
+    1
+    3
+
+##### BST: Contains
+
 With contains method we just want to see if a tree contains a particular value. 
 My first trial, I wrote it completely on my own which was fabulous:
 class Node:
