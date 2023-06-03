@@ -162,6 +162,8 @@ will solve later:
 |19|1122| Relative Sort Array|Easy|
 |20|387| First Unique Character in a String|Easy|
 |21|1496| Path Crossing|Easy|
+|22|290| Word Pattern|Easy|
+
 
 will solve later:
 1656
