@@ -171,7 +171,7 @@ will solve later:
 |20|387| First Unique Character in a String|Easy|
 |21|1496| Path Crossing|Easy|
 |22|290| Word Pattern|Easy|
-
+|23|141| Linked List Cycle|Easy| 
 
 will solve later:
 1656
