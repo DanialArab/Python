@@ -155,6 +155,7 @@ will solve later:
 |16|1207| Unique Number of Occurrences|Easy| 
 |17|2206| Divide Array Into Equal Pairs|Easy| 
 |18|2570| Merge Two 2D Arrays by Summing Values|Easy| 
+|19|1122| Relative Sort Array|Easy|
 
 will solve later:
 1656
