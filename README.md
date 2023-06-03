@@ -24,7 +24,6 @@ This repo documents my solutions to Leetcode - programming questions. I wrote my
 
 |**Index**|**Question ID** | **Question title**|  **Difficulty level**|
 | -- | --|  -- | -- |
-|1 | 1689 |Partitioning Into Minimum Number Of Deci-Binary Numbers | Medium |
 |1 | 1108 | Defanging an IP Address | Easy |
 |2 | 2011 | Final Value of Variable After Performing Operations| Easy |
 |3 | 771| Jewels and Stones  | Easy |
@@ -83,7 +82,7 @@ This repo documents my solutions to Leetcode - programming questions. I wrote my
 |56|2138| Divide a String Into Groups of Size k|Easy|
 |57|2224| Minimum Number of Operations to Convert Time|Easy|
 |58|1598 | Crawler Log Folder | Easy|
-|59|1455 | Check If a Word Occurs As a Prefix of Any Word in a Sentence|Easy|
+|59|1455 |Check If a Word Occurs As a Prefix of Any Word in a Sentence|Easy|
 |60|2068| Check Whether Two Strings are Almost Equivalent|Easy|
 |61|2490| Circular Sentence|Easy|
 
