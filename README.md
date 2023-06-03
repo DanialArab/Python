@@ -156,6 +156,7 @@ will solve later:
 |17|2206| Divide Array Into Equal Pairs|Easy| 
 |18|2570| Merge Two 2D Arrays by Summing Values|Easy| 
 |19|1122| Relative Sort Array|Easy|
+|20|387| First Unique Character in a String|Easy|
 
 will solve later:
 1656
