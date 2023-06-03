@@ -47,8 +47,7 @@ We don’t keep track of length in a BST.
         def __init__ (self, value):
             self.value = value 
             self.left = None
-            self.right = None 
-
+            self.right = None
 
     class BinarySearchTree:
         def __init__ (self, value):
@@ -56,25 +55,29 @@ We don’t keep track of length in a BST.
             self.root = new_node
 
 We don’t have to make the first node at the time of creating the BST, I mean what we have done yet is to create the first node at the same time as creating the data structure like linked list, stack, etc. but we don’t have to it we can alternatively create the first node using insert method like the following where we create an empty tree at the time of running the constructor: 
-class Node:
-    def __init__(self, value):
-        self.value = value
-        self.left = None
-        self.right = None
 
-class BinarySearchTree:
-    def __init__(self):
-        self.root = None
+    class Node:
+        def __init__(self, value):
+            self.value = value
+            self.left = None
+            self.right = None
 
-my_tree = BinarySearchTree()
-print(my_tree.root)
+    class BinarySearchTree:
+        def __init__(self):
+            self.root = None
+
+    my_tree = BinarySearchTree()
+    print(my_tree.root)
 
 output:
-None
 
-BST: Insert -- Intro 
-Just remember we don’t have duplicates in BST.
-So much fun:
+    None
+
+##### BST: Insert -- Intro 
+
+**Just remember we don’t have duplicates in BST.** 
+
+
 class Node:
     def __init__(self, value):
         self.value = value
