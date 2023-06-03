@@ -10,13 +10,13 @@
 
 #### Intro and terminology 
 
-o	We have already seen a tree in this course: linked list. A linked list is a tree that does not fork. 
-o	Binary tree we have left and right values so if each node can only point to two other nodes it is a binary tree
-o	But trees don’t have to be a binary tree, in this course we deal with binary trees though 
-o	Some terminologies:
-o	Full: in a full tree every node either points to ZERO nodes or TWO nodes.
-o	Perfect: in a perfect tree any level on the tree that has any nodes is completely filled all the way across 
-o	Complete: in a complete tree we are filling the tree from left to right with no gaps 
++ We have already seen a tree in this course: linked list. A linked list is a tree that does not fork. 
++ In a binary tree we have left and right values so if each node can only point to two other nodes it is a binary tree
++ But trees don’t have to be a binary tree, in this course we deal with binary trees though 
++ Some terminologies:
+    + Full: in a full tree every node either points to ZERO nodes or TWO nodes.
+    + Perfect: in a perfect tree any level on the tree that has any nodes is completely filled all the way across 
+    + Complete: in a complete tree we are filling the tree from left to right with no gaps 
 o	Every node can only have one parent 
 o	The child nodes which share a parent node are called siblings 
 o	Child nodes can also be parent nodes 
