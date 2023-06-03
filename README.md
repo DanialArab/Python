@@ -110,6 +110,7 @@ will solve later:
 |3| 1470|  Shuffle the Array |Easy |
 |4|1512 | Number of Good Pairs  |Easy |
 |5|2574 | Left and Right Sum Differences  |Easy |
+|59|1455 |Check If a Word Occurs As a Prefix of Any Word in a Sentence|Easy|
 
 
 
