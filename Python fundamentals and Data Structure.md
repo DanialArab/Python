@@ -17,10 +17,10 @@
     + Full: in a full tree every node either points to ZERO nodes or TWO nodes.
     + Perfect: in a perfect tree any level on the tree that has any nodes is completely filled all the way across 
     + Complete: in a complete tree we are filling the tree from left to right with no gaps 
-o	Every node can only have one parent 
-o	The child nodes which share a parent node are called siblings 
-o	Child nodes can also be parent nodes 
-o	A node that does not have any children is called leaf 
++ Every node can only have one parent 
++ The child nodes which share a parent node are called siblings 
++ Child nodes can also be parent nodes 
++ A node that does not have any children is called leaf 
 
 Binary search tree (BST): example 
 The nodes in a binary tree should be laid out in a particular way to be called a binary search tree: if the value of the nodes to be added to the tree is greater than the parent node it will be positioned on the right and if it is less than that it will be placed in the left. To add a new node we always start the comparison with the node at the very top. 
