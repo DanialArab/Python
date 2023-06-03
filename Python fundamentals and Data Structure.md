@@ -1,5 +1,7 @@
 # Python Fundamentals and Data Structure
 
+Reference: Fundamentals --> Back-end Development –-> Complete Python Mastery (Mosh Coding School)
+
 Zip Function
 
 If we have two lists and we want to combine them as a list of tuples let’s say, here we cannot use map function or list comprehension because they both work with a single list and so here we need built-in zip function, which returns a zip object which is also iterable and can be converted to a list like:
