@@ -82,7 +82,7 @@ This repo documents my solutions to Leetcode - programming questions. I wrote my
 |56|2138| Divide a String Into Groups of Size k|Easy|
 |57|2224| Minimum Number of Operations to Convert Time|Easy|
 |58|1598 | Crawler Log Folder | Easy|
-|59|1455 |Check If a Word Occurs As a Prefix of Any Word in a Sentence|Easy|
+|59|1455 |Check If a Word Occurs As a Prefix of Any Word in Sentence|Easy|
 |60|2068| Check Whether Two Strings are Almost Equivalent|Easy|
 |61|2490| Circular Sentence|Easy|
 
