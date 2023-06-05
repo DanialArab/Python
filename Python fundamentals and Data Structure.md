@@ -21,121 +21,122 @@
 
 Constructor 
 
-class Node:
-    def __init__(self, value):
-        self.value = value
-        self.next = None
+    class Node:
+        def __init__(self, value):
+            self.value = value
+            self.next = None
 
-class Stack:
-    def __init__(self, value):
-        new_node = Node(value)
-        self.top = new_node
-        self.height = 1
+    class Stack:
+        def __init__(self, value):
+            new_node = Node(value)
+            self.top = new_node
+            self.height = 1
 
-    def printer(self):
-        temp = self.top
-        while temp:
-            print(temp.value)
-            temp = temp.next
+        def printer(self):
+            temp = self.top
+            while temp:
+                print(temp.value)
+                temp = temp.next
 
-my_stack = Stack(4)
-my_stack.printer()
+    my_stack = Stack(4)
+    my_stack.printer()
 
 output:
-4
+    4
 Push
-class Node:
-    def __init__(self, value):
-        self.value = value
-        self.next = None
 
-class Stack:
-    def __init__(self, value):
-        new_node = Node(value)
-        self.top = new_node
-        self.height = 1
+    class Node:
+        def __init__(self, value):
+            self.value = value
+            self.next = None
 
-    def push(self, value):
-        new_node = Node(value)
-        if self.height == 0:
+    class Stack:
+        def __init__(self, value):
+            new_node = Node(value)
             self.top = new_node
-        else:
-            new_node.next = self.top
-            self.top = new_node
-        self.height += 1
-        return True
+            self.height = 1
 
-    def printer(self):
-        temp = self.top
-        while temp:
-            print(temp.value)
-            temp = temp.next
+        def push(self, value):
+            new_node = Node(value)
+            if self.height == 0:
+                self.top = new_node
+            else:
+                new_node.next = self.top
+                self.top = new_node
+            self.height += 1
+            return True
 
-my_stack = Stack(2)
-my_stack.push(1)
-my_stack.printer()
+        def printer(self):
+            temp = self.top
+            while temp:
+                print(temp.value)
+                temp = temp.next
+
+    my_stack = Stack(2)
+    my_stack.push(1)
+    my_stack.printer()
 
 output:
-1
-2
+    1
+    2
 
 Pop 
-class Node:
-    def __init__(self, value):
-        self.value = value
-        self.next = None
+    class Node:
+        def __init__(self, value):
+            self.value = value
+            self.next = None
 
-class Stack:
-    def __init__(self, value):
-        new_node = Node(value)
-        self.top = new_node
-        self.height = 1
-
-    def push(self, value):
-        new_node = Node(value)
-        if self.height == 0:
+    class Stack:
+        def __init__(self, value):
+            new_node = Node(value)
             self.top = new_node
-        else:
-            new_node.next = self.top
-            self.top = new_node
-        self.height += 1
-        return True
+            self.height = 1
 
-    def pop(self):  # pop is actually pop first b/c in stack implemented by LL i add/remove from the first node
-        if self.height == 0:
-            return None
-        temp = self.top
-        self.top = self.top.next
-        temp.next = None
-        self.height -= 1
-        return temp.value
+        def push(self, value):
+            new_node = Node(value)
+            if self.height == 0:
+                self.top = new_node
+            else:
+                new_node.next = self.top
+                self.top = new_node
+            self.height += 1
+            return True
 
-    def printer(self):
-        temp = self.top
-        while temp:
-            print(temp.value)
-            temp = temp.next
+        def pop(self):  # pop is actually pop first b/c in stack implemented by LL i add/remove from the first node
+            if self.height == 0:
+                return None
+            temp = self.top
+            self.top = self.top.next
+            temp.next = None
+            self.height -= 1
+            return temp.value
 
-my_stack = Stack(7)
-my_stack.push(23)
-my_stack.push(3)
-my_stack.push(11)
-my_stack.printer()
-print("\n")
-print(my_stack.pop(), "\n")
-my_stack.printer()
+        def printer(self):
+            temp = self.top
+            while temp:
+                print(temp.value)
+                temp = temp.next
+
+    my_stack = Stack(7)
+    my_stack.push(23)
+    my_stack.push(3)
+    my_stack.push(11)
+    my_stack.printer()
+    print("\n")
+    print(my_stack.pop(), "\n")
+    my_stack.printer()
 
 output:
-11
-3
-23
-7
+    11
+    3
+    23
+    7
 
-11 
+    11 
 
-3
-23
-7
+    3
+    23
+    7
 
 
 ### Data Structures: Trees 
