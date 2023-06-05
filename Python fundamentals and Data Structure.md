@@ -83,6 +83,7 @@ output:
     2
 
 Pop 
+
     class Node:
         def __init__(self, value):
             self.value = value
