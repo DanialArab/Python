@@ -172,6 +172,7 @@ will solve later:
 |21|1496| Path Crossing|Easy|
 |22|290| Word Pattern|Easy|
 |23|141| Linked List Cycle|Easy| 
+|24|2357| Make Array Zero by Subtracting Equal Amounts|Easy|
 
 will solve later:
 1656
