@@ -8,18 +8,19 @@
 
 ### Data Structures: Stacks 
 
-#### Intro 
+#### Intro - Stack 
 
 + LIFO
 + Like a tennis ball can 
 + An example is our browser history like when we visited some websites we can access the last one only and after pushing back button we can access the next one.
 + There are a couple of common ways to implement a stack: one is to use a list (which is the simplest way), we can also use a linked list to implement a stack 
-+ For something to be a stack you just have to add and remove from the same end so if I use a list there is one end that I want to use for adding and removing. If I want to use a list to implement a stack I want to make sure that I am adding and removing from the end not the beginning to make sure that I have O (1) and not O(n) (which is the case for adding and removing to/from the beginning). 
++ For something to be a stack you just have to **add and remove from the same end** so if I use a list there is one end that I want to use for adding and removing. If I want to use a list to implement a stack I want to make sure that I am adding and removing from the end not the beginning to make sure that I have O (1) and not O(n) (which is the case for adding and removing to/from the beginning). 
 + If I want o use a linked list to implement a stack, I want to make sure that the same end to/from which I add or remove is the first node and not the last one (again to have the O(1) rather than O(n)) (adding/removing an item to/from the begging of a linked list is O(1) but adding an item to the end of a linked list is of O(1) while removing an item from the end of a linked list is O(n)). 
-+ In stack we have pop and push corresponding to pop and prepend 
++ In stack we have **pop and push** corresponding to pop and prepend 
 + In stack we have top (instead of head) and bottom instead of tail, but since in stack to be implemented through a linked list we are adding or removing from the top we really don’t need to keep track of bottom. 
 
 Constructor 
+
 class Node:
     def __init__(self, value):
         self.value = value
