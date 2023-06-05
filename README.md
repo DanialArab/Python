@@ -228,7 +228,7 @@ will solve later:
 
 |**Index**|**Question ID** | **Question title**|  **Difficulty level**|
 | -- | --|  -- | -- |
-|1|||Easy |
+|1|590| N-ary Tree Postorder Traversal|Easy |
 
 will solve later 
 897
