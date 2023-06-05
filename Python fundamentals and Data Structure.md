@@ -42,6 +42,7 @@ Constructor
     my_stack.printer()
 
 output:
+
     4
 Push
 
@@ -77,6 +78,7 @@ Push
     my_stack.printer()
 
 output:
+
     1
     2
 
@@ -127,6 +129,7 @@ Pop
     my_stack.printer()
 
 output:
+
     11
     3
     23
