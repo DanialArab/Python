@@ -12,6 +12,7 @@ This repo documents my solutions to Leetcode - programming questions. I wrote my
 6. [Two Pointers](#6)
 7. [String Matching](#7)
 8. [Stack](#8)
+9. [Binary Tree](#9)
 
 <a name="1"></a>
 ## 1: String 
@@ -234,3 +235,17 @@ will solve later:
 
 will solve later 
 897
+
+
+<a name="9"></a>
+## 9. Binary Tree
+
+### Easy Difficulty Questions
+
+|**Index**|**Question ID** | **Question title**|  **Difficulty level**|
+| -- | --|  -- | -- |
+|1 |  | | Easy |
+
+
+will solve later
+1379
