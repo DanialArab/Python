@@ -394,13 +394,20 @@ Quiz:
 
 
 ### Algorithms: Tree Traversal 
+
 #### Intro
+
 Tree traversal is when we are going to visit every node in the tree and we want to take the values and put them in a list then will return that list. 
 Tree traversal is more complicated compared to doing something like with a linked list b/c in a linked list it is just linear so to traverse it we just start at the beginning and go through the list but with the tree there are multiple ways to visit each node one approach is breadth first search another way is depth first search. We look at different ways of DFS in the followings. 
-Breadth First Search (BFS)
-Intro 
+
+#### Breadth First Search (BFS)
+
+##### Intro 
+
 We start at the top of the tree then we do the second row and then the third row and so on and so forth. We will create two lists: queue and results, results is the one that will be returned with all the nodes’ values in it. The queue is the one where we include the entire node meaning its value and its left and right. But in the results we are only storing the values and not the entire node. The loop only runs as long as we have items in the queue list like as long as the queue is empty it means that we have visited every item in the tree and the only thing left to do is to return the results list.  
-Code 
+
+##### Code 
+
 The BFS is a method in our binary search tree we defined previously: 
 
     class Node:
@@ -467,10 +474,14 @@ output:
 #### Depth First Search
 
 There are three types of depth first search: preorder, postorder, and inorder.
-PreOrder 
-Intro 
+
+##### PreOrder 
+
+###### Intro 
+
 The order by which we add the items to the list is we start at the top then we keep moving to the left until we reach to point which is as far as we can go to the left then we go up and go right until we reach to the point that we looked at everything to the left of the top node then we go to the right and then we go to the left and then right …. 
-Code 
+
+###### Code 
 Again the DFS preorder is a method in our BinarySearchTree class. Inside the method we have a recursive function, we have not seen such a thing before:
 
     class Node:
@@ -548,10 +559,14 @@ output:
 
     [47, 21, 18, 27, 76, 52, 82]
 
-#### PostOrder 
-Intro 
+##### PostOrder 
+
+###### Intro 
+
 Just like the other tree traversal we start at the top what is different here is that we are just going to visit the self.root node we are not going to write that value to the results list yet, then we are going to go to the left then visit that node and then we go to the left again until there is no node to the left and right only then finally we write the value of the last node, which does not have any left or right, to the results list so the order is that we look left then right if there is nothing on the left and right we write the node’s value to the results list. Then we come back up and go to right … the last node which will be written to the results list is the self.root node. 
-Code
+
+###### Code
+
 The method for the dfs_post_order is exactly the same as of dfs_pre_order but we append at the end:
 
     class Node:
@@ -642,10 +657,14 @@ output:
     [18, 27, 21, 52, 82, 76, 47]
 
 
-#### InOrder 
-Intro
+##### InOrder 
+
+###### Intro
+
 We start at the top node, we go to the left, then again go to the left until there is nothing to the left then we write that last node to the results list then we go to the right and so on and so forth. In this case we write the lowest value first to the results list then the second lowest value and all the way we add the nodes’ values in numerical order to the results list. 
-Code
+
+###### Code
+
 Again here the method is pretty similar to that of preorder and postorder but we append the value after going to the left and before going to the right:
 
     class Node:
