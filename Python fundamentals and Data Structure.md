@@ -393,6 +393,361 @@ Quiz:
 2-	Binary Search Trees always have a better Big O than Linked Lists: False: An insert into a Binary Search Tree is typically (log n). Appending an item onto the end of a Linked List is O(1).
 
 
+### Algorithms: Tree Traversal 
+#### Intro
+Tree traversal is when we are going to visit every node in the tree and we want to take the values and put them in a list then will return that list. 
+Tree traversal is more complicated compared to doing something like with a linked list b/c in a linked list it is just linear so to traverse it we just start at the beginning and go through the list but with the tree there are multiple ways to visit each node one approach is breadth first search another way is depth first search. We look at different ways of DFS in the followings. 
+Breadth First Search (BFS)
+Intro 
+We start at the top of the tree then we do the second row and then the third row and so on and so forth. We will create two lists: queue and results, results is the one that will be returned with all the nodes’ values in it. The queue is the one where we include the entire node meaning its value and its left and right. But in the results we are only storing the values and not the entire node. The loop only runs as long as we have items in the queue list like as long as the queue is empty it means that we have visited every item in the tree and the only thing left to do is to return the results list.  
+Code 
+The BFS is a method in our binary search tree we defined previously: 
+
+    class Node:
+        def __init__(self, value):
+            self.value = value
+            self.left = None
+            self.right = None
+
+    class BinarySearchTree:
+        def __init__(self):
+            self.root = None
+
+        def insert(self, value):
+            new_node = Node(value)
+
+            if self.root is None:
+                self.root = new_node
+                return True
+
+            temp = self.root
+            while True:
+                if new_node.value == temp.value:
+                    return False
+                if new_node.value < temp.value:
+                    if temp.left is None:
+                        temp.left = new_node
+                        return True
+                    temp = temp.left
+                else:
+                    if temp.right is None:
+                        temp.right = new_node
+                        return True
+                    temp = temp.right
+
+        def BFS(self):
+            current_node = self.root
+            queue = []
+            results = []
+            queue.append(current_node)
+
+            while len(queue) > 0:
+                current_node = queue.pop(0)
+                results.append(current_node.value)
+                if current_node.left:
+                    queue.append(current_node.left)
+                if current_node.right:
+                    queue.append(current_node.right)
+            return results
+
+    my_tree = BinarySearchTree()
+    my_tree.insert(47)
+    my_tree.insert(21)
+    my_tree.insert(76)
+    my_tree.insert(18)
+    my_tree.insert(27)
+    my_tree.insert(52)
+    my_tree.insert(82)
+    print(my_tree.BFS())
+
+output:
+
+    [47, 21, 76, 18, 27, 52, 82]
+
+#### Depth First Search
+
+There are three types of depth first search: preorder, postorder, and inorder.
+PreOrder 
+Intro 
+The order by which we add the items to the list is we start at the top then we keep moving to the left until we reach to point which is as far as we can go to the left then we go up and go right until we reach to the point that we looked at everything to the left of the top node then we go to the right and then we go to the left and then right …. 
+Code 
+Again the DFS preorder is a method in our BinarySearchTree class. Inside the method we have a recursive function, we have not seen such a thing before:
+
+    class Node:
+        def __init__(self, value):
+            self.value = value
+            self.left = None
+            self.right = None
+
+    class BinarySearchTree:
+        def __init__(self):
+            self.root = None
+
+        def insert(self, value):
+            new_node = Node(value)
+
+            if self.root is None:
+                self.root = new_node
+                return True
+
+            temp = self.root
+            while True:
+                if new_node.value == temp.value:
+                    return False
+                if new_node.value < temp.value:
+                    if temp.left is None:
+                        temp.left = new_node
+                        return True
+                    temp = temp.left
+                else:
+                    if temp.right is None:
+                        temp.right = new_node
+                        return True
+                    temp = temp.right
+
+        def BFS(self):
+            current_node = self.root
+            queue = []
+            results = []
+
+            queue.append(current_node)
+
+            while len(queue) > 0:
+                current_node = queue.pop(0)
+                results.append(current_node.value)
+                if current_node.left:
+                    queue.append(current_node.left)
+                if current_node.right:
+                    queue.append(current_node.right)
+            return results
+
+        def dfs_pre_order(self):
+            results = []
+
+            def traverse(current_node):
+                results.append(current_node.value)
+                if current_node.left:
+                    traverse(current_node.left)
+                if current_node.right:
+                    traverse(current_node.right)
+
+            traverse(self.root)
+            return results
+
+    my_tree = BinarySearchTree()
+    my_tree.insert(47)
+    my_tree.insert(21)
+    my_tree.insert(76)
+    my_tree.insert(18)
+    my_tree.insert(27)
+    my_tree.insert(52)
+    my_tree.insert(82)
+    print(my_tree.dfs_pre_order())
+
+output:
+
+    [47, 21, 18, 27, 76, 52, 82]
+
+#### PostOrder 
+Intro 
+Just like the other tree traversal we start at the top what is different here is that we are just going to visit the self.root node we are not going to write that value to the results list yet, then we are going to go to the left then visit that node and then we go to the left again until there is no node to the left and right only then finally we write the value of the last node, which does not have any left or right, to the results list so the order is that we look left then right if there is nothing on the left and right we write the node’s value to the results list. Then we come back up and go to right … the last node which will be written to the results list is the self.root node. 
+Code
+The method for the dfs_post_order is exactly the same as of dfs_pre_order but we append at the end:
+
+    class Node:
+        def __init__(self, value):
+            self.value = value
+            self.left = None
+            self.right = None
+
+    class BinarySearchTree:
+        def __init__(self):
+            self.root = None
+
+        def insert(self, value):
+            new_node = Node(value)
+
+            if self.root is None:
+                self.root = new_node
+                return True
+
+            temp = self.root
+            while True:
+                if new_node.value == temp.value:
+                    return False
+                if new_node.value < temp.value:
+                    if temp.left is None:
+                        temp.left = new_node
+                        return True
+                    temp = temp.left
+                else:
+                    if temp.right is None:
+                        temp.right = new_node
+                        return True
+                    temp = temp.right
+
+        def BFS(self):
+            current_node = self.root
+            queue = []
+            results = []
+
+            queue.append(current_node)
+
+            while len(queue) > 0:
+                current_node = queue.pop(0)
+                results.append(current_node.value)
+                if current_node.left:
+                    queue.append(current_node.left)
+                if current_node.right:
+                    queue.append(current_node.right)
+            return results
+
+        def dfs_pre_order(self):
+            results = []
+
+            def traverse(current_node):
+                results.append(current_node.value)
+                if current_node.left:
+                    traverse(current_node.left)
+                if current_node.right:
+                    traverse(current_node.right)
+
+            traverse(self.root)
+            return results
+
+        def dfs_post_order(self):
+            results = []
+
+            def traverse(current_node):
+                if current_node.left:
+                    traverse(current_node.left)
+                if current_node.right:
+                    traverse(current_node.right)
+                results.append(current_node.value)
+            traverse(self.root)
+            return results
+
+    my_tree = BinarySearchTree()
+    my_tree.insert(47)
+    my_tree.insert(21)
+    my_tree.insert(76)
+    my_tree.insert(18)
+    my_tree.insert(27)
+    my_tree.insert(52)
+    my_tree.insert(82)
+    print(my_tree.dfs_post_order())
+
+output:
+
+    [18, 27, 21, 52, 82, 76, 47]
+
+
+#### InOrder 
+Intro
+We start at the top node, we go to the left, then again go to the left until there is nothing to the left then we write that last node to the results list then we go to the right and so on and so forth. In this case we write the lowest value first to the results list then the second lowest value and all the way we add the nodes’ values in numerical order to the results list. 
+Code
+Again here the method is pretty similar to that of preorder and postorder but we append the value after going to the left and before going to the right:
+
+    class Node:
+        def __init__(self, value):
+            self.value = value
+            self.left = None
+            self.right = None
+
+    class BinarySearchTree:
+        def __init__(self):
+            self.root = None
+
+        def insert(self, value):
+            new_node = Node(value)
+
+            if self.root is None:
+                self.root = new_node
+                return True
+
+            temp = self.root
+            while True:
+                if new_node.value == temp.value:
+                    return False
+                if new_node.value < temp.value:
+                    if temp.left is None:
+                        temp.left = new_node
+                        return True
+                    temp = temp.left
+                else:
+                    if temp.right is None:
+                        temp.right = new_node
+                        return True
+                    temp = temp.right
+
+        def BFS(self):
+            current_node = self.root
+            queue = []
+            results = []
+
+            queue.append(current_node)
+
+            while len(queue) > 0:
+                current_node = queue.pop(0)
+                results.append(current_node.value)
+                if current_node.left:
+                    queue.append(current_node.left)
+                if current_node.right:
+                    queue.append(current_node.right)
+            return results
+
+        def dfs_pre_order(self):
+            results = []
+
+            def traverse(current_node):
+                results.append(current_node.value)
+                if current_node.left:
+                    traverse(current_node.left)
+                if current_node.right:
+                    traverse(current_node.right)
+
+            traverse(self.root)
+            return results
+
+        def dfs_post_order(self):
+            results = []
+
+            def traverse(current_node):
+                if current_node.left:
+                    traverse(current_node.left)
+                if current_node.right:
+                    traverse(current_node.right)
+                results.append(current_node.value)
+            traverse(self.root)
+            return results
+
+        def dfs_in_order(self):
+            results = []
+
+            def traverse(current_node):
+                if current_node.left:
+                    traverse(current_node.left)
+                results.append(current_node.value)
+                if current_node.right:
+                    traverse(current_node.right)
+            traverse(self.root)
+            return results
+
+    my_tree = BinarySearchTree()
+    my_tree.insert(47)
+    my_tree.insert(21)
+    my_tree.insert(76)
+    my_tree.insert(18)
+    my_tree.insert(27)
+    my_tree.insert(52)
+    my_tree.insert(82)
+    print(my_tree.dfs_in_order())
+
+output:
+
+    [18, 21, 27, 47, 52, 76, 82]
+
+
 
 ## Zip Function
 
