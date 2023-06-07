@@ -90,7 +90,7 @@ This repo documents my solutions to Leetcode - programming questions. I wrote my
 |61|2490| Circular Sentence|Easy|
 |62|2710| Remove Trailing Zeros From a String|Easy|
 |63|1078| Occurrences After Bigram|Easy|
-|64|1507 Reformat Date|Easy|
+|64|1507| Reformat Date|Easy|
 
 
 will solve later:
