@@ -120,7 +120,7 @@ will solve later:
 |6|2656| Maximum Sum With Exactly K Elements|Easy|
 |7|2652| Sum Multiples|Easy|
 |8|1913| Maximum Product Difference Between Two Pairs|Easy|
-
+|9|561| Array Partition|Easy|
 
 
 
