@@ -92,6 +92,7 @@ This repo documents my solutions to Leetcode - programming questions. I wrote my
 |62|2710| Remove Trailing Zeros From a String|Easy|
 |63|1078| Occurrences After Bigram|Easy|
 |64|1507| Reformat Date|Easy|
+|65|383| Ransom Note|Easy|
 
 
 will solve later:
