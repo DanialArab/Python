@@ -125,6 +125,7 @@ will solve later:
 |11|1464| Maximum Product of Two Elements in an Array|Easy|
 |12|2500| Delete Greatest Value in Each Row|Easy|
 |13|2176| Count Equal and Divisible Pairs in an Array|Easy|
+|14|2553| Separate the Digits in an Array|Easy|
 
 
 will solve later
