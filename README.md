@@ -245,6 +245,7 @@ will solve later
 |**Index**|**Question ID** | **Question title**|  **Difficulty level**|
 | -- | --|  -- | -- |
 |1 |938| Range Sum of BST | Easy |
+|2|2236| Root Equals Sum of Children|Easy|
 
 
 will solve later
