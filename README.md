@@ -119,6 +119,7 @@ will solve later:
 |5|2574 | Left and Right Sum Differences  |Easy |
 |6|2656| Maximum Sum With Exactly K Elements|Easy|
 |7|2652| Sum Multiples|Easy|
+|8|1913| Maximum Product Difference Between Two Pairs|Easy|
 
 
 
