@@ -122,7 +122,7 @@ will solve later:
 |8|1913| Maximum Product Difference Between Two Pairs|Easy|
 |9|561| Array Partition|Easy|
 |10|1304| Find N Unique Integers Sum up to Zero|Easy|
-
+|11|1464| Maximum Product of Two Elements in an Array|Easy|
 
 will solve later
 1863
