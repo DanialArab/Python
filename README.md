@@ -121,7 +121,7 @@ will solve later:
 |7|2652| Sum Multiples|Easy|
 |8|1913| Maximum Product Difference Between Two Pairs|Easy|
 |9|561| Array Partition|Easy|
-
+|10|1304| Find N Unique Integers Sum up to Zero|Easy|
 
 
 <a name="3"></a>
