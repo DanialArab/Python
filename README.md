@@ -93,6 +93,7 @@ This repo documents my solutions to Leetcode - programming questions. I wrote my
 |63|1078| Occurrences After Bigram|Easy|
 |64|1507| Reformat Date|Easy|
 |65|383| Ransom Note|Easy|
+|66|389| Find the Difference|Easy|
 
 
 will solve later:
