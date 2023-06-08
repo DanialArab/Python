@@ -118,6 +118,7 @@ will solve later:
 |4|1512 | Number of Good Pairs  |Easy |
 |5|2574 | Left and Right Sum Differences  |Easy |
 |6|2656| Maximum Sum With Exactly K Elements|Easy|
+|7|2652| Sum Multiples|Easy|
 
 
 
