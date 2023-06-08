@@ -117,6 +117,7 @@ will solve later:
 |3| 1470|  Shuffle the Array |Easy |
 |4|1512 | Number of Good Pairs  |Easy |
 |5|2574 | Left and Right Sum Differences  |Easy |
+|6|2656| Maximum Sum With Exactly K Elements|Easy|
 
 
 
