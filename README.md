@@ -108,6 +108,8 @@ will solve later:
 606
 1769
 2716
+748
+
 
 <a name="2"></a>
 ## 2. Array
