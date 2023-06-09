@@ -252,10 +252,12 @@ will solve later:
 | -- | --|  -- | -- |
 |1|590| N-ary Tree Postorder Traversal|Easy |
 |2|1475| Final Prices With a Special Discount in a Shop|Easy|
+|3|682| Baseball Game|Easy|
 
 
 will solve later 
 897
+589 preorder tree traversal
 
 
 <a name="9"></a>
