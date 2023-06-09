@@ -253,7 +253,7 @@ will solve later:
 |1|590| N-ary Tree Postorder Traversal|Easy |
 |2|1475| Final Prices With a Special Discount in a Shop|Easy|
 |3|682| Baseball Game|Easy|
-
+|4|496| Next Greater Element I|Easy|
 
 will solve later 
 897
