@@ -149,7 +149,7 @@ will solve later
 | -- | --|  -- | -- |
 |1|1672 |Richest Customer Wealth  |Easy |
 |2| 2373| Largest Local Values in a Matrix |Easy |
-
+|3|1351| Count Negative Numbers in a Sorted Matrix|Easy|
 
 
 <a name="4"></a>
