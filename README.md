@@ -13,6 +13,7 @@ This repo documents my solutions to Leetcode - programming questions. I wrote my
 7. [String Matching](#7)
 8. [Stack](#8)
 9. [Binary Tree](#9)
+10. [Greedy](#10)
 
 <a name="1"></a>
 ## 1: String 
@@ -275,3 +276,13 @@ will solve later
 will solve later
 1379
 617
+
+
+<a name="10"></a>
+## 10. Greedy
+|**Index**|**Question ID** | **Question title**|  **Difficulty level**|
+| -- | --|  -- | -- |
+|1|1827| Minimum Operations to Make the Array Increasing|Easy|
+
+
+
