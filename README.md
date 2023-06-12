@@ -283,6 +283,6 @@ will solve later
 |**Index**|**Question ID** | **Question title**|  **Difficulty level**|
 | -- | --|  -- | -- |
 |1|1827| Minimum Operations to Make the Array Increasing|Easy|
-
+|2|860| Lemonade Change|Easy|
 
 
