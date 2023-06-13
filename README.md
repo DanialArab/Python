@@ -284,5 +284,7 @@ will solve later
 | -- | --|  -- | -- |
 |1|1827| Minimum Operations to Make the Array Increasing|Easy|
 |2|860| Lemonade Change|Easy|
+|3|1903| Largest Odd Number in String|Easy| 
+
 
 
