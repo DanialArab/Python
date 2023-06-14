@@ -287,4 +287,4 @@ will solve later
 |3|1903| Largest Odd Number in String|Easy| 
 |4|680| Valid Palindrome II|Easy| 
 |5|2591| Distribute Money to Maximum Children| Easy| 
-
+|6|2600| K Items With the Maximum Sum|Easy| 
