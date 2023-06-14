@@ -98,6 +98,8 @@ This repo documents my solutions to Leetcode - programming questions. I wrote my
 |67|2264| Largest 3-Same-Digit Number in String|Easy|
 |68|2451| Odd String Difference|Easy|
 |69|748| Shortest Completing Word|Easy|
+|70|2129| Capitalize the Title|Easy|
+
 
 will solve later:
 1002
