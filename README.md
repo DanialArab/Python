@@ -100,6 +100,7 @@ This repo documents my solutions to Leetcode - programming questions. I wrote my
 |69|748| Shortest Completing Word|Easy|
 |70|2129| Capitalize the Title|Easy|
 |71|599| Minimum Index Sum of Two Lists|Easy|
+|72|819| Most Common Word|Easy|
 
 
 will solve later:
