@@ -99,6 +99,7 @@ This repo documents my solutions to Leetcode - programming questions. I wrote my
 |68|2451| Odd String Difference|Easy|
 |69|748| Shortest Completing Word|Easy|
 |70|2129| Capitalize the Title|Easy|
+|71|599| Minimum Index Sum of Two Lists|Easy|
 
 
 will solve later:
