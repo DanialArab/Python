@@ -115,6 +115,8 @@ will solve later:
 2716
 1897
 541
+20
+
 
 <a name="2"></a>
 ## 2. Array
