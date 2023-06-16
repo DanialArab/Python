@@ -104,7 +104,6 @@ This repo documents my solutions to Leetcode - programming questions. I wrote my
 
 
 will solve later:
-1002
 1370
 2283
 2696
@@ -203,6 +202,8 @@ will solve later
 |22|290| Word Pattern|Easy|
 |23|141| Linked List Cycle|Easy| 
 |24|2357| Make Array Zero by Subtracting Equal Amounts|Easy|
+|25|1002| Find Common Characters|Easy|
+
 
 will solve later:
 1656
