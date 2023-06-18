@@ -203,6 +203,7 @@ will solve later
 |23|141| Linked List Cycle|Easy| 
 |24|2357| Make Array Zero by Subtracting Equal Amounts|Easy|
 |25|1002| Find Common Characters|Easy|
+|26|1394| Find Lucky Integer in an Array|Easy|
 
 
 will solve later:
