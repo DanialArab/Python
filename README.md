@@ -96,8 +96,6 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |74|535| Encode and Decode TinyURL|Medium|String|
 
 
-
-
 will solve later:
 1370
 2283
@@ -142,9 +140,7 @@ will solve later
 <a name="3"></a>
 ## 3. Matrix
 
-### Easy Difficulty Questions
-
-|**Index**|**Question ID** | **Question title**|  **Difficulty level**|
+|**Index**|**Question ID** | **Question title**|  **Difficulty level**|**Question Category**|
 | -- | --|  -- | -- |
 |1|1672 |Richest Customer Wealth  |Easy |
 |2| 2373| Largest Local Values in a Matrix |Easy |
