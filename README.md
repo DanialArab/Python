@@ -140,7 +140,7 @@ will solve later:
 |14|2553| Separate the Digits in an Array|Easy|
 |15|2535| Difference Between Element Sum and Digit Sum of an Array|Easy|
 |16|1588| Sum of All Odd Length Subarrays|Easy|
-
+|17|1| Two Sum|Easy| 
 
 will solve later
 1863
