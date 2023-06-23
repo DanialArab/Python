@@ -1,10 +1,7 @@
 # Python 
 
-This repo documents my solutions to Leetcode - programming questions. I wrote my solutions in Python, presented in the Jupyter Notebook file **Leetcode_Programming_Questions**. The followings are the tables to detail the questions that I solved so far:
+This repo documents my solutions to Leetcode - programming questions. I wrote my solutions in Python, presented in the Jupyter Notebook file **<a href="https://github.com/DanialArab/Python/blob/main/Leetcode_Programming_Questions.ipynb">Leetcode_Programming_Questions</a>**. The followings are the tables to detail the questions that I solved so far:
 
-<a href="https://github.com/DanialArab/Python/blob/main/Leetcode_Programming_Questions.ipynb">Leetcode_Programming_Questions</a>
-
-<a href="https://github.com/DanialArab/Geospatial_Data_Science/blob/main/My%20GIS%20Projects/2.%20Exploratory%20Data%20Analysis%20on%20US%20Wildfires/EDA%20on%201.88%20Million%20US%20Wildfires.ipynb" target="_blank" rel="noopener">EDA on 1.88 Million US Wildfires</a>. 
 
 
 # List of the Leetcoode questions
