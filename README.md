@@ -1,6 +1,6 @@
 # Python 
 
-This repo documents my solutions to Leetcode - programming questions. I wrote my solutions in Python, presented in the Jupyter Notebook file **<a href="https://github.com/DanialArab/Python/blob/main/Leetcode_Programming_Questions.ipynb">Leetcode_Programming_Questions</a>**. The followings are the tables to detail the questions that I solved so far:
+This repo documents my solutions to Leetcode - programming questions, whose categories are described in the following. I wrote my solutions in Python, presented in the Jupyter Notebook file **<a href="https://github.com/DanialArab/Python/blob/main/Leetcode_Programming_Questions.ipynb">Leetcode_Programming_Questions</a>**.
 
 
 
