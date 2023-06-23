@@ -296,3 +296,88 @@ will solve later
 |4|680| Valid Palindrome II|Easy| 
 |5|2591| Distribute Money to Maximum Children| Easy| 
 |6|2600| K Items With the Maximum Sum|Easy| 
+
+
+
+
+test
+
+
+|**Index**|**Question ID** | **Question title**|  **Difficulty level**| **Category**|
+| -- | --|  -- | -- | -- |
+|1 | 1689 |Partitioning Into Minimum Number Of Deci-Binary Numbers | Medium | String|
+|2|535| Encode and Decode TinyURL|Medium|String|
+|1 | 1108 | Defanging an IP Address | Easy |String|
+|2 | 2011 | Final Value of Variable After Performing Operations| Easy |String|
+|3 | 771| Jewels and Stones  | Easy |String|
+|4 | 2114| Maximum Number of Words Found in Sentences  | Easy |String|
+|5 |1678 |  Goal Parser Interpretation | Easy |String|
+|6| 1221|   Split a String in Balanced Strings |  Easy|String|
+|7 |1528 |   Shuffle String | Easy |String|
+|8 |1773 | Count Items Matching a Rule  | Easy |String|
+|9 |2194 |  Cells in a Range on an Excel Sheet | Easy |String|
+|10 |2325 |  Decode the Message | Easy |
+|11 |1859 | Sorting the Sentence  | Easy |
+|12 |1662 | Check If Two String Arrays are Equivalent  | Easy |
+|13 |1832 | Check if the Sentence Is Pangram  | Easy |String|
+|14 |1816 |  Truncate Sentence | Easy |String|
+|15 | 1768| Merge Strings Alternately  | Easy |String|
+|16 |804 | Unique Morse Code Words  | Easy |String|
+|17 | 709| To Lower Case  | Easy |String|
+|18 |1684 | Count the Number of Consistent Strings  | Easy |String|
+|19 |1614 |  Maximum Nesting Depth of the Parentheses | Easy |String|
+|20 |2315 |   Count Asterisks| Easy |String|
+|21 |557 |  Reverse Words in a String III | Easy|String|
+|22 |2103 | Rings and Rods  | Easy|String|
+|23 |2697 | Lexicographically Smallest Palindrome  |Easy |String|
+|24| 1021|  Remove Outermost Parentheses |Easy |String|
+|25| 1309| Decrypt String from Alphabet to Integer Mapping   |Easy |String|
+|26| 2000| Reverse Prefix of Word  |Easy |String|
+|27| 2678|  Number of Senior Citizens |Easy |String|
+|28|1704 | Determine if String Halves Are Alike  |Easy |String|
+|29| 1812|  Determine Color of a Chessboard Square |Easy |String|
+|30|942|DI String Match|Easy|String|
+|31|2185|Counting Words With a Given Prefix| Easy| String|
+|32|344|Reverse String| Easy| String|
+|33|2586| Count the Number of Vowel Strings in Range | Easy| String|
+|34|  1332| Remove Palindromic Subsequences  | Easy| String|
+|35|657|Robot Return to Origin|Easy|String|
+|36|944| Delete Columns to Make Sorted|Easy|String|
+|37|2351|First Letter to Appear Twice|Easy|String|
+|38|2278|Percentage of Letter in String|Easy|String|
+|39|1880|Check if Word Equals Summation of Two Words|Easy|String|
+|40|1974|Minimum Time to Type Word Using Special Typewriter|Easy|String|
+|41| 2255|Count Prefixes of a Given String | Easy|String|
+|42|2053|Kth Distinct String in an Array|Easy|String|
+|43|2496|Maximum Value of a String in an Array|Easy| String|
+|44|1876 | Substrings of Size Three with Distinct Characters|Easy| String|
+|45| 821|Shortest Distance to a Character |Easy |String|
+|46|2399|Check Distances Between Same Letters  |Easy |String|
+|47|412| Fizz Buzz |Easy |String|
+|48| 2506| Count Pairs Of Similar Strings|Easy |String|
+|49|2085| Count Common Words With One Occurrence |Easy |String|
+|50|500| Keyboard Row |Easy |String|
+|51|2309| Greatest English Letter in Upper and Lower Case|Easy|String|
+|52|1160| Find Words That Can Be Formed by Characters|Easy|String|
+|53|929 |Unique Email Addresses|Easy|String|
+|54|806| Number of Lines To Write String|Easy|String|
+|55|2243|Calculate Digit Sum of a String|Easy|String|
+|56|2138| Divide a String Into Groups of Size k|Easy|String|
+|57|2224| Minimum Number of Operations to Convert Time|Easy|String|
+|58|1598 | Crawler Log Folder | Easy|String|
+|59|1455 |Check If a Word Occurs As a Prefix of Any Word in a Sentence|Easy|String|
+|60|2068| Check Whether Two Strings are Almost Equivalent|Easy|String|
+|61|2490| Circular Sentence|Easy|String|
+|62|2710| Remove Trailing Zeros From a String|Easy|String|
+|63|1078| Occurrences After Bigram|Easy|String|
+|64|1507| Reformat Date|Easy|String|
+|65|383| Ransom Note|Easy|String|
+|66|389| Find the Difference|Easy|String|
+|67|2264| Largest 3-Same-Digit Number in String|Easy|String|
+|68|2451| Odd String Difference|Easy|String|
+|69|748| Shortest Completing Word|Easy|String|
+|70|2129| Capitalize the Title|Easy|String|
+|71|599| Minimum Index Sum of Two Lists|Easy|String|
+|72|819| Most Common Word|Easy|String|
+
+
