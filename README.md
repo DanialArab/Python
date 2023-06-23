@@ -18,7 +18,7 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 <a name="1"></a>
 ## 1: String 
 
-|**Index**|**Question ID** | **Question title**|  **Difficulty level**| **Category**|
+|**Index**|**Question ID** | **Question title**|  **Difficulty level**| **Question Category**|
 | -- | --|  -- | -- | -- |
 |1 | 1108 | Defanging an IP Address | Easy |String|
 |2 | 2011 | Final Value of Variable After Performing Operations| Easy |String|
