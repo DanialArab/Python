@@ -305,8 +305,6 @@ test
 
 |**Index**|**Question ID** | **Question title**|  **Difficulty level**| **Category**|
 | -- | --|  -- | -- | -- |
-|1 | 1689 |Partitioning Into Minimum Number Of Deci-Binary Numbers | Medium | String|
-|2|535| Encode and Decode TinyURL|Medium|String|
 |1 | 1108 | Defanging an IP Address | Easy |String|
 |2 | 2011 | Final Value of Variable After Performing Operations| Easy |String|
 |3 | 771| Jewels and Stones  | Easy |String|
@@ -316,9 +314,9 @@ test
 |7 |1528 |   Shuffle String | Easy |String|
 |8 |1773 | Count Items Matching a Rule  | Easy |String|
 |9 |2194 |  Cells in a Range on an Excel Sheet | Easy |String|
-|10 |2325 |  Decode the Message | Easy |
-|11 |1859 | Sorting the Sentence  | Easy |
-|12 |1662 | Check If Two String Arrays are Equivalent  | Easy |
+|10 |2325 |  Decode the Message | Easy |String|
+|11 |1859 | Sorting the Sentence  | Easy |String|
+|12 |1662 | Check If Two String Arrays are Equivalent  | Easy |String|
 |13 |1832 | Check if the Sentence Is Pangram  | Easy |String|
 |14 |1816 |  Truncate Sentence | Easy |String|
 |15 | 1768| Merge Strings Alternately  | Easy |String|
@@ -379,5 +377,6 @@ test
 |70|2129| Capitalize the Title|Easy|String|
 |71|599| Minimum Index Sum of Two Lists|Easy|String|
 |72|819| Most Common Word|Easy|String|
-
+|73 | 1689 |Partitioning Into Minimum Number Of Deci-Binary Numbers | Medium | String|
+|74|535| Encode and Decode TinyURL|Medium|String|
 
