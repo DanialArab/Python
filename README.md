@@ -95,21 +95,6 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |73 | 1689 |Partitioning Into Minimum Number Of Deci-Binary Numbers | Medium | String|
 |74|535| Encode and Decode TinyURL|Medium|String|
 
-
-will solve later:
-1370
-2283
-2696
-884
-2062
-606
-1769
-2716
-1897
-541
-20
-
-
 <a name="2"></a>
 ## 2. Array
 
@@ -133,19 +118,16 @@ will solve later:
 |16|1588| Sum of All Odd Length Subarrays|Easy|Array|
 |17|1| Two Sum|Easy| Array|
 
-will solve later
-1863
-
 
 <a name="3"></a>
 ## 3. Matrix
 
 |**Index**|**Question ID** | **Question title**|  **Difficulty level**|**Question Category**|
-| -- | --|  -- | -- |
-|1|1672 |Richest Customer Wealth  |Easy |
-|2| 2373| Largest Local Values in a Matrix |Easy |
-|3|1351| Count Negative Numbers in a Sorted Matrix|Easy|
-|4|2643| Row With Maximum Ones|Easy|
+| -- | --|  -- | -- | -- |
+|1|1672 |Richest Customer Wealth  |Easy |Matrix|
+|2| 2373| Largest Local Values in a Matrix |Easy |Matrix
+|3|1351| Count Negative Numbers in a Sorted Matrix|Easy|Matrix
+|4|2643| Row With Maximum Ones|Easy|Matrix
 
 
 <a name="4"></a>
