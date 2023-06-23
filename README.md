@@ -133,48 +133,46 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 <a name="4"></a>
 ## 4. Singly Linked List 
 
-### Easy Difficulty Questions
-
-|**Index**|**Question ID** | **Question title**|  **Difficulty level**|
-| -- | --|  -- | -- |
-|1|1290 |Convert Binary Number in a Linked List to Integer  |Easy |
-|2| 876| Middle of the Linked List |Easy |
-|3|206|Reverse Linked List|Easy|
-|4|2341| Maximum Number of Pairs in Array|Easy|
+|**Index**|**Question ID** | **Question title**|  **Difficulty level**|**Question Category**|
+| -- | --|  -- | -- |-- |
+|1|1290 |Convert Binary Number in a Linked List to Integer  |Easy |Singly Linked List |
+|2| 876| Middle of the Linked List |Easy |Singly Linked List |
+|3|206|Reverse Linked List|Easy|Singly Linked List |
+|4|2341| Maximum Number of Pairs in Array|Easy|Singly Linked List |
 
 <a name="5"></a>
 ## 5. Hash Table
 
 ### Easy Difficulty Questions
 
-|**Index**|**Question ID** | **Question title**|  **Difficulty level**|
-| -- | --|  -- | -- |
-|1|2367| Number of Arithmetic Triplets |Easy |
-|2|2215| Find the Difference of Two Arrays|Easy| 
-|3|1748|Sum of Unique Elements|Easy|
-|4|961| N-Repeated Element in Size 2N Array|Easy|
-|5|2341| Maximum Number of Pairs in Array|Easy|
-|6|2363| Merge Similar Items|Easy|
-|7|2032| Two Out of Three|Easy|
-|8|2418|Sort the People|Easy|
-|9|1436|Destination City|Easy|
-|10|1941| Check if All Characters Have Equal Number of Occurrences|Easy|
-|11|1742| Maximum Number of Balls in a Box|Easy|
-|12|1935| Maximum Number of Words You Can Type|Easy|
-|13|2006| Count Number of Pairs With Absolute Difference K|Easy|
-|14|1365| How Many Numbers Are Smaller Than the Current Number|Easy|
-|15|2670| Find the Distinct Difference Array|Easy|
-|16|1207| Unique Number of Occurrences|Easy| 
-|17|2206| Divide Array Into Equal Pairs|Easy| 
-|18|2570| Merge Two 2D Arrays by Summing Values|Easy| 
-|19|1122| Relative Sort Array|Easy|
-|20|387| First Unique Character in a String|Easy|
-|21|1496| Path Crossing|Easy|
-|22|290| Word Pattern|Easy|
-|23|141| Linked List Cycle|Easy| 
-|24|2357| Make Array Zero by Subtracting Equal Amounts|Easy|
-|25|1002| Find Common Characters|Easy|
-|26|1394| Find Lucky Integer in an Array|Easy|
+|**Index**|**Question ID** | **Question title**|  **Difficulty level**|**Question Category**|
+| -- | --|  -- | -- |-- |
+|1|2367| Number of Arithmetic Triplets |Easy |Hash Table|
+|2|2215| Find the Difference of Two Arrays|Easy| Hash Table|
+|3|1748|Sum of Unique Elements|Easy|Hash Table|
+|4|961| N-Repeated Element in Size 2N Array|Easy|Hash Table|
+|5|2341| Maximum Number of Pairs in Array|Easy|Hash Table|
+|6|2363| Merge Similar Items|Easy|Hash Table|
+|7|2032| Two Out of Three|Easy|Hash Table|
+|8|2418|Sort the People|Easy|Hash Table|
+|9|1436|Destination City|Easy|Hash Table|
+|10|1941| Check if All Characters Have Equal Number of Occurrences|Easy|Hash Table|
+|11|1742| Maximum Number of Balls in a Box|Easy|Hash Table|
+|12|1935| Maximum Number of Words You Can Type|Easy|Hash Table|
+|13|2006| Count Number of Pairs With Absolute Difference K|Easy|Hash Table|
+|14|1365| How Many Numbers Are Smaller Than the Current Number|Easy|Hash Table|
+|15|2670| Find the Distinct Difference Array|Easy|Hash Table|
+|16|1207| Unique Number of Occurrences|Easy| Hash Table|
+|17|2206| Divide Array Into Equal Pairs|Easy| Hash Table|
+|18|2570| Merge Two 2D Arrays by Summing Values|Easy| Hash Table|
+|19|1122| Relative Sort Array|Easy|Hash Table|
+|20|387| First Unique Character in a String|Easy|Hash Table|
+|21|1496| Path Crossing|Easy|Hash Table|
+|22|290| Word Pattern|Easy|Hash Table|
+|23|141| Linked List Cycle|Easy| Hash Table|
+|24|2357| Make Array Zero by Subtracting Equal Amounts|Easy|Hash Table|
+|25|1002| Find Common Characters|Easy|Hash Table|
+|26|1394| Find Lucky Integer in an Array|Easy|Hash Table|
 
 
 will solve later:
