@@ -2,9 +2,7 @@
 
 This repo documents my solutions to Leetcode - programming questions, whose categories are described in the following. I wrote my solutions in Python, presented in the Jupyter Notebook file **<a href="https://github.com/DanialArab/Python/blob/main/Leetcode_Programming_Questions.ipynb">Leetcode_Programming_Questions</a>**.
 
-
-
-# List of the Leetcoode questions
+## Leetcode Problems Categories
 
 1. [String](#1)
 2. [Array](#2)
