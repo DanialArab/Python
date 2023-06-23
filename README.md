@@ -115,7 +115,7 @@ will solve later:
 <a name="2"></a>
 ## 2. Array
 
-|**Index**|**Question ID** | **Question title**|  **Difficulty level**| **Category**|
+|**Index**|**Question ID** | **Question title**|  **Difficulty level**| **Question Category**|
 | -- | --|  -- | -- |-- |
 |1|1920 |  Build Array from Permutation |Easy |Array|
 |2|1929 |  Concatenation of Array |Easy |Array|
