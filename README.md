@@ -143,8 +143,6 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 <a name="5"></a>
 ## 5. Hash Table
 
-### Easy Difficulty Questions
-
 |**Index**|**Question ID** | **Question title**|  **Difficulty level**|**Question Category**|
 | -- | --|  -- | -- |-- |
 |1|2367| Number of Arithmetic Triplets |Easy |Hash Table|
@@ -174,100 +172,66 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |25|1002| Find Common Characters|Easy|Hash Table|
 |26|1394| Find Lucky Integer in an Array|Easy|Hash Table|
 
-
-will solve later:
-1656
-1370 (also in strings)
-
 <a name="6"></a>
 ## 6. Two Pointers
 
 ### Easy Difficulty Questions
 
-|**Index**|**Question ID** | **Question title**|  **Difficulty level**|
-| -- | --|  -- | -- |
-|1|832| Flipping an Image|Easy |
-|2|905| Sort Array By Parity|Easy|
-|3|977| Squares of a Sorted Array|Easy|
-|4|349| Intersection of Two Arrays|Easy|
-|5|922| Sort Array By Parity II|Easy|
-|6|2562| Find the Array Concatenation Value|Easy|
-|7|2441| Largest Positive Integer That Exists With Its Negative|Easy|
-|8|1385| Find the Distance Value Between Two Arrays|Easy|
-|9|283| Move Zeroes|Easy|
-|10|2465| Number of Distinct Averages|Easy|
-|11|202| Happy Number|Easy|
-|12|2540| Minimum Common Value|Easy|
-|13|345| Reverse Vowels of a String|Easy|
-
-
-will solve later:
-696
-917
-653
-392
-160
+|**Index**|**Question ID** | **Question title**|  **Difficulty level**|**Question Category**|
+| -- | --|  -- | -- | -- |
+|1|832| Flipping an Image|Easy |Two Pointers|
+|2|905| Sort Array By Parity|Easy|Two Pointers|
+|3|977| Squares of a Sorted Array|Easy|Two Pointers|
+|4|349| Intersection of Two Arrays|Easy|Two Pointers|
+|5|922| Sort Array By Parity II|Easy|Two Pointers|
+|6|2562| Find the Array Concatenation Value|Easy|Two Pointers|
+|7|2441| Largest Positive Integer That Exists With Its Negative|Easy|Two Pointers|
+|8|1385| Find the Distance Value Between Two Arrays|Easy|Two Pointers|
+|9|283| Move Zeroes|Easy|Two Pointers|
+|10|2465| Number of Distinct Averages|Easy|Two Pointers|
+|11|202| Happy Number|Easy|Two Pointers|
+|12|2540| Minimum Common Value|Easy|Two Pointers|
+|13|345| Reverse Vowels of a String|Easy|Two Pointers|
 
 <a name="7"></a>
 ## 7. String Matching
 
-### Easy Difficulty Questions
-
-|**Index**|**Question ID** | **Question title**|  **Difficulty level**|
-| -- | --|  -- | -- |
-|1|1408|String Matching in an Array|Easy |
-|2|796| Rotate String|Easy|
-|3|459| Repeated Substring Pattern|Easy|
-|4|28| Find the Index of the First Occurrence in a String|Easy|
-|5|1668| Maximum Repeating Substring|Easy|
+|**Index**|**Question ID** | **Question title**|  **Difficulty level**|**Question Category**|
+| -- | --|  -- | -- |-- |
+|1|1408|String Matching in an Array|Easy |String Matching|
+|2|796| Rotate String|Easy|String Matching|
+|3|459| Repeated Substring Pattern|Easy|String Matching|
+|4|28| Find the Index of the First Occurrence in a String|Easy|String Matching|
+|5|1668| Maximum Repeating Substring|Easy|String Matching|
 
 
 <a name="8"></a>
 ## 8. Stack
 
-### Easy Difficulty Questions
-
-|**Index**|**Question ID** | **Question title**|  **Difficulty level**|
-| -- | --|  -- | -- |
-|1|590| N-ary Tree Postorder Traversal|Easy |
-|2|1475| Final Prices With a Special Discount in a Shop|Easy|
-|3|682| Baseball Game|Easy|
-|4|496| Next Greater Element I|Easy|
-
-will solve later 
-897
-589 preorder tree traversal
-
+|**Index**|**Question ID** | **Question title**|  **Difficulty level**|**Question Category**|
+| -- | --|  -- | -- | -- |
+|1|590| N-ary Tree Postorder Traversal|Easy |Stack|
+|2|1475| Final Prices With a Special Discount in a Shop|Easy|Stack|
+|3|682| Baseball Game|Easy|Stack|
+|4|496| Next Greater Element I|Easy|Stack|
 
 <a name="9"></a>
 ## 9. Binary Tree
 
-### Easy Difficulty Questions
-
-|**Index**|**Question ID** | **Question title**|  **Difficulty level**|
-| -- | --|  -- | -- |
-|1 |938| Range Sum of BST | Easy |
-|2|2236| Root Equals Sum of Children|Easy|
-
-
-will solve later
-1379
-617
-
+|**Index**|**Question ID** | **Question title**|  **Difficulty level**|**Question Category**|
+| -- | --|  -- | -- |-- |
+|1 |938| Range Sum of BST | Easy |Binary Tree|
+|2|2236| Root Equals Sum of Children|Easy|Binary Tree|
 
 <a name="10"></a>
 ## 10. Greedy
-|**Index**|**Question ID** | **Question title**|  **Difficulty level**|
-| -- | --|  -- | -- |
-|1|1827| Minimum Operations to Make the Array Increasing|Easy|
-|2|860| Lemonade Change|Easy|
-|3|1903| Largest Odd Number in String|Easy| 
-|4|680| Valid Palindrome II|Easy| 
-|5|2591| Distribute Money to Maximum Children| Easy| 
-|6|2600| K Items With the Maximum Sum|Easy| 
 
-
-
-
-test
+|**Index**|**Question ID** | **Question title**|  **Difficulty level**|**Question Category**|
+| -- | --|  -- | -- |-- |
+|1|1827| Minimum Operations to Make the Array Increasing|Easy|Greedy|
+|2|860| Lemonade Change|Easy|Greedy|
+|3|1903| Largest Odd Number in String|Easy| Greedy|
+|4|680| Valid Palindrome II|Easy| Greedy|
+|5|2591| Distribute Money to Maximum Children| Easy| Greedy|
+|6|2600| K Items With the Maximum Sum|Easy| Greedy|
 
