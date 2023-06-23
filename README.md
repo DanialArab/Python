@@ -18,7 +18,6 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 <a name="1"></a>
 ## 1: String 
 
-
 |**Index**|**Question ID** | **Question title**|  **Difficulty level**| **Category**|
 | -- | --|  -- | -- | -- |
 |1 | 1108 | Defanging an IP Address | Easy |String|
@@ -97,89 +96,6 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |74|535| Encode and Decode TinyURL|Medium|String|
 
 
-### Medium Difficulty Questions
-
-|**Index**|**Question ID** | **Question title**|  **Difficulty level**|
-| -- | --|  -- | -- |
-|1 | 1689 |Partitioning Into Minimum Number Of Deci-Binary Numbers | Medium |
-|2|535| Encode and Decode TinyURL|Medium|
-
-### Easy Difficulty Questions
-
-|**Index**|**Question ID** | **Question title**|  **Difficulty level**|
-| -- | --|  -- | -- |
-|1 | 1108 | Defanging an IP Address | Easy |
-|2 | 2011 | Final Value of Variable After Performing Operations| Easy |
-|3 | 771| Jewels and Stones  | Easy |
-|4 | 2114| Maximum Number of Words Found in Sentences  | Easy |
-|5 |1678 |  Goal Parser Interpretation | Easy |
-|6| 1221|   Split a String in Balanced Strings |  Easy|
-|7 |1528 |   Shuffle String | Easy |
-|8 |1773 | Count Items Matching a Rule  | Easy |
-|9 |2194 |  Cells in a Range on an Excel Sheet | Easy |
-|10 |2325 |  Decode the Message | Easy |
-|11 |1859 | Sorting the Sentence  | Easy |
-|12 |1662 | Check If Two String Arrays are Equivalent  | Easy |
-|13 |1832 | Check if the Sentence Is Pangram  | Easy |
-|14 |1816 |  Truncate Sentence | Easy |
-|15 | 1768| Merge Strings Alternately  | Easy |
-|16 |804 | Unique Morse Code Words  | Easy |
-|17 | 709| To Lower Case  | Easy |
-|18 |1684 | Count the Number of Consistent Strings  | Easy |
-|19 |1614 |  Maximum Nesting Depth of the Parentheses | Easy |
-|20 |2315 |   Count Asterisks| Easy |
-|21 |557 |  Reverse Words in a String III | Easy|
-|22 |2103 | Rings and Rods  | Easy|
-|23 |2697 | Lexicographically Smallest Palindrome  |Easy |
-|24| 1021|  Remove Outermost Parentheses |Easy |
-|25| 1309| Decrypt String from Alphabet to Integer Mapping   |Easy |
-|26| 2000| Reverse Prefix of Word  |Easy |
-|27| 2678|  Number of Senior Citizens |Easy |
-|28|1704 | Determine if String Halves Are Alike  |Easy |
-|29| 1812|  Determine Color of a Chessboard Square |Easy |
-|30|942|DI String Match|Easy|
-|31|2185|Counting Words With a Given Prefix| Easy| 
-|32|344|Reverse String| Easy| 
-|33|2586| Count the Number of Vowel Strings in Range | Easy| 
-|34|  1332| Remove Palindromic Subsequences  | Easy| 
-|35|657|Robot Return to Origin|Easy|
-|36|944| Delete Columns to Make Sorted|Easy|
-|37|2351|First Letter to Appear Twice|Easy|
-|38|2278|Percentage of Letter in String|Easy|
-|39|1880|Check if Word Equals Summation of Two Words|Easy|
-|40|1974|Minimum Time to Type Word Using Special Typewriter|Easy|
-|41| 2255|Count Prefixes of a Given String | Easy|
-|42|2053|Kth Distinct String in an Array|Easy|
-|43|2496|Maximum Value of a String in an Array|Easy| 
-|44|1876 | Substrings of Size Three with Distinct Characters|Easy| 
-|45| 821|Shortest Distance to a Character |Easy |
-|46|2399|Check Distances Between Same Letters  |Easy |
-|47|412| Fizz Buzz |Easy |
-|48| 2506| Count Pairs Of Similar Strings|Easy |
-|49|2085| Count Common Words With One Occurrence |Easy |
-|50|500| Keyboard Row |Easy |
-|51|2309| Greatest English Letter in Upper and Lower Case|Easy|
-|52|1160| Find Words That Can Be Formed by Characters|Easy|
-|53|929 |Unique Email Addresses|Easy|
-|54|806| Number of Lines To Write String|Easy|
-|55|2243|Calculate Digit Sum of a String|Easy|
-|56|2138| Divide a String Into Groups of Size k|Easy|
-|57|2224| Minimum Number of Operations to Convert Time|Easy|
-|58|1598 | Crawler Log Folder | Easy|
-|59|1455 |Check If a Word Occurs As a Prefix of Any Word in a Sentence|Easy|
-|60|2068| Check Whether Two Strings are Almost Equivalent|Easy|
-|61|2490| Circular Sentence|Easy|
-|62|2710| Remove Trailing Zeros From a String|Easy|
-|63|1078| Occurrences After Bigram|Easy|
-|64|1507| Reformat Date|Easy|
-|65|383| Ransom Note|Easy|
-|66|389| Find the Difference|Easy|
-|67|2264| Largest 3-Same-Digit Number in String|Easy|
-|68|2451| Odd String Difference|Easy|
-|69|748| Shortest Completing Word|Easy|
-|70|2129| Capitalize the Title|Easy|
-|71|599| Minimum Index Sum of Two Lists|Easy|
-|72|819| Most Common Word|Easy|
 
 
 will solve later:
@@ -198,8 +114,6 @@ will solve later:
 
 <a name="2"></a>
 ## 2. Array
-
-### Easy Difficulty Questions
 
 |**Index**|**Question ID** | **Question title**|  **Difficulty level**| **Category**|
 | -- | --|  -- | -- |-- |
