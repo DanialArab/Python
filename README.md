@@ -94,6 +94,7 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |72|819| Most Common Word|Easy|String|
 |73 | 1689 |Partitioning Into Minimum Number Of Deci-Binary Numbers | Medium | String|
 |74|535| Encode and Decode TinyURL|Medium|String|
+|75|1769|  Minimum Number of Operations to Move All Balls to Each Box|Medium|String|
 
 <a name="2"></a>
 ## 2. Array
