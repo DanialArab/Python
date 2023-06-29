@@ -97,6 +97,7 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |75|1769|  Minimum Number of Operations to Move All Balls to Each Box|Medium|String|
 |76|2391| Minimum Amount of Time to Collect Garbage|Medium|String|
 |77|2120|Execution of All Suffix Instructions Staying in a Grid |Medium| String|
+|78|2125| Number of Laser Beams in a Bank|Medium|String|
 
 <a name="2"></a>
 ## 2. Array
