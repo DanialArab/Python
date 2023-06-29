@@ -99,7 +99,7 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |77|2120|Execution of All Suffix Instructions Staying in a Grid |Medium| String|
 |78|2125| Number of Laser Beams in a Bank|Medium|String|
 |79|434| Number of Segments in a String|Easy|String|
-
+|80|1805| Number of Different Integers in a String|Easy|String|
 
 <a name="2"></a>
 ## 2. Array
