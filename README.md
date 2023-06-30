@@ -137,7 +137,9 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |15|2535| Difference Between Element Sum and Digit Sum of an Array|Easy|Array|
 |16|1588| Sum of All Odd Length Subarrays|Easy|Array|
 |17|1| Two Sum|Easy| Array|
-|18|2303| Calculate Amount Paid in Taxes| Array|
+|18|2303| Calculate Amount Paid in Taxes|Easy| Array|
+|19|2078| Two Furthest Houses With Different Colors|Easy| Array|
+
 
 
 <a name="3"></a>
