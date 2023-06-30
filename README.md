@@ -104,6 +104,9 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |82|917| Reverse Only Letters| Easy|String|
 |83|171| Excel Sheet Column Number| Easy|String|
 |84|1945| Sum of Digits of String After Convert| Easy|String|
+|85|1763| Longest Nice Substring| Easy|String|
+
+
 
 
 
