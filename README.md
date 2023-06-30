@@ -101,6 +101,7 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |79|434| Number of Segments in a String|Easy|String|
 |80|1805| Number of Different Integers in a String|Easy|String|
 |81|2062| Count Vowel Substrings of a String| Easy|String|
+|82|917| Reverse Only Letters| Easy|String|
 
 <a name="2"></a>
 ## 2. Array
