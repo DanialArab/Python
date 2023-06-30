@@ -118,28 +118,28 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 <a name="2"></a>
 ## 2. Array
 
-|**Index**|**Question ID** | **Question title**|  **Difficulty level**| **Question Category**|
-| -- | --|  -- | -- |-- |
-|1|1920 |  Build Array from Permutation |Easy |Array|
-|2|1929 |  Concatenation of Array |Easy |Array|
-|3| 1470|  Shuffle the Array |Easy |Array|
-|4|1512 | Number of Good Pairs  |Easy |Array|
-|5|2574 | Left and Right Sum Differences  |Easy |Array|
-|6|2656| Maximum Sum With Exactly K Elements|Easy|Array|
-|7|2652| Sum Multiples|Easy|Array|
-|8|1913| Maximum Product Difference Between Two Pairs|Easy|Array|
-|9|561| Array Partition|Easy|Array|
-|10|1304| Find N Unique Integers Sum up to Zero|Easy|Array|
-|11|1464| Maximum Product of Two Elements in an Array|Easy|Array|
-|12|2500| Delete Greatest Value in Each Row|Easy|Array|
-|13|2176| Count Equal and Divisible Pairs in an Array|Easy|Array|
-|14|2553| Separate the Digits in an Array|Easy|Array|
-|15|2535| Difference Between Element Sum and Digit Sum of an Array|Easy|Array|
-|16|1588| Sum of All Odd Length Subarrays|Easy|Array|
-|17|1| Two Sum|Easy| Array|
-|18|2303| Calculate Amount Paid in Taxes|Easy| Array|
-|19|2078| Two Furthest Houses With Different Colors|Easy| Array|
-|20|575| Distribute Candies|Easy| Array|
+|**Index**|**Question ID** | **Question title**|  **Difficulty level**| 
+| -- | --|  -- | -- |
+|1|1920 |  Build Array from Permutation |Easy |
+|2|1929 |  Concatenation of Array |Easy |
+|3| 1470|  Shuffle the Array |Easy |
+|4|1512 | Number of Good Pairs  |Easy |
+|5|2574 | Left and Right Sum Differences  |Easy |
+|6|2656| Maximum Sum With Exactly K Elements|Easy|
+|7|2652| Sum Multiples|Easy|
+|8|1913| Maximum Product Difference Between Two Pairs|Easy|
+|9|561| Array Partition|Easy|
+|10|1304| Find N Unique Integers Sum up to Zero|Easy|
+|11|1464| Maximum Product of Two Elements in an Array|Easy|
+|12|2500| Delete Greatest Value in Each Row|Easy|
+|13|2176| Count Equal and Divisible Pairs in an Array|Easy|
+|14|2553| Separate the Digits in an Array|Easy|
+|15|2535| Difference Between Element Sum and Digit Sum of an Array|Easy|
+|16|1588| Sum of All Odd Length Subarrays|Easy|
+|17|1| Two Sum|Easy| 
+|18|2303| Calculate Amount Paid in Taxes|Easy| 
+|19|2078| Two Furthest Houses With Different Colors|Easy| 
+|20|575| Distribute Candies|Easy| 
 
 
 
