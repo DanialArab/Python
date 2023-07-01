@@ -154,6 +154,9 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |3|1351| Count Negative Numbers in a Sorted Matrix|Easy|
 |4|2643| Row With Maximum Ones|Easy|
 |5|1337| The K Weakest Rows in a Matrix|Easy|
+|6|883| Projection Area of 3D Shapes|Easy|
+
+
 
 
 
