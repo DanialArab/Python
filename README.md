@@ -156,8 +156,9 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |5|1337| The K Weakest Rows in a Matrix|Easy|
 |6|883| Projection Area of 3D Shapes|Easy|
 |7|1380| Lucky Numbers in a Matrix|Easy|
+|8|463| Island Perimeter|Easy|
 
-
+ 
 
 
 
