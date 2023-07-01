@@ -147,12 +147,14 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 <a name="3"></a>
 ## 3. Matrix
 
-|**Index**|**Question ID** | **Question title**|  **Difficulty level**|**Question Category**|
-| -- | --|  -- | -- | -- |
-|1|1672 |Richest Customer Wealth  |Easy |Matrix|
-|2| 2373| Largest Local Values in a Matrix |Easy |Matrix
-|3|1351| Count Negative Numbers in a Sorted Matrix|Easy|Matrix
-|4|2643| Row With Maximum Ones|Easy|Matrix
+|**Index**|**Question ID** | **Question title**|  **Difficulty level**|
+| -- | --|  -- | -- | 
+|1|1672 |Richest Customer Wealth  |Easy |
+|2| 2373| Largest Local Values in a Matrix |Easy |
+|3|1351| Count Negative Numbers in a Sorted Matrix|Easy|
+|4|2643| Row With Maximum Ones|Easy|
+|5|1337| The K Weakest Rows in a Matrix|Easy|
+
 
 
 <a name="4"></a>
