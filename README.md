@@ -105,6 +105,8 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |83|171| Excel Sheet Column Number| Easy|
 |84|1945| Sum of Digits of String After Convert| Easy|
 |85|1763| Longest Nice Substring| Easy|
+|86|541| Reverse String II| Easy|
+
 
 
 
