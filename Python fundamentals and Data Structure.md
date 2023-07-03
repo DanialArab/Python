@@ -6,6 +6,7 @@ Here is the summary of my notes from the following courses:
 + <a href="https://www.udemy.com/course/data-structures-algorithms-python/">Python Data Structures & Algorithms + LEETCODE Exercises</a>
 
 1. [Data Structures & Algorithms](#1)
+    1. [Time and Space Complexities ](#2) 
     1. [Data Structures: Stacks](#2)
     2. [Data Structures: Trees ](#3)
        1. [Binary search tree (BST)](#4)
@@ -19,15 +20,69 @@ Here is the summary of my notes from the following courses:
 
 
 <a name="1"></a>
-### Introduction 
+## Data Structures & Algorithms 
 
 <a name="2"></a>
-#### What is a Database? 
+### Time and Space Complexities 
+
+#### Overview
+
+You may get asked in the interview that what would be the best data structure or algorithm for this situation? What data structure or algorithm you would use for a particular question like when the list is the best solution or when a linked list is the best one? In these cases what you are really asked about is on understanding Big O? 
+
+#### Big O: Intro 
+
+It is a huge topic when it comes to data structures and algos. It is a way of comparing, mathematically like how efficient they are compared to each other, two sets of code. 
+
+##### Time complexity
+
+It is not measured in time b/c otherwise it would be machine dependent. So it is measured in the number of operations needed to complete something. 
+
+##### Space complexity 
+
+It is about how much running a code takes memory, an indicator of memory usage. It should be traded off with time complexity meaning we have to consider both time and space complexities when comparing two sets of codes. For most of the parts in this course we are concerned about time complexities. 
+
+#### Terminologies 
+
+When dealing with time and space complexities we deal with Omega, Theta, and Omicron. 
+
+##### Omega
+
+The best-case scenario 
+
+##### Theta
+
+The average case scenario. 
+
+##### Omicron
+
+The worst-case scenario. 
+
+When we are talking about big O we always talk about the worst case. 
+
+#### Big O 
+
+##### Big O: O(n) (or proportional) 
+
+It is also called proportional b/c there is a linear relationship between the number of operations with the input size n. There is n number of operations/runs when we pass in number n  Like:
+
+        def print_function(n):
+            for i in range(n):
+                print(i)
+
+        print_function(10)
+
+        0
+        1
+        2
+        3
+        4
+        5
+        6
+        7
+        8
+        9
 
 
-### References: 
-+ Fundamentals --> Back-end Development –->  (Mosh Coding School - Mosh Hamedani)
-+ Data Structures & Algorithms – Python (Udemy course by Scott Barrett)
 
 ## Data Structures & Algorithms 
 
