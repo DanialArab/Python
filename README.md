@@ -181,6 +181,8 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |5|705| Design HashSet|Easy|
 |6|706| Design HashMap|Easy|
 |7|21| Merge Two Sorted Lists|Easy|
+|8|160| Intersection of Two Linked Lists|Easy|
+
 
 
 
