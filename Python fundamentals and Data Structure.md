@@ -3,11 +3,7 @@
 Here is the summary of my notes from the following courses:
 
 + <a href="https://codewithmosh.com/p/python-programming-course-beginners">Complete Python Mastery</a>
-+ The structure of my notes is as follows:
-
-1. [Introduction](#1)
-    1. [What is a Database?](#2)
-  
++ <a href="https://www.udemy.com/course/data-structures-algorithms-python/">Python Data Structures & Algorithms + LEETCODE Exercises</a>
 
 
 <a name="1"></a>
