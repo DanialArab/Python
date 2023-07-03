@@ -25,7 +25,7 @@ Here is the summary of my notes from the following courses:
            7. [Big O: Different Terms for Inputs](#18)
            8. [Big O: Lists](#19)
            9. [Big O: Wrap Up](#20)
-
+    2. [Classes and pointers](#21)
 
 1. [Data Structures: Stacks](#2)
 2. [Data Structures: Trees ](#3)
@@ -259,6 +259,19 @@ O(log n) = divide and conquer
 O(1) = constant time 
 
 Great site: <a href="https://www.bigocheatsheet.com/">Big O Cheat Sheet</a>
+
+<a name="21"></a>
+#### Classes and pointers
+
+Every data structure we create would be through defining classes. 
+
+Integers are **immutable** objects in Python. When num1 = 11 and num2 = num1, the value 11 is assigned to both num1 and num2. Since integers are immutable, when we update num2 to 22, a new memory location is allocated for num2 with the updated value, while num1 remains unchanged with the value 11. But dictionaries are **mutable objects** in Python. When dict2 = dict1, both dict1 and dict2 refer to the same dictionary object. Therefore, when we update the value associated with the key "value" in dict2 to 22, it reflects the same change in dict1 because they are pointing to the same object. This is because dictionaries are mutable, and changes made to one reference of the object will be reflected in all other references.
+
+In summary, when working with immutable objects like integers, assigning one variable to another creates a new copy with the same value. However, with mutable objects like dictionaries and lists, assigning one variable to another creates a new reference to the same object.
+
+
+
+
 
 
 ## Data Structures & Algorithms 
