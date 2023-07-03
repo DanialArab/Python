@@ -179,6 +179,7 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |3|206|Reverse Linked List|Easy|
 |4|2341| Maximum Number of Pairs in Array|Easy|
 |5|705| Design HashSet|Easy|
+|6|706| Design HashMap|Easy|
 
 
 
