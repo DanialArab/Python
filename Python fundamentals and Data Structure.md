@@ -63,11 +63,11 @@ When we are talking about big O we always talk about the worst case.
 
 ![](https://github.com/DanialArab/images/blob/main/Python/Big%20O.png)
 
-Reference:<a href="https://www.bigocheatsheet.com/">Big O Cheat Sheet</a>
+Reference: <a href="https://www.bigocheatsheet.com/">Big O Cheat Sheet</a>
 
 ##### Big O: O(n) (or proportional) 
 
-It is also called proportional b/c there is a linear relationship between the number of operations with the input size n. There is n number of operations/runs when we pass in number n  Like:
+It is also called proportional b/c there is a **linear relationship between the number of operations with the input size n**. There is n number of operations/runs when we pass in number n.  Like:
 
         def print_function(n):
             for i in range(n):
@@ -89,128 +89,139 @@ It is also called proportional b/c there is a linear relationship between the nu
 
 ##### Big O: Drop Constants 
 
-There are few ways through which we can simplify Big O notation. One of them is drop constants. Like:
-def print_function(n):
-    for i in range(n):
-        print(i)
+There are a few ways through which we can simplify Big O notation. One of them is drop constants. Like:
 
-    for j in range(n):
-        print(j)
+        def print_function(n):
+            for i in range(n):
+                print(i)
+        
+            for j in range(n):
+                print(j)
+        
+        print_function(10)
+        output:
+        0
+        1
+        2
+        3
+        4
+        5
+        6
+        7
+        8
+        9
+        0
+        1
+        2
+        3
+        4
+        5
+        6
+        7
+        8
+        9
 
-print_function(10)
-output:
-0
-1
-2
-3
-4
-5
-6
-7
-8
-9
-0
-1
-2
-3
-4
-5
-6
-7
-8
-9
 
-
-The above code ran n + n or 2n times. However the Big O is simplified from O(2n) to O(n). it does not mater if there was O(100n) we simplify it to O(n). 
+The above code ran n + n or 2n times. However, the Big O is simplified from O(2n) to O(n). it does not matter if there was O(100n) we simplify it to O(n). 
 
 ##### Big O: O (n ^2)
 
 The below code runs n * n times or n^2 leading to have O(n^2):
-def print_function(n):
-    for i in range(n):
-        for j in range(n):
-            print(i, j)
 
-print_function(10)
+        def print_function(n):
+            for i in range(n):
+                for j in range(n):
+                    print(i, j)
+        
+        print_function(10)
 
-also the below code runs in n * n * n times, and you might think that our big O is O(n^3):
-def print_function(n):
-    for i in range(n):
-        for j in range(n):
-            for k in range(n):
-                print(i, j, k)
+also the below code runs in n * n * n times, and you might think that our big O is O(n^3), but we simplify it as O(n^2).
 
-print_function(10)
+        def print_function(n):
+            for i in range(n):
+                for j in range(n):
+                    for k in range(n):
+                        print(i, j, k)
 
-but we simplify it as O(n^2). Again, it does not matter if it is O(n^10) or etc. we simplify it as O(n^2), which is less efficient in terms of time complexity compared to O(n). 
+        print_function(10)
+
+Again, it does not matter if it is O(n^10) or etc. We simplify it as O(n^2), which is less efficient in terms of time complexity compared to O(n). 
 
 ##### Big O: Drop Non-Dominants
 
 We simplify the O(n^2 + n) as O(n^2) in the following code:
-def print_function(n):
-    for i in range(n):
-        for j in range(n):
-            print(i, j)
 
-    for k in range(n):
-        print(k)
+        def print_function(n):
+            for i in range(n):
+                for j in range(n):
+                    print(i, j)
+        
+            for k in range(n):
+                print(k)
+        
+        print_function(10)
 
-print_function(10)
-
-##### Big O: O(1) 
+##### Big O: O(1) (or constant)
 
 O(1) is also called constant time meaning that as n increases the number of operations remains constant. It is the most efficient Big O. so any time you can make it Big O(1) that would be the optimal solution. 
-def add(n):
-    return n + n 
 
-print(add(10))
-
+        def add(n):
+            return n + n 
+        
+        print(add(10))
 
 or 
-def add(n):
-    return n + n + n
 
-print(add(10))
+        def add(n):
+            return n + n + n
+        
+        print(add(10))
 
-in above codes, the number of operations is independent of n like if n is 1 or 1000000 the number of operations is the same and equal to 1. In the first code since we have one operation the big O is O(1), and we also simplify it in the second code as O(1).
+in the above codes, the number of operations is independent of n like if n is 1 or 1000000 the number of operations is the same and equal to 1. In the first code since we have one operation the big O is O(1), and we also simplify it in the second code as O(1).
 
 ##### Big O: O(log n) 
 
 To find an item in a sorted list we can first cut the list to a half and continue with the half which includes the desired number we continue doing this until finding the number. Let’s say if I have 8 items in my list I need to repeat this three times like 2 to the power of 3 is 8 or log of 2 of 8 (log of 8 with the base of 2) is 3. In this case the number of operations or big O is O(log n). 
-This is very efficient/flat as shown in the above graph. These are the ones we see mostly in the course (I mean O(n^2), O(n), O(log n), and O (1)) but in some sorting algorithm we have O (n log n ) we see a couple of those like merge sort and quick sort in this course. O (n log n) is the most efficient that you can make in a sorting algorithm if you want to sort various types of data like string (if you only want to sort some numbers you can get more efficient than that though). 
+
+This is very efficient/flat as shown in the above graph. These are the ones we see mostly in the course (I mean O(n^2), O(n), O(log n), and O (1)) but in some sorting algorithms we have O (n log n ) we see a couple of those like merge sort and quick sort in this course. O (n log n) is the most efficient that you can make in a sorting algorithm if you want to sort various types of data like string (if you only want to sort some numbers you can get more efficient than that though). 
 
 ##### Big O: Different Terms for Inputs
 
 Big O (a + b) and Big O (a * b) are the Big Os for the following, respectively:
-def print_function(a, b):
-    for i in range(a):
-        print(i)
 
-    for j in range(b):
-        print(j)
+        def print_function(a, b):
+            for i in range(a):
+                print(i)
+        
+            for j in range(b):
+                print(j)
 
-and also: 
-def print_function(a, b):
-    for i in range(a):
-        for j in range(b):
-            print(i, j) 
-            
+and also:
 
+        def print_function(a, b):
+            for i in range(a):
+                for j in range(b):
+                    print(i, j) 
 
 ##### Big O: Lists
 
-It is very common to compare the Big O of other data structures against that of list, which is a built-in data structure. Appending and popping, of course the last item in a list I mean, of an item to/from a list is of O(1) (no reindexing required). However, inserting an item into a list at a particular index or popping an item at the particular index other than the last one requires re-indexing and so we have O(n). one may argue that the big O would be O(1/2 n) if the item is in the middle of the list but there are two issues: one is that the constant ½ can be dropped by the simplification of a drop of constants and second is that Big O is all about the worst-case scenario not the average case scenario. also to search an item by value in a list is of O(n), while the searching by an index is of O(1). 
-Takeaway; adding or removing from the end of a list is of O(1) but adding to or removing from the other end is of O (n). in the middle the big O is also O(n). 
+It is very common to compare the Big O of other data structures against that of list, which is a built-in data structure. Appending and popping, of course, the last item in a list I mean, of an item to/from a list is of O(1) (no reindexing required). However, inserting an item into a list at a particular index or popping an item at a particular index other than the last one requires re-indexing and so we have O(n). One may argue that the big O would be O(1/2 n) if the item is in the middle of the list but there are two issues: one is that the constant ½ can be dropped by the simplification of a drop of constants and the second is that Big O is all about the worst-case scenario, not the average case scenario. also to search an item by value in a list is of O(n), while the searching by an index is of O(1). 
+
+**Takeaway** Adding or removing from the end of a list is of O(1) but adding to or removing from the other end is of O (n). in the middle the big O is also O(n). 
 
 ##### Big O: Wrap Up
 
 Some terminologies:
-O(n^2) = loop within a loop
-O(n) = proportional 
-O(log n) = divide and conquer
-O(1) = constant time 
-Great site: https://www.bigocheatsheet.com/ 
 
+O(n^2) = loop within a loop
+
+O(n) = proportional 
+
+O(log n) = divide and conquer
+
+O(1) = constant time 
+
+Great site: <a href="https://www.bigocheatsheet.com/">Big O Cheat Sheet</a>
 
 
 ## Data Structures & Algorithms 
