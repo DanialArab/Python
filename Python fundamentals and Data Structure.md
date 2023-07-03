@@ -5,6 +5,18 @@ Here is the summary of my notes from the following courses:
 + <a href="https://codewithmosh.com/p/python-programming-course-beginners">Complete Python Mastery</a>
 + <a href="https://www.udemy.com/course/data-structures-algorithms-python/">Python Data Structures & Algorithms + LEETCODE Exercises</a>
 
+1. [Data Structures & Algorithms](#1)
+    1. [Data Structures: Stacks](#2)
+    2. [Data Structures: Trees ](#3)
+       1. [Binary search tree (BST)](#4)
+    3. [Algorithms](#5)
+       1. [Algorithms: Tree Traversal]
+           1. [Breadth First Search (BFS)]()
+           2. [Depth First Search]()
+               1. [PreOrder]
+               2. [PostOrder]
+               3. [InOrder]
+
 
 <a name="1"></a>
 ### Introduction 
@@ -485,7 +497,7 @@ output:
     [47, 21, 76, 18, 27, 52, 82]
 
 #### Depth First Search HERE
-
+Breadth First Search (BFS)
 There are three types of depth first search: preorder, postorder, and inorder.
 
 ##### PreOrder 
