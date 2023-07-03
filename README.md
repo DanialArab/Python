@@ -180,6 +180,8 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |4|2341| Maximum Number of Pairs in Array|Easy|
 |5|705| Design HashSet|Easy|
 |6|706| Design HashMap|Easy|
+|7|21| Merge Two Sorted Lists|Easy|
+
 
 
 
