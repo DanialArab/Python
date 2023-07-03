@@ -1,7 +1,24 @@
 # Python Fundamentals and Data Structure
 
+Here is the summary of my notes from the following courses:
+
++ <a href="https://codewithmosh.com/p/python-programming-course-beginners">Complete Python Mastery</a>
++ The structure of my notes is as follows:
+
+1. [Introduction](#1)
+    1. [What is a Database?](#2)
+  
+
+
+<a name="1"></a>
+### Introduction 
+
+<a name="2"></a>
+#### What is a Database? 
+
+
 ### References: 
-+ Fundamentals --> Back-end Development –-> Complete Python Mastery (Mosh Coding School - Mosh Hamedani)
++ Fundamentals --> Back-end Development –->  (Mosh Coding School - Mosh Hamedani)
 + Data Structures & Algorithms – Python (Udemy course by Scott Barrett)
 
 ## Data Structures & Algorithms 
