@@ -172,12 +172,16 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 <a name="4"></a>
 ## 4. Singly Linked List 
 
-|**Index**|**Question ID** | **Question title**|  **Difficulty level**|**Question Category**|
-| -- | --|  -- | -- |-- |
-|1|1290 |Convert Binary Number in a Linked List to Integer  |Easy |Singly Linked List |
-|2| 876| Middle of the Linked List |Easy |Singly Linked List |
-|3|206|Reverse Linked List|Easy|Singly Linked List |
-|4|2341| Maximum Number of Pairs in Array|Easy|Singly Linked List |
+|**Index**|**Question ID** | **Question title**|  **Difficulty level**|
+| -- | --|  -- | -- |
+|1|1290 |Convert Binary Number in a Linked List to Integer  |Easy |
+|2| 876| Middle of the Linked List |Easy |
+|3|206|Reverse Linked List|Easy|
+|4|2341| Maximum Number of Pairs in Array|Easy|
+|5|705| Design HashSet|Easy|
+
+
+
 
 <a name="5"></a>
 ## 5. Hash Table
