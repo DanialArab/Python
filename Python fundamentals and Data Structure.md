@@ -62,6 +62,9 @@ When we are talking about big O we always talk about the worst case.
 #### Big O 
 
 ![](https://github.com/DanialArab/images/blob/main/Python/Big%20O.png)
+
+Reference:<a href="https://www.bigocheatsheet.com/">Big O Cheat Sheet</a>
+
 ##### Big O: O(n) (or proportional) 
 
 It is also called proportional b/c there is a linear relationship between the number of operations with the input size n. There is n number of operations/runs when we pass in number n  Like:
