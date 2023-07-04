@@ -162,6 +162,7 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |9|1030| Matrix Cells in Distance Order|Easy|
 |10|766|Toeplitz Matrix|Easy|
 |11|999|Available Captures for Rook|Easy|
+|12|1260|Shift 2D Grid|Easy|
 
  
  
