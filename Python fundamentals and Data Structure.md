@@ -25,18 +25,27 @@ Here is the summary of my notes from the following courses:
            7. [Big O: Different Terms for Inputs](#18)
            8. [Big O: Lists](#19)
            9. [Big O: Wrap Up](#20)
-    2. [Classes and pointers](#21)
-
-1. [Data Structures: Stacks](#2)
-2. [Data Structures: Trees ](#3)
-   1. [Binary search tree (BST)](#4)
-3. [Algorithms](#5)
-   1. [Algorithms: Tree Traversal]
+    2. [Pointers](#21)
+    3. [Data Structures](#22)
+        1. [Singly Linked List](#23)
+        2. [Doubly Linked List](#24)
+        3. [Stacks](#)
+        4. [Queues]()
+        5. [Trees ](#3)
+            1. [Binary search tree (BST)](#4)
+                [Algorithms: Tree Traversal]
        1. [Breadth First Search (BFS)]()
        2. [Depth First Search]()
            1. [PreOrder]
            2. [PostOrder]
            3. [InOrder]
+        6. [Hash Table](#5)
+        7. [Graphs]()
+   4. [Algorithms]()
+       1. [Recursion]
+       2. [Basic Sorts]
+       3. [Tree Traversal]
+ 
 
 
 <a name="1"></a>
@@ -261,7 +270,7 @@ O(1) = constant time
 Great site: <a href="https://www.bigocheatsheet.com/">Big O Cheat Sheet</a>
 
 <a name="21"></a>
-#### Classes and pointers
+#### Pointers
 
 Every data structure we create would be through defining classes. 
 
@@ -270,11 +279,32 @@ Integers are **immutable** objects in Python. When num1 = 11 and num2 = num1, th
 In summary, when working with immutable objects like integers, assigning one variable to another creates a new copy with the same value. However, with mutable objects like dictionaries and lists, assigning one variable to another creates a new reference to the same object.
 
 
+<a name="22"></a>
+#### Data Structures
+
+<a name="23"></a>
+##### Singly Linked List
+
+<a name="24"></a>
+###### Intro
+
++ A linked list does not have an index unlike a list
++ A list is a contiguous place in memory meaning the list’s items are right next to each other in memory (this is why we can access the list’s items through indexing) but in a linked list all the nodes are spread all over the place.
++ In a linked list we have a variable called head which points to the first node, we also have a tail pointing to the last node, each node points to the next node all the way towards the end where the last node points to None. 
+
+<a name="25"></a>
+###### Big O
+
++ Adding a node to the end of a linked list, appending I mean, is of O(1) but removing a node from the end of a linked list is O(n) b/c I need to start from the head node to change the pointer at the tail.
++ Adding a node to the beginning of a linked list is of O(1) and also removing the node from the beginning is of O(1).
++ Adding a node in the middle of a linked list is of O(n) b/c I need to start from the head node to change the pointer, also removing a node from the middle of a linked list is of O(n).
++ Look up in a linked list either through the value or index is of O(n). The following is a good summary:
+
+![](https://github.com/DanialArab/images/blob/main/Python/Linked%20List%20vs.%20List%20Big%20O.png)
 
 
 
 
-## Data Structures & Algorithms 
 
 ### Data Structures: Stacks 
 
