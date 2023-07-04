@@ -281,7 +281,6 @@ Integers are **immutable** objects in Python. When num1 = 11 and num2 = num1, th
 
 In summary, when working with immutable objects like integers, assigning one variable to another creates a new copy with the same value. However, with mutable objects like dictionaries and lists, assigning one variable to another creates a new reference to the same object.
 
-
 <a name="22"></a>
 #### Data Structures
 
@@ -304,6 +303,148 @@ In summary, when working with immutable objects like integers, assigning one var
 + Look up in a linked list either through the value or index is of O(n). The following is a good summary:
 
 ![](https://github.com/DanialArab/images/blob/main/Python/Linked%20List%20vs.%20List%20Big%20O.png)
+
+<a name="26"></a>
+###### Implementation 
+
+        class Node:
+            def __init__ (self, value):
+                self.value = value
+                self.next = None
+        
+        class Linked_List:
+            def __init__(self, value):
+                new_node = Node(value)
+                self.head = new_node
+                self.tail = new_node
+                self.length = 1
+        
+            def print_list(self):
+                temp = self.head
+                while temp:
+                    print (temp.value)
+                    temp  = temp.next 
+        
+            def append(self, value):
+                new_node = Node(value)
+                if self.head is None:
+                    self.head = new_node
+                    self.tail = new_node
+                else:
+                    self.tail.next = new_node
+                    self.tail = new_node
+                self.length += 1
+        
+            def prepend(self, value):
+                new_node = Node(value)
+        
+                if self.length == 0:
+                    self.head = new_node
+                    self.tail = new_node
+        
+                else:
+                    new_node.next = self.head
+                    self.head = new_node
+                self.length += 1
+                return True
+        
+            def pop(self):
+                if self.length == 0:
+                    return None
+                temp = self.head
+                pre = self.head 
+        
+                while temp.next:
+                    pre = temp 
+                    temp = temp.next 
+        
+                self.tail = pre 
+                self.tail.next = None        
+                self.length -= 1
+                if self.length == 0:
+                    self.head = None
+                    self.tail = None 
+                
+                return temp
+        
+            def pop_first(self):
+                if self.length == 0:
+                    return None 
+                
+                temp = self.head
+                self.head = self.head.next 
+                temp.next = None
+                self.length -= 1
+        
+                if self.length == 0:
+                    self.tail = None
+        
+                return temp 
+        
+            def get(self, index):
+                if index < 0 or index >= self.length:
+                    return None
+                
+                temp = self.head 
+                for _ in range(index):
+                    temp = temp.next 
+                return temp 
+            
+            def set_value (self, index, value):
+                
+                temp = self.get(index)
+                if temp:
+                    temp.value = value 
+                    return True 
+                return False 
+            
+            def insert (self, index, value):
+                if index < 0 or index > self.length:
+                    return False 
+                if index == 0:
+                    return self.prepend(value)
+                if index == self.length:
+                    return self.append(value)
+                
+                new_node = Node (value)
+                temp = self.get(index - 1)
+                new_node.next = temp.next 
+                temp.next = new_node
+                self.length += 1 
+                return True 
+        
+            def remove (self, index):
+                if index < 0 or index >= self.length:
+                    return None
+                if index == 0:
+                    return self.pop_first()
+                if index == self.length - 1:
+                    return self.pop()
+                
+        
+                pre = self.get(index - 1)
+                temp = pre.next
+                pre.next = temp.next 
+                temp.next = None
+                self.length -= 1
+        
+                return temp 
+            
+            def reverse(self):
+        
+                temp = self.head
+                self.head = self.tail
+                self.tail = temp 
+        
+                after = temp.next 
+                before = None
+                
+                for _ in range(self.length):
+                    after = temp.next 
+                    temp.next = before
+                    before = temp 
+                    temp = after 
+
 
 
 
@@ -472,6 +613,7 @@ The nodes in a binary tree should be laid out in a particular way to be called a
 ##### BST: Big O 
 The total number of nodes in a BST can be calculated with **2^n -1** where n is the level of the tree, we can approximate it with 2^n to get the total number of nodes in a BST. 
 The steps we need to take to add/remove a node to/from the desired level in a BST is equal to the level of that node in a tree. This means that all of these have **O(log n)**. Remember this is achieved by **divide and conquer**. In terms of time complexity a perfect tree gives us the best perfect scenario which is measured as Omega. The worst case is that when we have a tree growing like a straight line which never forks (a linked list actually) in this case the time complexity is O(n) so technically a big o of a BST is O(n). So if we assume that we don’t have a worst case possible scenario, i.e., the BST not to be a linked list, we treat it as if the big o is O(log n) and not O(n) data structure. (so in conclusion the big O of a BST is O(n) but if we assume that we can exclude the worst case scenario, which is a linked list, we can treat it as O(log n) data structure). So for the following we treat it as if O(log n):
+
 + Lookup()
 + Insert()
 + Remove()
