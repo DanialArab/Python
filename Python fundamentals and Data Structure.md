@@ -31,14 +31,14 @@ Here is the summary of my notes from the following courses:
            1. [Intro](#24)
            2. [Big O](#25)
            3. [Implementation](#26)
-        3. [Doubly Linked List](#24)
-        4. [Stacks](#)
-        5. [Queues]()
-        6. [Trees ](#3)
-            1. [Binary search tree (BST)](#4)
+        2. [Doubly Linked List](#27)
+        3. [Stacks](#)
+        4. [Queues]()
+        5. [Trees ](#3)
+            . [Binary search tree (BST)](#4)
                 [Algorithms: Tree Traversal]
-       1. [Breadth First Search (BFS)]()
-       2. [Depth First Search]()
+       . [Breadth First Search (BFS)]()
+       . [Depth First Search]()
            1. [PreOrder]
            2. [PostOrder]
            3. [InOrder]
@@ -447,7 +447,10 @@ In summary, when working with immutable objects like integers, assigning one var
 
 
 
+<a name="27"></a>
+##### Doubly Linked List 
 
+HERE
 
 
 ### Data Structures: Stacks 
