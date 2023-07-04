@@ -166,9 +166,11 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |13|2319|Check if Matrix Is X-Matrix|Easy|
 |14|2639|Find the Width of Columns of a Grid|Easy|
 |15|1582|Special Positions in a Binary Matrix|Easy|
+|16|867|Transpose Matrix|Easy|
 
  
- 
+  
+
  
 
 
