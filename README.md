@@ -163,6 +163,7 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |10|766|Toeplitz Matrix|Easy|
 |11|999|Available Captures for Rook|Easy|
 |12|1260|Shift 2D Grid|Easy|
+|13|2319|Check if Matrix Is X-Matrix|Easy|
 
  
  
