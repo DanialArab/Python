@@ -168,8 +168,8 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |15|1582|Special Positions in a Binary Matrix|Easy|
 |16|867|Transpose Matrix|Easy|
 |17|892|Surface Area of 3D Shapes|Easy|
+|18|1886|Determine Whether Matrix Can Be Obtained By Rotation|Easy|
 
- 
   
 
  
