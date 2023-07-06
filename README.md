@@ -170,6 +170,7 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |17|892|Surface Area of 3D Shapes|Easy|
 |18|1886|Determine Whether Matrix Can Be Obtained By Rotation|Easy|
 |19|661|Image Smoother|Easy|
+|20|1275|Find Winner on a Tic Tac Toe Game|Easy|
 
   
 
