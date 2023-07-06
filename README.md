@@ -169,8 +169,10 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |16|867|Transpose Matrix|Easy|
 |17|892|Surface Area of 3D Shapes|Easy|
 |18|1886|Determine Whether Matrix Can Be Obtained By Rotation|Easy|
+|19|661|Image Smoother|Easy|
 
   
+
 
  
 
