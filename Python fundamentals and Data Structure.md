@@ -45,9 +45,11 @@ Here is the summary of my notes from the following courses:
         6. [Hash Table](#5)
         7. [Graphs]()
    4. [Algorithms](#)
-       1. [Recursion]
-       2. [Basic Sorts]
-       3. [Tree Traversal]
+       1. [Recursion](#)
+          1. [Intro](#)
+          2. [Call stack](#)
+       3. [Basic Sorts]
+       4. [Tree Traversal]
  
 
 
