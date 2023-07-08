@@ -48,6 +48,7 @@ Here is the summary of my notes from the following courses:
        1. [Recursion](#)
           1. [Intro](#)
           2. [Call stack](#)
+          3. [Factorial](#)
        3. [Basic Sorts]
        4. [Tree Traversal]
  
@@ -1235,45 +1236,52 @@ Points:
 + Also if you have a print statement instead of a return statement, if the condition in the if statement is met there would be a print but b/c there is no return statement to cause us to stop running the code we will end up having a stack overflow. So it is very important o have a return statement in your code. 
 + If the recursive function needs to call itself again, this is called a recursive case
 
-Call Stack
+<a name=""></a>
+###### Call Stack
 
-We start taking a look at the call stack with the function that is nut recursive to make sure we can understand it and then we look at how recursive functions go on the call stack. 
+We start taking a look at the call stack with the function that is not recursive to make sure we can understand it and then we look at how recursive functions go on the call stack. 
+
 What we learned in the data structure section on stack also applies here. So whatever function is at the top of the call stack is the only one that can run once that function is done running and you remove it then the next function can run and so on and so forth. 
-def funcThree():
-    print("Three")
 
-def funcTwo():
-    funcThree()
-    print("Two")
+        def funcThree():
+            print("Three")
+        
+        def funcTwo():
+            funcThree()
+            print("Two")
+        
+        def funcOne():
+            funcTwo()
+            print("One")
+        
+        funcOne()
+        
+        
+        output:
+        Three
+        Two
+        One
 
-def funcOne():
-    funcTwo()
-    print("One")
+<a name=""></a>
+###### Factorial 
 
-funcOne()
-
-
-output:
-Three
-Two
-One
-
-Factorial 
-In any course aimed to teach recursion the factorial is used. 
+In any course aimed to teach recursion, the factorial is used. 
 Some reminders:
-•	In a recursive function, I need to do the same thing over and over 
-•	The problem needs to be getting smaller
+
++ In a recursive function, I need to do the same thing over and over
++ The problem needs to be getting smaller
+ 
 Factorial function properly demonstrates these two and so that is why it is used most often to teach recursion. 
 
-def factorial(n):
-    if n == 1:
-        return 1
-    return n * factorial(n-1)
-
-print(factorial(4))
-
-output:
-24
+        def factorial(n):
+            if n == 1:
+                return 1
+            return n * factorial(n-1)
+        
+        print(factorial(4))
+        
+        output:
+        24
 
 
 
