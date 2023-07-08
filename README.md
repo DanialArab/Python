@@ -305,6 +305,8 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |2|342| Power of Four|Easy|
 |3|231| Power of Two|Easy|
 |4|326| Power of Three|Easy|
+|5|1265|Print Immutable Linked List in Reverse|Medium|
+
 
 
 
