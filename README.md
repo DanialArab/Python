@@ -304,6 +304,8 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |1|509| Fibonacci Number|Easy|
 |2|342| Power of Four|Easy|
 |3|231| Power of Two|Easy|
+|4|326| Power of Three|Easy|
+
 
 
 
