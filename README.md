@@ -302,5 +302,7 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |**Index**|**Question ID** | **Question title**|  **Difficulty level**|
 | -- | --|  -- | -- |
 |1|509| Fibonacci Number|Easy|
+|2|342| Power of Four|Easy|
+
 
 
