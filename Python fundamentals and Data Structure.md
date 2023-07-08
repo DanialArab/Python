@@ -1215,18 +1215,26 @@ output:
     [18, 21, 27, 47, 52, 76, 82]
 
 
-Recursion
-Intro 
-Recursion is a function that calls itself until it does not. The example is opening a gift box through running a gift_box function, which returns either a ball or smaller gift box and we run the function again … 
+<a name=""></a>
+##### Recursion
+
+<a name=""></a>
+###### Intro 
+
+**Recursion is a function that calls itself until it does not**. The example is opening a gift box through running a gift_box function, which returns either a ball or a smaller gift box and we run the function again … 
+
 Points:
-•	The process of opening each new box, in our example, is the same. In a general term, the process of whatever we do with recursion has to be the same 
-•	Each time we open a box, we make the problem smaller 
-•	You have to have a return in your recursive function to make sure that at some point the recursive function finally does not call itself. 
-•	When we open the box and it contains the ball this is what we call our base case this is when we are going to stop opening boxes or the function will stop calling itself, so the base case is when we stop calling the recursive function. This is very important to have the if statement for the base case b/c otherwise the function gets called again and again … which is called stack overflow so I do need to have a base case where this will at some point stop calling itself. 
-•	The statement of the base case has to be true at some point to prevent infinite looping through creating a stack overflow. So if you get a stack overflow in a recursive function this is one of the places to go troubleshoot 
-•	Also if you have a print statement instead of a return statement, if the condition in the if statement is met there would be a print but b/c there is no return statement to cause us to stop running the code we will end up having a stack overflow. So it is very important o have a return statement in your code. 
-•	If the recursive function needs to call itself again, this is called a recursive case
+
++ The process of opening each new box, in our example, is the same. In a general term, the process of whatever we do with recursion has to be the same 
++ Each time we open a box, we make the problem smaller 
++ You have to have a return in your recursive function to make sure that at some point the recursive function finally does not call itself. 
++ When we open the box and it contains the ball this is what we call our base case this is when we are going to stop opening boxes or the function will stop calling itself, so the base case is when we stop calling the recursive function. This is very important to have the if statement for the base case b/c otherwise the function gets called again and again … which is called stack overflow so I do need to have a base case where this will at some point stop calling itself. 
++ The statement of the base case has to be true at some point to prevent infinite looping through creating a stack overflow. So if you get a stack overflow in a recursive function this is one of the places to go troubleshoot 
++ Also if you have a print statement instead of a return statement, if the condition in the if statement is met there would be a print but b/c there is no return statement to cause us to stop running the code we will end up having a stack overflow. So it is very important o have a return statement in your code. 
++ If the recursive function needs to call itself again, this is called a recursive case
+
 Call Stack
+
 We start taking a look at the call stack with the function that is nut recursive to make sure we can understand it and then we look at how recursive functions go on the call stack. 
 What we learned in the data structure section on stack also applies here. So whatever function is at the top of the call stack is the only one that can run once that function is done running and you remove it then the next function can run and so on and so forth. 
 def funcThree():
