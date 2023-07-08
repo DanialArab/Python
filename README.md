@@ -14,6 +14,8 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 8. [Stack](#8)
 9. [Binary Tree](#9)
 10. [Greedy](#10)
+11. [Recursion](#11)
+
 
 <a name="1"></a>
 ## 1: String 
