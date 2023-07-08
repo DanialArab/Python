@@ -44,7 +44,7 @@ Here is the summary of my notes from the following courses:
            3. [InOrder]
         6. [Hash Table](#5)
         7. [Graphs]()
-   4. [Algorithms]()
+   4. [Algorithms](#)
        1. [Recursion]
        2. [Basic Sorts]
        3. [Tree Traversal]
