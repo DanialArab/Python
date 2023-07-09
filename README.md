@@ -108,6 +108,7 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |84|1945| Sum of Digits of String After Convert| Easy|
 |85|1763| Longest Nice Substring| Easy|
 |86|541| Reverse String II| Easy|
+|87|1119| Remove Vowels from a String| Easy|
 
 
 
