@@ -1219,6 +1219,325 @@ output:
 
 
 <a name=""></a>
+#### Hash Table
+
+<a name=""></a>
+##### Intro 
+
++ Dictionaries are the built-in hash tables. 
++ The way that hash tables work is like we have a hash function/method which performs a hash on the key so we take that key and then run it through the hash and in addition to getting the key-value pair back we also get an address, where we store that key-value pair. 
++ Hash function/method has two characteristics:
+    + It is one way
+    + It is deterministic meaning for a particular hash function every time that we put the specific key in it we expect to get the same address back.
+      
+So the hash function embodies these two characteristics. As said, we have dictionaries as the Python built-in hash tables but we are going to create our own: we create our own address space by creating a list then we create methods.
+
+<a name=""></a>
+##### HT: Collisions 
+
+A collision happens when you put a key-value pair at an address where there was already a key-value pair. These two key-value pairs are put in another list at that specific address. This technique of dealing with collisions where you just put them at the same address is called **separate chaining**. Another way to deal with collisions is that you go down until you find an empty address and then you put the key-value pair there. This technique is called **linear probing** which is a form of **open addressing**. This makes it so that you don’t have more than one key-value pair at any address. In this course, we do separate chaining. Another way of doing separate chaining is instead of having lists that are all stored at that address in our list of address space is we can have a linked list at those addresses. But in this course, we use a list of lists to have various key-value pairs at the same address. 
+
+<a name=""></a>
+##### HT: Constructor 
+
+The point is that you always want to have a prime number of addresses in your address space. The reason for this is that having a prime number addresses increases the amount of randomness for how the key-value pairs will be distributed through the hash table so it reduces your collisions. 
+
+The only thing that the constructor of a hash table does is to build the empty lists of address space. 
+
+        class HashTable:
+            def __init__(self, size=7):
+                self.data_map = [None] * size
+
+In addition, we want to create our hash method like:
+
+Point: the hash method takes a key to determine the address where we store the key-value pair. The hash method returns a value between zero and size – 1 (to make this happen I have: % len(self.data_map) in the following), which is our address to store the key-value pair in the hash table.  
+
+        class HshTable:
+            def __init__(self, size=7):
+                self.data_map = [None] * size
+        
+            def __hash(self, key):
+                my_hash = 0
+                for letter in key:
+                    my_hash = (my_hash + ord(letter) * 23) % len(self.data_map)
+                return my_hash
+        
+            def ptinter(self):
+                for i, val in enumerate(self.data_map):
+                    print(f"{i}: {val}")
+        
+        my_hash_table = HshTable()
+        my_hash_table.ptinter()
+        
+        output:
+        0: None
+        1: None
+        2: None
+        3: None
+        4: None
+        5: None
+        6: None
+
+<a name=""></a>
+##### HT: Set 
+
+        class HashTable:
+            def __init__(self, size=7):
+                self.data_map = [None]*size
+        
+            def __hash(self, key):
+                my_hash = 0
+                for letter in key:
+                    my_hash = (my_hash + ord(letter)*23) % len(self.data_map)
+                return my_hash
+        
+            def set_item(self, key, value):
+                index = self.__hash(key)
+                if self.data_map[index] == None:
+                    self.data_map[index] = []
+                self.data_map[index].append([key, value])
+        
+            def printer(self):
+                for i, val in enumerate(self.data_map):
+                    print(f"{i} : {val}")
+        
+        my_t = HashTable()
+        my_t.set_item("bolts", 1400)
+        my_t.set_item("washers", 50)
+        my_t.set_item("lumber", 70)
+        my_t.printer()
+        
+        output:
+        0 : None
+        1 : None
+        2 : None
+        3 : None
+        4 : [['bolts', 1400], ['washers', 50]]
+        5 : None
+        6 : [['lumber', 70]]
+
+
+<a name=""></a>
+##### HT: Get 
+
+What I wrote at my first trial before seeing the Scott’s solution was:
+class HashTable:
+    def __init__(self, size=7):
+        self.data_map = [None]*size
+
+    def __hash(self, key):
+        my_hash = 0
+        for letter in key:
+            my_hash = (my_hash + ord(letter) * 23) % len(self.data_map)
+        return my_hash
+
+    def set_item(self, key, value):
+        index = self.__hash(key)
+        if self.data_map[index] == None:
+            self.data_map[index] = []
+        self.data_map[index].append([key, value])
+
+    def get_item(self, key):
+        index = self.__hash(key)
+        if self.data_map[index]:
+            for k, val in self.data_map[index]:
+                if k == key:
+                    return val
+        else:
+            return None
+
+    def printer(self):
+        for i, val in enumerate(self.data_map):
+            print(f"{i} : {val}")
+
+my_t = HashTable()
+my_t.set_item("bolts", 1400)
+my_t.set_item("washers", 50)
+my_t.printer()
+
+print(my_t.get_item("bolts"))
+print(my_t.get_item("washers"))
+print(my_t.get_item("lumber"))
+
+output:
+0 : None
+1 : None
+2 : None
+3 : None
+4 : [['bolts', 1400], ['washers', 50]]
+5 : None
+6 : None
+1400
+50
+None
+
+Which I believe it was pretty impressive b/c I think it is even more professional than that of Scott’s, which is as follows: 
+class HashTable:
+    def __init__(self, size=7):
+        self.data_map = [None]*size
+
+    def __hash(self, key):
+        my_hash = 0
+        for letter in key:
+            my_hash = (my_hash + ord(letter) * 23) % len(self.data_map)
+        return my_hash
+
+    def set_item(self, key, value):
+        index = self.__hash(key)
+        if self.data_map[index] == None:
+            self.data_map[index] = []
+        self.data_map[index].append([key, value])
+
+    def get_item(self, key):
+        index = self.__hash(key)
+        if self.data_map[index] is not None:
+            for i in range(len(self.data_map[index])):
+                if self.data_map[index][i][0] == key:
+                    return self.data_map[index][i][1]
+        return None
+
+    def printer(self):
+        for i, val in enumerate(self.data_map):
+            print(f"{i} : {val}")
+
+my_t = HashTable()
+my_t.set_item("bolts", 1400)
+my_t.set_item("washers", 50)
+my_t.printer()
+
+print(my_t.get_item("bolts"))
+print(my_t.get_item("washers"))
+print(my_t.get_item("lumber"))
+
+output:
+0 : None
+1 : None
+2 : None
+3 : None
+4 : [['bolts', 1400], ['washers', 50]]
+5 : None
+6 : None
+1400
+50
+None
+
+HT: Keys
+Awesome great job in my first trial, which is exactly like what Scott wrote:
+class HashTable:
+    def __init__(self, size=7):
+        self.data_map = [None]*size
+
+    def __hash(self, key):
+        my_hash = 0
+        for letter in key:
+            my_hash = (my_hash + ord(letter) * 23) % len(self.data_map)
+        return my_hash
+
+    def set_item(self, key, value):
+        index = self.__hash(key)
+        if self.data_map[index] == None:
+            self.data_map[index] = []
+        self.data_map[index].append([key, value])
+
+    def get_item(self, key):
+        index = self.__hash(key)
+        if self.data_map[index] is not None:
+            for i in range(len(self.data_map[index])):
+                if self.data_map[index][i][0] == key:
+                    return self.data_map[index][i][1]
+            return None
+
+    def keys(self):
+        all_keys = []
+        for i in range(len(self.data_map)):
+            if self.data_map[i]:
+                for j in range(len(self.data_map[i])):
+                    keys.append(self.data_map[i][j][0])
+        return all_keys
+
+    def printer(self):
+        for i, val in enumerate(self.data_map):
+            print(f"{i} : {val}")
+
+my_t = HashTable()
+my_t.set_item("bolts", 1400)
+my_t.set_item("washers", 50)
+my_t.printer()
+
+print(my_t.get_item("bolts"))
+print(my_t.get_item("washers"))
+print(my_t.get_item("lumber"))
+print(my_t.keys())
+
+output:
+0 : None
+1 : None
+2 : None
+3 : None
+4 : [['bolts', 1400], ['washers', 50]]
+5 : None
+6 : None
+1400
+50
+None
+['bolts', 'washers']
+
+HT: Big O 
+o	We use linked list instead of a nested list here since it is visually easier to look at
+o	Since everything we do with a hash table involves using the hash method, the first thing we need to do is to figure out the big O of the hash method itself. So for a given key of a certain number of letters, it will always be the same number of operations to calculate the hash that means that the hash method itself is O(1) 
+o	Let’s look at setting an item, we run it through our hash method and let’s say that is going to be at the address of two we append that onto our linked list and appending that is also O(1) 
+o	Now let’s look at get items: again first we get the address through running our hash method which is O(1) and then it could be either only one operation to find the item or if the item would be in the end of a linked list the big O would be O(n) I mean the worst case would be that all the items being put in the same address and to find the desired item we need to iterate through all the items and so the big o would be O(n) but the assumption with the hash table is that the distribution is going to be more distributed even with the very primitive hash method that we created it gives us a very good distribution of items. The hash method that’s built into Python is going to be even more efficient at distributing all the items and also you are going to be dealing with a much larger address space, so collisions are going to be fairly rare so we treat hash tables which are implemented as dictionaries in Python as a O(1) and it is O(1) to place a key value pair or to look up something by key. Either way it is O(1). 
+HT: Interview Question
+A very common interview question:
+We want to determine whether 2 lists have an item in common.
+ Approach 1, which is the naïve approach: 
+def item_in_common(list1, list2):
+    for i in list1:
+        for j in list2:
+            if i == j:
+                return True
+    return False
+
+list1 = [1, 3, 5]
+list2 = [2, 4, 6]
+print(item_in_common(list1, list2))
+
+This approach is of O(n^2) b/c of having nested for loops. This approach is inefficient! 
+Approach 2, which is desired by the interviewer: 
+def item_in_common(list1, list2):
+    my_dict = {}
+    for i in list1:
+        my_dict[i] = True
+
+    for j in list2:
+        if j in my_dict:
+            return True
+    return False
+
+list1 = [1, 3, 5]
+list2 = [2, 4, 5]
+print(item_in_common(list1, list2))
+
+output:
+True
+
+The key here is that I avoided using a nested for loops but I have one loop after the other which makes the big o as O(2n) which is simplified as O(n). 
+
+
+
+HT: Big O quiz
+1-	Both Insert and Lookup by key in a Hash Table is O(1): True
+2-	Since a Hash Table is O(1) for Insert and Lookup it is always better than a Binary Search Tree: False b/c Binary Search Trees are sorted which makes them better at searching for all values that fall within a range.
+3-	Looking up a value in a Hash Table is O(1): False b/c Key lookup is O(1) but not value.
+
+
+
+
+
+
+
+
+<a name=""></a>
 ##### Recursion
 
 <a name=""></a>
