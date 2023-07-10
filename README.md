@@ -233,6 +233,11 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |24|2357| Make Array Zero by Subtracting Equal Amounts|Easy|
 |25|1002| Find Common Characters|Easy|
 |26|1394| Find Lucky Integer in an Array|Easy|
+|27|1165|  Single-Row Keyboard|Easy|
+
+
+
+
 
 <a name="6"></a>
 ## 6. Two Pointers
