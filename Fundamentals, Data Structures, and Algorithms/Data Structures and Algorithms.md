@@ -1,53 +1,52 @@
 
 # Python Data Structures and Algorithms
 
-1. [Data Structures & Algorithms](#1)
-    1. [Time and Space Complexities ](#2)
-       1. [Overview](#3)
-       2. [Big O: Intro ](#4)
-           1. [Time complexity](#5)
-           2. [Space complexity](#6)
-       3. [Terminologies](#7)
-           1. [Omega](#8)
-           2. [Theta](#9)
-           3. [Omicron](#10)
-       4. [Big O](#11)
-           1. [Big O: O(n) (or proportional)](#12)
-           2. [Big O: Drop Constants](#13)
-           3. [Big O: O (n ^2)](#14)
-           4. [Big O: Drop Non-Dominants](#15)
-           5. [Big O: O(1) (or constant)](#16)
-           6. [Big O: O(log n)](#17)
-           7. [Big O: Different Terms for Inputs](#18)
-           8. [Big O: Lists](#19)
-           9. [Big O: Wrap Up](#20)
-    2. [Pointers](#21)
-    3. [Data Structures](#22)
-        1. [Singly Linked List](#23)
-           1. [Intro](#24)
-           2. [Big O](#25)
-           3. [Implementation](#26)
-        2. [Doubly Linked List](#27)
-        3. [Stacks](#)
-        4. [Queues]()
-        5. [Trees ](#3)
-            . [Binary search tree (BST)](#4)
-                [Algorithms: Tree Traversal]
-       . [Breadth First Search (BFS)]()
-       . [Depth First Search]()
-           1. [PreOrder]
-           2. [PostOrder]
-           3. [InOrder]
-        6. [Hash Table](#5)
-        7. [Graphs]()
-   4. [Algorithms](#)
-       1. [Recursion](#)
-          1. [Intro](#)
-          2. [Call stack](#)
-          3. [Factorial](#)
-       3. [Basic Sorts]
-       4. [Tree Traversal]
- 
+1. [Time and Space Complexities ](#2)
+   1. [Overview](#3)
+   2. [Big O: Intro ](#4)
+       1. [Time complexity](#5)
+       2. [Space complexity](#6)
+   3. [Terminologies](#7)
+       1. [Omega](#8)
+       2. [Theta](#9)
+       3. [Omicron](#10)
+   4. [Big O](#11)
+       1. [Big O: O(n) (or proportional)](#12)
+       2. [Big O: Drop Constants](#13)
+       3. [Big O: O (n ^2)](#14)
+       4. [Big O: Drop Non-Dominants](#15)
+       5. [Big O: O(1) (or constant)](#16)
+       6. [Big O: O(log n)](#17)
+       7. [Big O: Different Terms for Inputs](#18)
+       8. [Big O: Lists](#19)
+       9. [Big O: Wrap Up](#20)
+2. [Pointers](#21)
+3. [Data Structures](#22)
+    1. [Singly Linked List](#23)
+       1. [Intro](#24)
+       2. [Big O](#25)
+       3. [Implementation](#26)
+    2. [Doubly Linked List](#27)
+    3. [Stacks](#)
+    4. [Queues]()
+    5. [Trees ](#3)
+        . [Binary search tree (BST)](#4)
+            [Algorithms: Tree Traversal]
+   . [Breadth First Search (BFS)]()
+   . [Depth First Search]()
+       1. [PreOrder]
+       2. [PostOrder]
+       3. [InOrder]
+    6. [Hash Table](#5)
+    7. [Graphs]()
+4. [Algorithms](#)
+   1. [Recursion](#)
+      1. [Intro](#)
+      2. [Call stack](#)
+      3. [Factorial](#)
+   3. [Basic Sorts]
+   4. [Tree Traversal]
+ . [Reference](#)
 
 <a name="2"></a>
 ### Time and Space Complexities 
@@ -1597,6 +1596,7 @@ Factorial function properly demonstrates these two and so that is why it is used
 
 
 
-Reference:
+<a name="2"></a>
+### Reference:
 
 + <a href="https://www.udemy.com/course/data-structures-algorithms-python/">Python Data Structures & Algorithms + LEETCODE Exercises</a>
