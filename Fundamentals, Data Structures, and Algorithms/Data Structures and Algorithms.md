@@ -1,32 +1,32 @@
 
 # Python Data Structures and Algorithms
 
-1. [Time and Space Complexities ](#2)
-   1. [Overview](#3)
-   2. [Big O: Intro ](#4)
-       1. [Time complexity](#5)
-       2. [Space complexity](#6)
-   3. [Terminologies](#7)
-       1. [Omega](#8)
-       2. [Theta](#9)
-       3. [Omicron](#10)
-   4. [Big O](#11)
-       1. [Big O: O(n) (or proportional)](#12)
-       2. [Big O: Drop Constants](#13)
-       3. [Big O: O (n ^2)](#14)
-       4. [Big O: Drop Non-Dominants](#15)
-       5. [Big O: O(1) (or constant)](#16)
-       6. [Big O: O(log n)](#17)
-       7. [Big O: Different Terms for Inputs](#18)
-       8. [Big O: Lists](#19)
-       9. [Big O: Wrap Up](#20)
-2. [Pointers](#21)
-3. [Data Structures](#22)
-    1. [Singly Linked List](#23)
-       1. [Intro](#24)
-       2. [Big O](#25)
-       3. [Implementation](#26)
-    2. [Doubly Linked List](#27)
+1. [Time and Space Complexities ](#1)
+   1. [Overview](#2)
+   2. [Big O: Intro ](#3)
+       1. [Time complexity](#4)
+       2. [Space complexity](#5)
+   3. [Terminologies](#6)
+       1. [Omega](#7)
+       2. [Theta](#8)
+       3. [Omicron](#9)
+   4. [Big O](#10)
+       1. [Big O: O(n) (or proportional)](#11)
+       2. [Big O: Drop Constants](#12)
+       3. [Big O: O (n ^2)](#13)
+       4. [Big O: Drop Non-Dominants](#14)
+       5. [Big O: O(1) (or constant)](#15)
+       6. [Big O: O(log n)](#16)
+       7. [Big O: Different Terms for Inputs](#17)
+       8. [Big O: Lists](#18)
+       9. [Big O: Wrap Up](#19)
+2. [Pointers](#20)
+3. [Data Structures](#21)
+    1. [Singly Linked List](#22)
+       1. [Intro](#23)
+       2. [Big O](#24)
+       3. [Implementation](#25)
+    2. [Doubly Linked List](#26)
     3. [Stacks](#)
     4. [Queues]()
     5. [Trees ](#3)
@@ -48,59 +48,59 @@
    4. [Tree Traversal]
  . [Reference](#)
 
-<a name="2"></a>
+<a name="1"></a>
 ### Time and Space Complexities 
 
-<a name="3"></a>
+<a name="2"></a>
 #### Overview
 
 You may get asked in the interview that what would be the best data structure or algorithm for this situation? What data structure or algorithm you would use for a particular question like when the list is the best solution or when a linked list is the best one? In these cases what you are really asked about is on understanding Big O? 
 
-<a name="4"></a>
+<a name="3"></a>
 #### Big O: Intro 
 
 It is a huge topic when it comes to data structures and algos. It is a way of comparing, mathematically like how efficient they are compared to each other, two sets of code. 
 
-<a name="5"></a>
+<a name="4"></a>
 ##### Time complexity
 
 It is not measured in time b/c otherwise it would be machine dependent. So it is measured in the number of operations needed to complete something. 
 
-<a name="6"></a>
+<a name="5"></a>
 ##### Space complexity 
 
 It is about how much running a code takes memory, an indicator of memory usage. It should be traded off with time complexity meaning we have to consider both time and space complexities when comparing two sets of codes. For most of the parts in this course we are concerned about time complexities. 
 
-<a name="7"></a>
+<a name="6"></a>
 #### Terminologies 
 
 When dealing with time and space complexities we deal with Omega, Theta, and Omicron. 
 
-<a name="8"></a>
+<a name="7"></a>
 ##### Omega
 
 The best-case scenario 
 
-<a name="9"></a>
+<a name="8"></a>
 ##### Theta
 
 The average case scenario. 
 
-<a name="10"></a>
+<a name="9"></a>
 ##### Omicron
 
 The worst-case scenario. 
 
 When we are talking about big O we always talk about the worst case. 
 
-<a name="11"></a>
+<a name="10"></a>
 #### Big O 
 
 ![](https://github.com/DanialArab/images/blob/main/Python/Big%20O.png)
 
 Reference: <a href="https://www.bigocheatsheet.com/">Big O Cheat Sheet</a>
 
-<a name="12"></a>
+<a name="11"></a>
 ##### Big O: O(n) (or proportional) 
 
 It is also called proportional b/c there is a **linear relationship between the number of operations with the input size n**. There is n number of operations/runs when we pass in number n.  Like:
@@ -122,7 +122,7 @@ It is also called proportional b/c there is a **linear relationship between the 
         8
         9
 
-<a name="13"></a>
+<a name="12"></a>
 ##### Big O: Drop Constants 
 
 There are a few ways through which we can simplify Big O notation. One of them is drop constants. Like:
@@ -160,7 +160,7 @@ There are a few ways through which we can simplify Big O notation. One of them i
 
 The above code ran n + n or 2n times. However, the Big O is simplified from O(2n) to O(n). it does not matter if there was O(100n) we simplify it to O(n). 
 
-<a name="14"></a>
+<a name="13"></a>
 ##### Big O: O (n ^2)
 
 The below code runs n * n times or n^2 leading to have O(n^2):
@@ -184,7 +184,7 @@ also the below code runs in n * n * n times, and you might think that our big O 
 
 Again, it does not matter if it is O(n^10) or etc. We simplify it as O(n^2), which is less efficient in terms of time complexity compared to O(n). 
 
-<a name="15"></a>
+<a name="14"></a>
 ##### Big O: Drop Non-Dominants
 
 We simplify the O(n^2 + n) as O(n^2) in the following code:
@@ -199,7 +199,7 @@ We simplify the O(n^2 + n) as O(n^2) in the following code:
         
         print_function(10)
 
-<a name="16"></a>
+<a name="15"></a>
 ##### Big O: O(1) (or constant)
 
 O(1) is also called constant time meaning that as n increases the number of operations remains constant. It is the most efficient Big O. so any time you can make it Big O(1) that would be the optimal solution. 
@@ -218,14 +218,14 @@ or
 
 in the above codes, the number of operations is independent of n like if n is 1 or 1000000 the number of operations is the same and equal to 1. In the first code since we have one operation the big O is O(1), and we also simplify it in the second code as O(1).
 
-<a name="17"></a>
+<a name="16"></a>
 ##### Big O: O(log n) 
 
 To find an item in a sorted list we can first cut the list to a half and continue with the half which includes the desired number we continue doing this until finding the number. Let’s say if I have 8 items in my list I need to repeat this three times like 2 to the power of 3 is 8 or log of 2 of 8 (log of 8 with the base of 2) is 3. In this case the number of operations or big O is O(log n). 
 
 This is very efficient/flat as shown in the above graph. These are the ones we see mostly in the course (I mean O(n^2), O(n), O(log n), and O (1)) but in some sorting algorithms we have O (n log n ) we see a couple of those like merge sort and quick sort in this course. O (n log n) is the most efficient that you can make in a sorting algorithm if you want to sort various types of data like string (if you only want to sort some numbers you can get more efficient than that though). 
 
-<a name="18"></a>
+<a name="17"></a>
 ##### Big O: Different Terms for Inputs
 
 Big O (a + b) and Big O (a * b) are the Big Os for the following, respectively:
@@ -244,14 +244,14 @@ and also:
                 for j in range(b):
                     print(i, j) 
 
-<a name="19"></a>
+<a name="18"></a>
 ##### Big O: Lists
 
 It is very common to compare the Big O of other data structures against that of list, which is a built-in data structure. Appending and popping, of course, the last item in a list I mean, of an item to/from a list is of O(1) (no reindexing required). However, inserting an item into a list at a particular index or popping an item at a particular index other than the last one requires re-indexing and so we have O(n). One may argue that the big O would be O(1/2 n) if the item is in the middle of the list but there are two issues: one is that the constant ½ can be dropped by the simplification of a drop of constants and the second is that Big O is all about the worst-case scenario, not the average case scenario. also to search an item by value in a list is of O(n), while the searching by an index is of O(1). 
 
 **Takeaway** Adding or removing from the end of a list is of O(1) but adding to or removing from the other end is of O (n). in the middle the big O is also O(n). 
 
-<a name="20"></a>
+<a name="19"></a>
 ##### Big O: Wrap Up
 
 Some terminologies:
@@ -266,7 +266,7 @@ O(1) = constant time
 
 Great site: <a href="https://www.bigocheatsheet.com/">Big O Cheat Sheet</a>
 
-<a name="21"></a>
+<a name="20"></a>
 #### Pointers
 
 Every data structure we create would be through defining classes. 
@@ -275,20 +275,20 @@ Integers are **immutable** objects in Python. When num1 = 11 and num2 = num1, th
 
 In summary, when working with immutable objects like integers, assigning one variable to another creates a new copy with the same value. However, with mutable objects like dictionaries and lists, assigning one variable to another creates a new reference to the same object.
 
-<a name="22"></a>
+<a name="21"></a>
 #### Data Structures
 
-<a name="23"></a>
+<a name="22"></a>
 ##### Singly Linked List
 
-<a name="24"></a>
+<a name="23"></a>
 ###### Intro
 
 + A linked list does not have an index unlike a list
 + A list is a contiguous place in memory meaning the list’s items are right next to each other in memory (this is why we can access the list’s items through indexing) but in a linked list all the nodes are spread all over the place.
 + In a linked list we have a variable called head which points to the first node, we also have a tail pointing to the last node, each node points to the next node all the way towards the end where the last node points to None. 
 
-<a name="25"></a>
+<a name="24"></a>
 ###### Big O
 
 + Adding a node to the end of a linked list, appending I mean, is of O(1) but removing a node from the end of a linked list is O(n) b/c I need to start from the head node to change the pointer at the tail.
@@ -298,7 +298,7 @@ In summary, when working with immutable objects like integers, assigning one var
 
 ![](https://github.com/DanialArab/images/blob/main/Python/Linked%20List%20vs.%20List%20Big%20O.png)
 
-<a name="26"></a>
+<a name="25"></a>
 ###### Implementation 
 
         class Node:
