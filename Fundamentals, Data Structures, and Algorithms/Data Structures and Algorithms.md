@@ -1332,7 +1332,7 @@ Point: the hash method takes a key to determine the address where we store the k
       ['bolts', 'washers']
 
 <a name=""></a>
-##### HT: Big O 
+##### HT: Big O  HERE
 
 + We use linked list instead of a nested list here since it is visually easier to look at
 + Since everything we do with a hash table involves using the hash method, the first thing we need to do is to figure out the big O of the hash method itself. So for a given key of a certain number of letters, it will always be the same number of operations to calculate the hash that means that the hash method itself is O(1)
