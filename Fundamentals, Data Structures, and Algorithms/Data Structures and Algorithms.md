@@ -1241,7 +1241,7 @@ The only thing that the constructor of a hash table does is to build the empty l
 
 In addition, we want to create our hash method like:
 
-Point: the hash method takes a key to determine the address where we store the key-value pair. The hash method returns a value between zero and size – 1 (to make this happen I have: % len(self.data_map) in the following), which is our address to store the key-value pair in the hash table.  
+Point: the hash method takes a key to determine the address where we store the key-value pair. The hash method returns a value between zero and size – 1 (to make this happen I have % len(self.data_map) below), which is our address to store the key-value pair in the hash table.  
 
         class HshTable:
             def __init__(self, size=7):
@@ -1311,108 +1311,58 @@ Point: the hash method takes a key to determine the address where we store the k
 <a name=""></a>
 ##### HT: Get 
 
-What I wrote at my first trial before seeing the Scott’s solution was:
-class HashTable:
-    def __init__(self, size=7):
-        self.data_map = [None]*size
+      class HashTable:
+          def __init__(self, size=7):
+              self.data_map = [None]*size
+      
+          def __hash(self, key):
+              my_hash = 0
+              for letter in key:
+                  my_hash = (my_hash + ord(letter) * 23) % len(self.data_map)
+              return my_hash
+      
+          def set_item(self, key, value):
+              index = self.__hash(key)
+              if self.data_map[index] == None:
+                  self.data_map[index] = []
+              self.data_map[index].append([key, value])
+      
+          def get_item(self, key):
+              index = self.__hash(key)
+              if self.data_map[index] is not None:
+                  for i in range(len(self.data_map[index])):
+                      if self.data_map[index][i][0] == key:
+                          return self.data_map[index][i][1]
+              return None
+      
+          def printer(self):
+              for i, val in enumerate(self.data_map):
+                  print(f"{i} : {val}")
+      
+      my_t = HashTable()
+      my_t.set_item("bolts", 1400)
+      my_t.set_item("washers", 50)
+      my_t.printer()
+      
+      print(my_t.get_item("bolts"))
+      print(my_t.get_item("washers"))
+      print(my_t.get_item("lumber"))
+      
+      output:
+      0 : None
+      1 : None
+      2 : None
+      3 : None
+      4 : [['bolts', 1400], ['washers', 50]]
+      5 : None
+      6 : None
+      1400
+      50
+      None
 
-    def __hash(self, key):
-        my_hash = 0
-        for letter in key:
-            my_hash = (my_hash + ord(letter) * 23) % len(self.data_map)
-        return my_hash
+<a name=""></a>
+##### HT: Keys
 
-    def set_item(self, key, value):
-        index = self.__hash(key)
-        if self.data_map[index] == None:
-            self.data_map[index] = []
-        self.data_map[index].append([key, value])
-
-    def get_item(self, key):
-        index = self.__hash(key)
-        if self.data_map[index]:
-            for k, val in self.data_map[index]:
-                if k == key:
-                    return val
-        else:
-            return None
-
-    def printer(self):
-        for i, val in enumerate(self.data_map):
-            print(f"{i} : {val}")
-
-my_t = HashTable()
-my_t.set_item("bolts", 1400)
-my_t.set_item("washers", 50)
-my_t.printer()
-
-print(my_t.get_item("bolts"))
-print(my_t.get_item("washers"))
-print(my_t.get_item("lumber"))
-
-output:
-0 : None
-1 : None
-2 : None
-3 : None
-4 : [['bolts', 1400], ['washers', 50]]
-5 : None
-6 : None
-1400
-50
-None
-
-Which I believe it was pretty impressive b/c I think it is even more professional than that of Scott’s, which is as follows: 
-class HashTable:
-    def __init__(self, size=7):
-        self.data_map = [None]*size
-
-    def __hash(self, key):
-        my_hash = 0
-        for letter in key:
-            my_hash = (my_hash + ord(letter) * 23) % len(self.data_map)
-        return my_hash
-
-    def set_item(self, key, value):
-        index = self.__hash(key)
-        if self.data_map[index] == None:
-            self.data_map[index] = []
-        self.data_map[index].append([key, value])
-
-    def get_item(self, key):
-        index = self.__hash(key)
-        if self.data_map[index] is not None:
-            for i in range(len(self.data_map[index])):
-                if self.data_map[index][i][0] == key:
-                    return self.data_map[index][i][1]
-        return None
-
-    def printer(self):
-        for i, val in enumerate(self.data_map):
-            print(f"{i} : {val}")
-
-my_t = HashTable()
-my_t.set_item("bolts", 1400)
-my_t.set_item("washers", 50)
-my_t.printer()
-
-print(my_t.get_item("bolts"))
-print(my_t.get_item("washers"))
-print(my_t.get_item("lumber"))
-
-output:
-0 : None
-1 : None
-2 : None
-3 : None
-4 : [['bolts', 1400], ['washers', 50]]
-5 : None
-6 : None
-1400
-50
-None
-
-HT: Keys
 Awesome great job in my first trial, which is exactly like what Scott wrote:
 class HashTable:
     def __init__(self, size=7):
