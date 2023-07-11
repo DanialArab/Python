@@ -1333,11 +1333,14 @@ Point: the hash method takes a key to determine the address where we store the k
 
 <a name=""></a>
 ##### HT: Big O 
-o	We use linked list instead of a nested list here since it is visually easier to look at
-o	Since everything we do with a hash table involves using the hash method, the first thing we need to do is to figure out the big O of the hash method itself. So for a given key of a certain number of letters, it will always be the same number of operations to calculate the hash that means that the hash method itself is O(1) 
-o	Let’s look at setting an item, we run it through our hash method and let’s say that is going to be at the address of two we append that onto our linked list and appending that is also O(1) 
-o	Now let’s look at get items: again first we get the address through running our hash method which is O(1) and then it could be either only one operation to find the item or if the item would be in the end of a linked list the big O would be O(n) I mean the worst case would be that all the items being put in the same address and to find the desired item we need to iterate through all the items and so the big o would be O(n) but the assumption with the hash table is that the distribution is going to be more distributed even with the very primitive hash method that we created it gives us a very good distribution of items. The hash method that’s built into Python is going to be even more efficient at distributing all the items and also you are going to be dealing with a much larger address space, so collisions are going to be fairly rare so we treat hash tables which are implemented as dictionaries in Python as a O(1) and it is O(1) to place a key value pair or to look up something by key. Either way it is O(1). 
-HT: Interview Question
+
++ We use linked list instead of a nested list here since it is visually easier to look at
++ Since everything we do with a hash table involves using the hash method, the first thing we need to do is to figure out the big O of the hash method itself. So for a given key of a certain number of letters, it will always be the same number of operations to calculate the hash that means that the hash method itself is O(1)
++ Let’s look at setting an item, we run it through our hash method and let’s say that is going to be at the address of two we append that onto our linked list and appending that is also O(1)
++ Now let’s look at get items: again first we get the address through running our hash method which is O(1) and then it could be either only one operation to find the item or if the item would be in the end of a linked list the big O would be O(n) I mean the worst case would be that all the items being put in the same address and to find the desired item we need to iterate through all the items and so the big o would be O(n) but the assumption with the hash table is that the distribution is going to be more distributed even with the very primitive hash method that we created it gives us a very good distribution of items. The hash method that’s built into Python is going to be even more efficient at distributing all the items and also you are going to be dealing with a much larger address space, so collisions are going to be fairly rare so we treat hash tables which are implemented as dictionaries in Python as a O(1) and it is O(1) to place a key value pair or to look up something by key. Either way it is O(1). 
+
+<a name=""></a>
+##### HT: Interview Question
 A very common interview question:
 We want to determine whether 2 lists have an item in common.
  Approach 1, which is the naïve approach: 
