@@ -1228,14 +1228,72 @@ The key here is that I avoided using a nested for loops but I have one loop afte
 HT: Big O quiz
 1-	Both Insert and Lookup by key in a Hash Table is O(1): True
 2-	Since a Hash Table is O(1) for Insert and Lookup it is always better than a Binary Search Tree: False b/c Binary Search Trees are sorted which makes them better at searching for all values that fall within a range.
-3-	Looking up a value in a Hash Table is O(1): False b/c Key lookup is O(1) but not value.
-
-
+3-	Looking up a value in a Hash Table is O(1): False b/c Key lookup is O(1) but not value. 
 
 <a name="48"></a>
 ##### Graphs 
 
-HERE
+<a name="49"></a>
+###### Intro
+
+<a name="50"></a>
+###### Adjacency Matrix
+
+<a name="51"></a>
+###### Adjacency List
+
+
+<a name="52"></a>
+###### Big O
+
+<a name="53"></a>
+###### Implementation
+
+
+4. [Algorithms](#54)
+   1. [Recursion](#55)
+      1. [Intro](#56)
+      2. [Call stack](#57)
+      3. [Factorial](#58)
+   2. [Basic Sorts](#59)
+      1. [Bubble sort](#60)
+         1. [Intro](#61)
+         2. [Implementation](#62)
+      2. [Selection sort](#63)
+         1. [Intro](#64)
+         2. [Implementation](#65)
+      3.  [Insertion sort](#66)
+         1. [Intro](#67)
+         2. [Implementation](#68)
+         3. [Big O](#69)
+   3. [Merge Sort](#70)
+      1. [Overview](#71)
+      2. [Intro](#72)
+      3. [Implementation](#73)
+      4. [Bog O](#74)
+   4. [Quick Sort](#75)
+      1. [Quick Sort: Intro](#76)
+      2. [Pivot: Intro](#77)
+      3. [Pivot: Implementation](#78)
+      4. [Quick Sort: Implementation](#79)
+      5. [Big O](#80)
+   5. [Tree Traversal](#81)
+      1. [Intro](#82)
+      2. [Breadth First Search (BFS)](#83)
+         1. [Intro](#84)
+         2. [Implementation](#85)
+      4. [Depth First Search](#86)
+         1. [PreOrder](#87)
+            1. [Intro](#88)
+            2. [Implementation](#89)
+         3. [PostOrder](#90)
+            1. [Intro](#91)
+            2. [Implementation](#92)
+         5. [InOrder](#93)
+            1. [Intro](#94)
+            2. [Implementation](#95)
+5. [Reference](#96)
+
 
 ### Algorithms: Tree Traversal 
 
