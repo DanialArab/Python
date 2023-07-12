@@ -42,9 +42,8 @@
              3. [Insert](#39)
              4. [Contains](#40)
              5. [Minimum value](#41)
-      
-
-    9. [Hash Table](#5)
+    6. [Hash Table](#5)
+          1. []
     10. [Graphs]()
 4. [Algorithms](#)
    1. [Recursion](#)
