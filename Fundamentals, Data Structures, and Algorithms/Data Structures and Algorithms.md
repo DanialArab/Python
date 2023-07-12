@@ -31,17 +31,19 @@
     3. [Stacks](#28)
        1. [Intro](#29)
        2. [Implementation](#30)
-    6. [Queues](#31)
+    4. [Queues](#31)
        1. [Intro](#32)
        2. [Implementation](#33)
-    7. [Trees ](#34)
-        . [Binary search tree (BST)](#4)
-            [Algorithms: Tree Traversal]
-   . [Breadth First Search (BFS)]()
-   . [Depth First Search]()
-       1. [PreOrder]
-       2. [PostOrder]
-       3. [InOrder]
+    5. [Trees ](#34)
+       1. [Intro and terminology](#35)
+       2. [Binary search tree (BST)](#36)
+             1. [BST: Big O](#37)
+             2. [Constructor](#38)
+             3. [Insert](#39)
+             4. [Contains](#40)
+             5. [Minimum value](#41)
+      
+
     9. [Hash Table](#5)
     10. [Graphs]()
 4. [Algorithms](#)
@@ -53,6 +55,16 @@
    4. [Tree Traversal]
  . [Reference](#)
 
+
+       
+            [Algorithms: Tree Traversal]
+   . [Breadth First Search (BFS)]()
+   . [Depth First Search]()
+       1. [PreOrder]
+       2. [PostOrder]
+       3. [InOrder]
+
+   
 <a name="1"></a>
 ### Time and Space Complexities 
 
@@ -826,7 +838,7 @@ output:
     None
 
 <a name="39"></a>
-####### BST: Insert -- Intro 
+####### BST: Insert 
 
 **Just remember we don’t have duplicates in BST.** 
 
@@ -936,7 +948,6 @@ the output is the same as above.
 
     True
     False
-
 
 <a name="41"></a>
 ####### BST: Minimum Value 
