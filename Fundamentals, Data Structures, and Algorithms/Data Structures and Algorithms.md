@@ -680,6 +680,79 @@ In summary, when working with immutable objects like integers, assigning one var
        7
 
 
+<a name="31"></a>
+#####  Queues] 
+
+<a name="32"></a>
+###### Intro  
+
++ FIFO
++ We have the terms enqueue  and dequeue to add and remove from the queue respectively
++ We can use list and linked list to implement a queue. Queue is FIFO so for something to be a queue we add on one end and remove from the other end so if we want to use a list to implement a queue we have O(1) on one end and O(n) on the other end (b/c we have O(1) for adding or removing from the end of a list and O(n) for adding or removing from the beginning of a list).
++ If we use a linked list to implement a queue: we have O(1) for adding to the end of a linked list and O(1) for removing from the beginning of a linked list so I do NOT want to dequeue from the end of a linked list. So I want to enqueue to the end of a linked list and dequeue from the beginning of a linked list to make sure that we have O(1) for both adding and removing an item to/from a queue.
++ In queue we keep track of both head and tail, which are called first and last here. 
+
+<a name="33"></a>
+###### Implementation  
+
+      class Node:
+          def __init__(self, value):
+              self.value = value
+              self.next = None
+      
+      class Queue:
+          def __init__(self, value):
+              new_node = Node(value)
+              self.first = new_node
+              self.last = new_node
+              self.length = 1
+      
+          def enqueue(self, value):
+              new_node = Node(value)
+              if self.length == 0:
+                  self.first = new_node
+                  self.last = new_node
+              else:
+                  self.last.next = new_node
+                  self.last = new_node
+              self.length += 1
+      
+          def dequeue(self):
+              if self.length == 0:
+                  return None
+              temp = self.first
+              if self.length == 1:
+                  self.first = None
+                  self.last = None
+              else:
+                  self.first = self.first.next
+                  temp.next = None
+              self.length -= 1
+              return temp.value
+      
+          def printer(self):
+              temp = self.first
+              while temp:
+                  print(temp.value)
+                  temp = temp.next
+      
+      my_q = Queue(1)
+      my_q.enqueue(2)
+      my_q.enqueue(3)
+      print(my_q.dequeue())
+      print(my_q.dequeue())
+      print(my_q.dequeue())
+      print(my_q.dequeue())
+      
+      
+      output:
+      1
+      2
+      3
+      None
+
+
+
 ### Data Structures: Trees 
 
 #### Intro and terminology 
