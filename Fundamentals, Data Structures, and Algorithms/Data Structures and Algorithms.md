@@ -32,9 +32,9 @@
        1. [Intro](#29)
        2. [Implementation](#30)
     6. [Queues](#31)
-       1. 
-   
-    8. [Trees ](#3)
+       1. [Intro](#32)
+       2. [Implementation](#33)
+    7. [Trees ](#34)
         . [Binary search tree (BST)](#4)
             [Algorithms: Tree Traversal]
    . [Breadth First Search (BFS)]()
