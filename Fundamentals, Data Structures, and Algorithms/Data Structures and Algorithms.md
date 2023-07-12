@@ -28,9 +28,13 @@
        3. [Implementation](#25)
     2. [Doubly Linked List](#26)
        1. [Implementation](#27)
-    4. [Stacks](#)
-    5. [Queues]()
-    6. [Trees ](#3)
+    3. [Stacks](#28)
+       1. [Intro](#29)
+       2. [Implementation](#30)
+    6. [Queues](#31)
+       1. 
+   
+    8. [Trees ](#3)
         . [Binary search tree (BST)](#4)
             [Algorithms: Tree Traversal]
    . [Breadth First Search (BFS)]()
@@ -38,8 +42,8 @@
        1. [PreOrder]
        2. [PostOrder]
        3. [InOrder]
-    7. [Hash Table](#5)
-    8. [Graphs]()
+    9. [Hash Table](#5)
+    10. [Graphs]()
 4. [Algorithms](#)
    1. [Recursion](#)
       1. [Intro](#)
