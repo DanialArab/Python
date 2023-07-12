@@ -681,7 +681,7 @@ In summary, when working with immutable objects like integers, assigning one var
 
 
 <a name="31"></a>
-#####  Queues] 
+##### Queues
 
 <a name="32"></a>
 ###### Intro  
@@ -752,10 +752,11 @@ In summary, when working with immutable objects like integers, assigning one var
       None
 
 
+<a name="34"></a>
+##### Trees
 
-### Data Structures: Trees 
-
-#### Intro and terminology 
+<a name="35"></a>
+###### Intro and terminology 
 
 + We have already seen a tree in this course: linked list. A linked list is a tree that does not fork. 
 + In a binary tree we have left and right values so if each node can only point to two other nodes it is a binary tree
@@ -769,14 +770,16 @@ In summary, when working with immutable objects like integers, assigning one var
 + Child nodes can also be parent nodes 
 + A node that does not have any children is called leaf 
 
-#### Binary search tree (BST)
+<a name="36"></a>
+###### Binary search tree (BST)
 
 The nodes in a binary tree should be laid out in a particular way to be called a binary search tree: if the value of the nodes to be added to the tree is greater than the parent node it will be positioned on the right and if it is less than that it will be placed in the left. To add a new node we always start the comparison with the node at the very top. 
 
 **If you take any node in a binary search tree all the nodes below it to the right are greater than that node and everything on the left is going to be less than.**
 
 
-##### BST: Big O 
+<a name="37"></a>
+####### BST: Big O 
 The total number of nodes in a BST can be calculated with **2^n -1** where n is the level of the tree, we can approximate it with 2^n to get the total number of nodes in a BST. 
 The steps we need to take to add/remove a node to/from the desired level in a BST is equal to the level of that node in a tree. This means that all of these have **O(log n)**. Remember this is achieved by **divide and conquer**. In terms of time complexity a perfect tree gives us the best perfect scenario which is measured as Omega. The worst case is that when we have a tree growing like a straight line which never forks (a linked list actually) in this case the time complexity is O(n) so technically a big o of a BST is O(n). So if we assume that we don’t have a worst case possible scenario, i.e., the BST not to be a linked list, we treat it as if the big o is O(log n) and not O(n) data structure. (so in conclusion the big O of a BST is O(n) but if we assume that we can exclude the worst case scenario, which is a linked list, we can treat it as O(log n) data structure). So for the following we treat it as if O(log n):
 
@@ -788,7 +791,8 @@ Interview question: we need to add data to a data structure very quickly and the
 Re:
 Linked list is the best data structure b/c appending to a linked list is O(1), you see you can justify through big O concepts. 
 
-##### BST: Constructor 
+<a name="38"></a>
+####### BST: Constructor 
 We don’t keep track of length in a BST. 
 
     class Node:
@@ -821,7 +825,8 @@ output:
 
     None
 
-##### BST: Insert -- Intro 
+<a name="39"></a>
+####### BST: Insert -- Intro 
 
 **Just remember we don’t have duplicates in BST.** 
 
@@ -869,7 +874,8 @@ output:
     1
     3
 
-##### BST: Contains
+<a name="40"></a>
+####### BST: Contains
 
 With contains method we just want to see if a tree contains a particular value. 
 
@@ -932,7 +938,8 @@ the output is the same as above.
     False
 
 
-##### BST: Minimum Value 
+<a name="41"></a>
+####### BST: Minimum Value 
 
 This method finds and returns the node with the minimum value in a tree or a subtree. So we write this method like it can be also applied in any subtree. 
 
