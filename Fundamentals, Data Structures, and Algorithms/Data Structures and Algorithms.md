@@ -1249,8 +1249,25 @@ HT: Big O quiz
 <a name="53"></a>
 ###### Implementation
 
+<a name="54"></a>
+### Algorithms
 
-4. [Algorithms](#54)
+<a name="55"></a>
+#### Recursion
+
+<a name="56"></a>
+##### Intro
+
+<a name="57"></a>
+##### Call stack
+
+<a name="58"></a>
+##### Factorial
+
+<a name="59"></a>
+##### Intro
+HERE
+4. [Recursion](#54)
    1. [Recursion](#55)
       1. [Intro](#56)
       2. [Call stack](#57)
