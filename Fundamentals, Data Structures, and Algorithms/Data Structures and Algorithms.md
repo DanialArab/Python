@@ -1085,8 +1085,7 @@ Point: the hash method takes a key to determine the address where we store the k
         5: None
         6: None
 
-<a name=""></a>
-##### HT implementation of methods Set, Get, and Keys
+Implementation of methods Set, Get, and Keys: 
   
       class HashTable:
           def __init__(self, size=7):
@@ -1192,8 +1191,6 @@ True
 
 The key here is that I avoided using a nested for loops but I have one loop after the other which makes the big o as O(2n) which is simplified as O(n). 
 
-
-
 HT: Big O quiz
 1-	Both Insert and Lookup by key in a Hash Table is O(1): True
 2-	Since a Hash Table is O(1) for Insert and Lookup it is always better than a Binary Search Tree: False b/c Binary Search Trees are sorted which makes them better at searching for all values that fall within a range.
@@ -1201,9 +1198,10 @@ HT: Big O quiz
 
 
 
+<a name="48"></a>
+##### Graphs 
 
-
-
+HERE
 
 ### Algorithms: Tree Traversal 
 
