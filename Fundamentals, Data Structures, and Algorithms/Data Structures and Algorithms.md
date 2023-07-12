@@ -70,28 +70,36 @@
          1. [Intro](#67)
          2. [Implementation](#68)
          3. [Big O](#69)
-   3. [Merge Sort]
-      1. [Overview]
-      2. [Intro]
-      3. [Implementation]
-      4. [Bog O]
-   4. [Quick Sort]
-      1. [Quick Sort: Intro]
-      2. [Pivot: Intro]
-      3. [Pivot: Implementation]
-      4. [Quick Sort: Implementation]
-      5. [Big O] 
-   5. [Tree Traversal]
- . [Reference](#)
+   3. [Merge Sort](#70)
+      1. [Overview](#71)
+      2. [Intro](#72)
+      3. [Implementation](#73)
+      4. [Bog O](#74)
+   4. [Quick Sort](#75)
+      1. [Quick Sort: Intro](#76)
+      2. [Pivot: Intro](#77)
+      3. [Pivot: Implementation](#78)
+      4. [Quick Sort: Implementation](#79)
+      5. [Big O](#80)
+   5. [Tree Traversal](#81)
+      1. [Intro](#82)
+      2. [Breadth First Search (BFS)](#83)
+         1. [Intro](#84)
+         2. [Implementation](#85)
+      4. [Depth First Search](#86)
+         1. [PreOrder](#87)
+            1. [Intro](#88)
+            2. [Implementation](#89)
+         3. [PostOrder](#90)
+            1. [Intro](#91)
+            2. [Implementation](#92)
+         5. [InOrder](#93)
+            1. [Intro](#94)
+            2. [Implementation](#95)
+5. [Reference](#96)
 
 
-       
-            [Algorithms: Tree Traversal]
-   . [Breadth First Search (BFS)]()
-   . [Depth First Search]()
-       1. [PreOrder]
-       2. [PostOrder]
-       3. [InOrder]
+   
 
    
 <a name="1"></a>
