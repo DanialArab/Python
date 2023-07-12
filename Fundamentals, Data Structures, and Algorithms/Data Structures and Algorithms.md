@@ -838,7 +838,7 @@ output:
     None
 
 <a name="39"></a>
-####### BST: Insert 
+###### BST: Insert 
 
 **Just remember we don’t have duplicates in BST.** 
 
@@ -887,7 +887,7 @@ output:
     3
 
 <a name="40"></a>
-####### BST: Contains
+###### BST: Contains
 
 With contains method we just want to see if a tree contains a particular value. 
 
@@ -950,7 +950,7 @@ the output is the same as above.
     False
 
 <a name="41"></a>
-####### BST: Minimum Value 
+###### BST: Minimum Value 
 
 This method finds and returns the node with the minimum value in a tree or a subtree. So we write this method like it can be also applied in any subtree. 
 
