@@ -1866,77 +1866,78 @@ Merge sort is different compared to the other sorting algorithms we have seen so
       Sorted:  [1, 2, 3, 4]
 
 
-
-<a name="74"></a>
-##### Bog O
-
-<a name="74"></a>
-##### Bog O
-
-<a name="75"></a>
-#### Quick Sort
-
 <a name="76"></a>
-##### Quick Sort: Intro
+##### Bog O
+
+Space complexity here is O(n) b/c a list of n items need to be broken into n separate list to be stored in memory and so the big o of space complexity is O(n) but for the previous sorting algorithms we have seen yet the lists are sorted in place meaning we take the original list and we move things around inside of that list but merge sort is different b/c it creates new lists.
+Time complexity: big o for breaking a list apart into separate lists with breaking lists in halves  sequentially is log n and then putting them back with merge function is O(n) so we have O(n log n) for merge sort. Reminder is that the other three sorting algorithms we already talked about, bubble, selection and insertion, are all of O(n^2) time complexity while merge sort is of (n log n), which is much more efficient. So n log n is the most efficient that you can make a sorting algorithm that is going to sort multiple types of data. There are certain efficiencies and sorting only numbers and there are some sorting algorithms that can run more efficient than this BUT you can only sort numbers with them. 
 
 <a name="77"></a>
-##### Pivot: Intro
+#### Quick Sort
+
+HERE 
 
 <a name="78"></a>
-##### Pivot: Implementation
+##### Quick Sort: Intro
 
 <a name="79"></a>
-##### Quick Sort: Implementation
+##### Pivot: Intro
 
 <a name="80"></a>
-##### Big O
+##### Pivot: Implementation
 
 <a name="81"></a>
-#### Tree Traversal
+##### Quick Sort: Implementation
 
 <a name="82"></a>
-##### Intro 
+##### Big O
 
 <a name="83"></a>
-##### Breadth First Search (BFS)
+#### Tree Traversal
 
 <a name="84"></a>
-###### Intro
+##### Intro 
 
 <a name="85"></a>
-###### Implementation
+##### Breadth First Search (BFS)
 
 <a name="86"></a>
-##### Depth First Search
+###### Intro
 
 <a name="87"></a>
-###### PreOrder
+###### Implementation
 
 <a name="88"></a>
-###### Intro 
-
+##### Depth First Search
 
 <a name="89"></a>
-###### Implementation  
+###### PreOrder
 
 <a name="90"></a>
-###### PostOrder
+###### Intro 
+
 
 <a name="91"></a>
-###### Intro 
-
-
-<a name="92"></a>
 ###### Implementation  
 
-<a name="93"></a>
-###### InOrder
+<a name="92"></a>
+###### PostOrder
 
-<a name="94"></a>
+<a name="93"></a>
 ###### Intro 
 
 
+<a name="94"></a>
+###### Implementation  
+
 <a name="95"></a>
+###### InOrder
+
+<a name="96"></a>
+###### Intro 
+
+
+<a name="97"></a>
 ###### Implementation  
 
 
