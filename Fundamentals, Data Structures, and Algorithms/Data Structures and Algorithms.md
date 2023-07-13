@@ -74,29 +74,31 @@
       1. [Overview](#71)
       2. [Intro](#72)
       3. [Implementation](#73)
-      4. [Bog O](#74)
-   4. [Quick Sort](#75)
-      1. [Quick Sort: Intro](#76)
-      2. [Pivot: Intro](#77)
-      3. [Pivot: Implementation](#78)
-      4. [Quick Sort: Implementation](#79)
-      5. [Big O](#80)
-   5. [Tree Traversal](#81)
-      1. [Intro](#82)
-      2. [Breadth First Search (BFS)](#83)
-         1. [Intro](#84)
-         2. [Implementation](#85)
-      4. [Depth First Search](#86)
-         1. [PreOrder](#87)
-            1. [Intro](#88)
-            2. [Implementation](#89)
-         3. [PostOrder](#90)
-            1. [Intro](#91)
-            2. [Implementation](#92)
-         5. [InOrder](#93)
-            1. [Intro](#94)
-            2. [Implementation](#95)
-5. [Reference](#96)
+      4. [Merge Sort: Intro](#74)
+      5. [Merge Sort: Implementation](#75)
+      6. [Bog O](#76)
+   4. [Quick Sort](#77)
+      1. [Quick Sort: Intro](#78)
+      2. [Pivot: Intro](#79)
+      3. [Pivot: Implementation](#80)
+      4. [Quick Sort: Implementation](#81)
+      5. [Big O](#82)
+   5. [Tree Traversal](#83)
+      1. [Intro](#84)
+      2. [Breadth First Search (BFS)](#85)
+         1. [Intro](#86)
+         2. [Implementation](#87)
+      4. [Depth First Search](#88)
+         1. [PreOrder](#89)
+            1. [Intro](#90)
+            2. [Implementation](#91)
+         3. [PostOrder](#92)
+            1. [Intro](#93)
+            2. [Implementation](#94)
+         5. [InOrder](#95)
+            1. [Intro](#96)
+            2. [Implementation](#97)
+5. [Reference](#98)
 
 
    
@@ -826,7 +828,6 @@ The nodes in a binary tree should be laid out in a particular way to be called a
 
 **If you take any node in a binary search tree all the nodes below it to the right are greater than that node and everything on the left is going to be less than.**
 
-
 <a name="37"></a>
 ####### BST: Big O 
 The total number of nodes in a BST can be calculated with **2^n -1** where n is the level of the tree, we can approximate it with 2^n to get the total number of nodes in a BST. 
@@ -1061,7 +1062,6 @@ Quiz:
 <a name="42"></a>
 ##### Hash Table
 
-
 <a name="43"></a>
 ###### Intro 
 
@@ -1233,22 +1233,363 @@ HT: Big O quiz
 <a name="48"></a>
 ##### Graphs 
 
-
 <a name="49"></a>
 ###### Intro
+
+We do have:
++ a vertex or node, the proper to say that is vertex, the plural would be vertices
++ between vertices we have edge or connection, the proper to say it is edge
++ there is no limit to how many other vertices that a vertex can connect to
++ two concepts here:
+   + with graphs you may have weighted edges, you are not going to have it always, but you can have. You may use something like this in a maps app to address traffics for example. Another example would be with network routing protocols like it is better to have an extra hop and have two very fast links than one very slow link. Again the edges can be weighted or NOT weighted  
+   + bi-directional (like you and your friend are friends on facebook) vs directional relationship (like you follow a celebrity on Instagram but he does not follow you back), in a graph where all the edges are bi-directional you will often see it like without arrows  so if there is no arrows in the edges it is assumed that it is bi-directional and it goes both ways 
+   + so in summary the edges can be weighted or not and also they can be directional or bi-directional
++ we already saw a graph in the course: it was a tree, trees are a from of graphs but they have the limitations that each node can only point to two other nodes, also we mentioned we had seen a tree before: a linked list so linked list is a form of a tree which is a form of a graph and so a linked list is a form of a graph with the limitation that they can only point to one other node.
 
 <a name="50"></a>
 ###### Adjacency Matrix
 
+We have two ways to represent a graph:
++ adjacency matrix
++ + adjacency list
+
+the following is an example of an adjacency matrix: 
+
+![](https://github.com/DanialArab/images/blob/main/Python/adjacency%20matrix.png)
+
+Scott mentioned each vertex cannot have an edge with itself and that’s why we always have a 45 degree line of zeros (BUT in the above image I took from net it is like vertex D has edge with itself!). 
+
+In a bi-directional matrix we always have a mirror image on each side of the 45 degree line, if it is directional it would not be like that and we lose the symmetry. 
+Also if our edges are weighted we also store these weights in the matrix like instead of having ones in the matrix, like in an above fig., we have the weights associated with each edge. 
+
 <a name="51"></a>
 ###### Adjacency List
 
+With an adjacency list we represent the graph as a dictionary where the keys are the vertex of interest and the values are a list of all the edges that the vertex in the key has with other vertices like for the above figure I have:
+      {
+      “A”: [“B”, “C”, “D”],
+      …
+      }
+In our course, we use an adjacency list to represent our graphs. 
 
 <a name="52"></a>
 ###### Big O
 
+Space complexity of adjacency matrix vs. adjacency list: the huge difference between these two is that in a matrix each vertex has to also store all of the vertices it is not connected to. So from the space complexity standpoint, the adjacency matrix big o is the number of vertices squared i.e., O(|V|^2) while in the adjacency list the big o is the number of vertices plus the number of edges i.e., O (|V| + |E|) so let’s take a look at the big o of the common operations in a graph:
++ adding a vertex (just a vertex not connecting it to anything): for adjacency list is O(1) but for the adjacency matrix is O(|V|^2) b/c basically we need to rewrite the entire matrix. This is a huge difference between the adjacency list and matrix
++ adding an edge: in an adjacency list we append the edges to the lists pretty easy, in an adjacency matrix we change the numbers in the matrix from zero to one for the particular edge therefore adding an edge for both adjacency list and matrix is of O(1).
++ Removing an edge between two vertices: the big o of an adjacency matrix is O(1) b/c I just need to change the numbers one to zero, however, the big o of an adjacency list is O(|E|) b/c we have to iterate through the list of edges that is associated with each one of those vertices so big o is the number of edges that we have to go through. This is a win for matrix over the list
++ Remove the vertex: in a list we have to remove the vertex and also its appearance as edge in all the other edges which means we have to touch everything in the dictionary. In a matrix in order to remove a vertex we have to basically rewrite the entire matrix so the big o would be O(|V|^2) for the matrix and O(|V| + |E|) for the list. For the adjacency list if we have bi-directional connections there is an efficiency in how you can write your method that makes this more efficient
++ When we have a small graphs it is not a big deal to store all the zeros other than the ones in an adjacency matrix but imagine for much larger graphs like a billion items there would be billions of items in a horizontal axis and in the vertical axis  so representing a graph through an adjacency matrix is incredibly inefficient from the storage perspective whereas with the adjacency list we don’t have to store all those zeros so we use adjacency list in this course which is much simpler and much more efficient. 
+
 <a name="53"></a>
 ###### Implementation
+
+**Add Vertex**
+
+Because our constructor in our class Graph is pretty simple Scott did not devote a separate part to it and included it here:
+
+      class Graph:
+          def __init__(self):
+              self.adj_list = {}
+      
+          def add_vertex(self, vertex):
+              if vertex not in self.adj_list:
+                  self.adj_list[vertex] = []
+                  return True
+              return False
+      
+          def printer(self):
+              for key in self.adj_list:
+                  print(f"{key} : {self.adj_list[key]}")
+      
+      my_graph = Graph()
+      print(my_graph.add_vertex("A"))
+      my_graph.printer()
+      
+      output:
+      True
+      A : []
+
+**Add Edge **
+
+      class Graph:
+          def __init__(self):
+              self.adj_list = {}
+      
+          def add_vertex(self, vertex):
+              if vertex not in self.adj_list:
+                  self.adj_list[vertex] = []
+                  return True
+              return False
+      
+          def add_edge(self, v1, v2):
+              if v1 in self.adj_list and v2 in self.adj_list:
+                  self.adj_list[v1].append(v2)
+                  self.adj_list[v2].append(v1)
+                  return True
+              return False
+      
+          def printer(self):
+              for key in self.adj_list:
+                  print(f"{key} : {self.adj_list[key]}")
+      
+      my_graph = Graph()
+      
+      my_graph.add_vertex(1)
+      my_graph.add_vertex(2)
+      
+      my_graph.add_edge(1, 2)
+      
+      my_graph.printer()
+      
+      output:
+      1 : [2]
+      2 : [1]
+
+
+**Remove Edge**
+
+      class Graph:
+          def __init__(self):
+              self.adj_list = {}
+      
+          def add_vertex(self, vertex):
+              if vertex not in self.adj_list:
+                  self.adj_list[vertex] = []
+                  return True
+              return False
+      
+          def add_edge(self, v1, v2):
+              if v1 in self.adj_list and v2 in self.adj_list:
+                  self.adj_list[v1].append(v2)
+                  self.adj_list[v2].append(v1)
+                  return True
+              return False
+      
+          def remove_edge(self, v1, v2):
+              if v1 in self.adj_list and v2 in self.adj_list:
+                  self.adj_list[v1].remove(v2)
+                  self.adj_list[v2].remove(v1)
+                  return True
+              return False
+      
+          def printer(self):
+              for key in self.adj_list:
+                  print(f"{key} : {self.adj_list[key]}")
+      
+      my_graph = Graph()
+      
+      my_graph.add_vertex("A")
+      my_graph.add_vertex("B")
+      my_graph.add_vertex("C")
+      
+      my_graph.add_edge("A", "B")
+      my_graph.add_edge("B", "C")
+      my_graph.add_edge("C", "A")
+      my_graph.printer()
+      print("\n")
+      my_graph.remove_edge("A", "B")
+      my_graph.printer()
+      
+      output:
+      A : ['B', 'C']
+      B : ['A', 'C']
+      C : ['B', 'A']
+      
+      A : ['C']
+      B : ['C']
+      C : ['B', 'A']
+
+The issue is that our code as it is in the above does not address one of the edge cases which is when there is no edge/connection between the two vertices, my change to solve this:
+
+      class Graph:
+          def __init__(self):
+              self.adj_list = {}
+      
+          def add_vertex(self, vertex):
+              if vertex not in self.adj_list:
+                  self.adj_list[vertex] = []
+                  return True
+              return False
+      
+          def add_edge(self, v1, v2):
+              if v1 in self.adj_list and v2 in self.adj_list:
+                  self.adj_list[v1].append(v2)
+                  self.adj_list[v2].append(v1)
+                  return True
+              return False
+      
+          def remove_edge(self, v1, v2):
+              if v1 in self.adj_list and v2 in self.adj_list:
+                  if v2 in self.adj_list[v1] and v1 in self.adj_list[v2]:
+                      self.adj_list[v1].remove(v2)
+                      self.adj_list[v2].remove(v1)
+                      return True
+              return False
+      
+          def printer(self):
+              for key in self.adj_list:
+                  print(f"{key} : {self.adj_list[key]}")
+      
+      my_graph = Graph()
+      
+      my_graph.add_vertex("A")
+      my_graph.add_vertex("B")
+      my_graph.add_vertex("C")
+      my_graph.add_vertex("D")
+      
+      my_graph.add_edge("A", "B")
+      my_graph.add_edge("B", "C")
+      my_graph.add_edge("C", "A")
+      my_graph.printer()
+      print("\n")
+      my_graph.remove_edge("A", "D")
+      my_graph.printer()
+      
+      output:
+      A : ['B', 'C']
+      B : ['A', 'C']
+      C : ['B', 'A']
+      D : []
+      
+      A : ['B', 'C']
+      B : ['A', 'C']
+      C : ['B', 'A']
+      D : []
+
+But the better approach to solve this issue is through using try block like what Scott did and I learned it, which is in the following:
+
+      class Graph:
+          def __init__(self):
+              self.adj_list = {}
+      
+          def add_vertex(self, vertex):
+              if vertex not in self.adj_list:
+                  self.adj_list[vertex] = []
+                  return True
+              return False
+      
+          def add_edge(self, v1, v2):
+              if v1 in self.adj_list and v2 in self.adj_list:
+                  self.adj_list[v1].append(v2)
+                  self.adj_list[v2].append(v1)
+                  return True
+              return False
+      
+          def remove_edge(self, v1, v2):
+              if v1 in self.adj_list and v2 in self.adj_list:
+                  try:
+                      self.adj_list[v1].remove(v2)
+                      self.adj_list[v2].remove(v1)
+                  except ValueError:
+                      pass
+                  return True
+              return False
+      
+          def printer(self):
+              for key in self.adj_list:
+                  print(f"{key} : {self.adj_list[key]}")
+      
+      my_graph = Graph()
+      
+      my_graph.add_vertex("A")
+      my_graph.add_vertex("B")
+      my_graph.add_vertex("C")
+      my_graph.add_vertex("D")
+      
+      my_graph.add_edge("A", "B")
+      my_graph.add_edge("B", "C")
+      my_graph.add_edge("C", "A")
+      my_graph.printer()
+      print("\n")
+      my_graph.remove_edge("A", "D")
+      my_graph.printer()
+      
+      output:
+      A : ['B', 'C']
+      B : ['A', 'C']
+      C : ['B', 'A']
+      D : []
+      
+      A : ['B', 'C']
+      B : ['A', 'C']
+      C : ['B', 'A']
+      D : []
+
+**Remove Vertex**
+
+Before removing a vertex we have to remove all the other edges that vertex has with other nodes and it is only then that we can remove the vertex. 
+In the big o section, we already mentioned that there could be an efficiency that we could use in graphs that have bidirectional connections: we know that if vertex D has an edge with one vertex that vertex also has an edge with vertex D. we take advantage of this in our for loop: 
+
+      class Graph:
+          def __init__(self):
+              self.adj_list = {}
+      
+          def add_vertex(self, vertex):
+              if vertex not in self.adj_list:
+                  self.adj_list[vertex] = []
+                  return True
+              return False
+      
+          def add_edge(self, v1, v2):
+              if v1 in self.adj_list and v2 in self.adj_list:
+                  self.adj_list[v1].append(v2)
+                  self.adj_list[v2].append(v1)
+                  return True
+              return False
+      
+          def remove_edge(self, v1, v2):
+              if v1 in self.adj_list and v2 in self.adj_list:
+                  try:
+                      self.adj_list[v1].remove(v2)
+                      self.adj_list[v2].remove(v1)
+                  except ValueError:
+                      pass
+                  return True
+              return False
+      
+          def remove_vertex(self, vertex):
+              if vertex in self.adj_list:
+                  for other_vertex in self.adj_list[vertex]:
+                      self.adj_list[other_vertex].remove(vertex)
+                  del self.adj_list[vertex]
+                  return True
+              return False
+      
+          def printer(self):
+              for key in self.adj_list:
+                  print(f"{key} : {self.adj_list[key]}")
+      
+      my_graph = Graph()
+      
+      my_graph.add_vertex("A")
+      my_graph.add_vertex("B")
+      my_graph.add_vertex("C")
+      my_graph.add_vertex("D")
+      
+      my_graph.add_edge("A", "B")
+      my_graph.add_edge("A", "C")
+      my_graph.add_edge("A", "D")
+      my_graph.add_edge("B", "D")
+      my_graph.add_edge("C", "D")
+      my_graph.printer()
+      print("\n")
+      my_graph.remove_vertex("D")
+      my_graph.printer()
+      
+      output:
+      A : ['B', 'C', 'D']
+      B : ['A', 'D']
+      C : ['A', 'D']
+      D : ['A', 'B', 'C']
+      
+      A : ['B', 'C']
+      B : ['A']
+      C : ['A']
+
+Quiz 
++ Graphs are the go-to data structure when you need to represent entities and the relationships between them: True. 
 
 <a name="54"></a>
 ### Algorithms
@@ -1259,11 +1600,64 @@ HT: Big O quiz
 <a name="56"></a>
 ##### Intro
 
+**Recursion is a function that calls itself until it does not**. The example is opening a gift box through running a gift_box function, which returns either a ball or a smaller gift box and we run the function again … 
+
+Points:
+
++ The process of opening each new box, in our example, is the same. In a general term, the process of whatever we do with recursion has to be the same 
++ Each time we open a box, we make the problem smaller 
++ You have to have a return in your recursive function to make sure that at some point the recursive function finally does not call itself. 
++ When we open the box and it contains the ball this is what we call our base case this is when we are going to stop opening boxes or the function will stop calling itself, so the base case is when we stop calling the recursive function. This is very important to have the if statement for the base case b/c otherwise the function gets called again and again … which is called stack overflow so I do need to have a base case where this will at some point stop calling itself. 
++ The statement of the base case has to be true at some point to prevent infinite looping through creating a stack overflow. So if you get a stack overflow in a recursive function this is one of the places to go troubleshoot 
++ Also if you have a print statement instead of a return statement, if the condition in the if statement is met there would be a print but b/c there is no return statement to cause us to stop running the code we will end up having a stack overflow. So it is very important o have a return statement in your code. 
++ If the recursive function needs to call itself again, this is called a recursive case
+
 <a name="57"></a>
 ##### Call stack
 
+We start taking a look at the call stack with the function that is not recursive to make sure we can understand it and then we look at how recursive functions go on the call stack. 
+
+What we learned in the data structure section on stack also applies here. So whatever function is at the top of the call stack is the only one that can run once that function is done running and you remove it then the next function can run and so on and so forth. 
+
+        def funcThree():
+            print("Three")
+        
+        def funcTwo():
+            funcThree()
+            print("Two")
+        
+        def funcOne():
+            funcTwo()
+            print("One")
+        
+        funcOne()
+        
+        
+        output:
+        Three
+        Two
+        One
+
 <a name="58"></a>
 ##### Factorial
+
+In any course aimed to teach recursion, the factorial is used. 
+Some reminders:
+
++ In a recursive function, I need to do the same thing over and over
++ The problem needs to be getting smaller
+ 
+Factorial function properly demonstrates these two and so that is why it is used most often to teach recursion. 
+
+        def factorial(n):
+            if n == 1:
+                return 1
+            return n * factorial(n-1)
+        
+        print(factorial(4))
+        
+        output:
+        24
 
 <a name="59"></a>
 #### Basic Sorts
@@ -1274,8 +1668,28 @@ HT: Big O quiz
 <a name="61"></a>
 ###### Intro
 
+We talk about the logic here and then code it next. We want to sort a list. What we do with bubble sort is we start with the first item in the list and we are going to compare it with the second item and if the first item is larger than the second item we are going to switch these then we take the second item and then compare it with the third item if switch is not required we just go to the third item and then compare it with the fourth one and so on and so forth. When we do this and make this comparison all the way up to reaching the last item in the list (meaning finishing the first round), now this last item is sorted, what we have done is we have bubbled up the largest item. In order to do that we have to do 5 comparisons if the list contains 6 items let’s say. Now I only have 5 items left to sort so in this round we only have 4 comparisons: we start back at the beginning and compare the first item to the second item etc. in this round the second largest item out of the list will be bubbled up or sorted. 
+
 <a name="62"></a>
 ###### Implementation
+
+      def bubble_sort(my_list):
+          for i in range(len(my_list)-1, 0, -1):
+              for j in range(i):
+                  if my_list[j] > my_list[j+1]:
+                      my_list[j], my_list[j+1] = my_list[j+1], my_list[j]
+                      # temp = my_list[j]
+                      # my_list[j] = my_list[j+1]
+                      # my_list[j+1] = temp
+          return my_list
+      
+      my_list = [4, 2, 6, 5, 1, 3]
+      print(bubble_sort(my_list))
+      
+      output:
+      [1, 2, 3, 4, 5, 6]
+
+Scott wrote the lines as commented above but mine is more concise! Bingo! But the best would be to define a swap function as I learned from Mosh. 
 
 <a name="63"></a>
 ##### Selection sort
@@ -1283,8 +1697,31 @@ HT: Big O quiz
 <a name="64"></a>
 ###### Intro
 
+The difference between bubble sort and selection sort is that here we also need the indexes for the selection sort. Therefore with the selection sort we look at the first item and then we are going to keep track of the index where the minimum value is. The important thing to emphasize here is that we keep track of the index of the minimum value and not the actual minimum value: we are not storing a value but we are storing the index. At the end of the first round when we find the index of the minimum value we switch the minimum value at that index with the first item (at index zero I mean). Now we know that the value at the zero index is sorted then we are going to move to the next item 
+
 <a name="65"></a>
 ###### Implementation
+      
+      def selection_sort(my_list):
+          for i in range(len(my_list)-1):
+              min_index = i
+              for j in range(i+1, len(my_list)):
+                  if my_list[j] < my_list[min_index]:
+                      min_index = j
+      
+              if i != min_index:
+                  swap(my_list, i, min_index)
+          return my_list
+      
+      def swap(li, index1, index2):
+          temp = li[index1]
+          li[index1] = li[index2]
+          li[index2] = temp
+      
+      print(selection_sort([4, 2, 6, 5, 1, 3]))
+      
+      output:
+      [1, 2, 3, 4, 5, 6]
 
 <a name="66"></a>
 ##### Insertion sort
@@ -1292,11 +1729,38 @@ HT: Big O quiz
 <a name="67"></a>
 ###### Intro
 
+With the insertion sort we always start with the second item in the list. Then we compare it with the previous item if it is less than the previous item we swap their spots. Then we go to the next item and we do the same thing we compare it with the previous item and so on and so forth. There is a case when we move the item to the beginning of the list then j would be -1 so we need to take care of it: 
+
 <a name="68"></a>
 ###### Implementation
 
+      def insertion_sort(my_list):
+          for i in range(1, len(my_list)):
+              temp = my_list[i]
+              j = i - 1
+      
+              while temp < my_list[j] and j > -1:
+                  my_list[j+1] = my_list[j]
+                  my_list[j] = temp
+                  j -= 1
+      
+          return my_list
+      
+      print(insertion_sort([2, 4, 44, 0, 3, 21, 1]))
+      
+      output:
+      [0, 1, 2, 3, 4, 21, 44]
+
 <a name="69"></a>
 ###### Big O
+
+Obviously b/c we have a nested loop the big O is O(n^2) as the worst possible scenario. But our best possible scenario is when we have a sorted or almost sorted list, whose big o is O(n). 
+
+**Quiz on Basic Sorts**
+
+1-	Bubble, Selection, and Insertion Sort all have O(n) time complexity: False: b/c each of these three sorting algorithms have a loop within a loop so they are O(n^2).
+2-	Bubble, Selection, and Insertion Sort have O(1) space complexity: True, b/c All three of these sort the list in place. That means that they do not create additional copies of the list. That means that the space complexity is O(1).
+3-	Bubble, Selection, and Insertion Sort are all O(n) if you start with a sorted (or almost sorted) array: False, Only Insertion Sort is O(n) when you start with sorted (or almost sorted) data.
 
 <a name="70"></a>
 #### Merge Sort
@@ -1304,15 +1768,110 @@ HT: Big O quiz
 <a name="71"></a>
 ##### Overview
 
+The idea behind merge sort is that if you have two sorted lists it is very easy to combine these into a new sorted list. 
+Let’s say if we have an unsorted list of 8 elements what merge sort is going to do is to first break it in half in sequential steps until we only have only one item in the broken lists, like in our example we have 8 separate lists with one item in each and a list with one item in it is by definition a sorted list. Now you can take each two of them and create a new list that is sorted we keep doing this until having 4 lists with 2 items in each we do this again to make 2 lists of 4 items and finally we can combine these two lists to make a sorted lists of 8 elements. This is a high level overview of a merge sort. 
+
 <a name="72"></a>
-##### Intro
+##### Merge: Intro
+
+Merge function is called a helper function meaning it does not do all of what is required for merge sort but instead it just does a portion of it. The portion that merge function does is it takes two sorted lists, they do need to be sorted, and takes values from these and puts them into a new combined list. How? We loop through each of these lists we will loop through the first one with a variable i and in the second list with a variable j then we just compare i and j and whichever one is lowest we add it to the new combined list. Then we do it again and again until one of the lists is empty once we have done that we have another loop that loops through whichever list that still has items and we will add these items to the combined list. 
 
 <a name="73"></a>
-##### Implementation
+##### Merge: Implementation
+
+Tips: b/c you don’t know how many times you need to loop through you cannot use for loops and instead you need to use while loops. 
+
+      def merge(list1, list2):
+          combined = []
+          i = 0
+          j = 0
+          while i < len(list1) and j < len(list2):
+              if list1[i] < list2[j]:
+                  combined.append(list1[i])
+                  i += 1
+              else:
+                  combined.append(list2[j])
+                  j += 1
+          while i < len(list1):
+              combined.append(list1[i])
+              i += 1
+      
+          while j < len(list2):
+              combined.append(list2[j])
+              j += 1
+      
+          return combined
+      
+      list1 = [1, 2, 7, 8]
+      list2 = [3, 4, 5, 6]
+      print(merge(list1, list2))
+      
+      output:
+      [1, 2, 3, 4, 5, 6, 7, 8]
+
+
+<a name="74"></a>
+##### Merge Sort: Intro 
+
+Here we want to break the list down into halves and then we can use our merge helper function. We want to write a code to break the list in half. Here b/c the two characteristics of recursion apply (repeating the exact same thing over and over and also making a problem smaller in each step, both of which here are the case) we can use recursion. Also here our base class is happening when our list length would be one, where we want to stop calling our recursive function. At this point we want to use the merge helper function we created before to put the lists back together. So in summary we have three steps in merge sort:
+
+1-	Breaks lists in half
+2-	Base case, when len (the_list) is 1
+3-	Uses merge () to put lists back together 
+
+<a name="75"></a>
+##### Merge Sort: Implementation 
+
+Points:
+
+Merge sort is different compared to the other sorting algorithms we have seen so far, b/c the other sorting algorithms sort the list in place i.e., the original list will be sorted when we are done. But with merge sort the original list stays the same and it returns a separate sorted list. 
+
+      def merge(list1, list2):
+          combined = []
+          i = 0
+          j = 0
+          while i < len(list1) and j < len(list2):
+              if list1[i] < list2[j]:
+                  combined.append(list1[i])
+                  i += 1
+              else:
+                  combined.append(list2[j])
+                  j += 1
+          while i < len(list1):
+              combined.append(list1[i])
+              i += 1
+      
+          while j < len(list2):
+              combined.append(list2[j])
+              j += 1
+      
+          return combined
+      
+      def merge_sort(my_list):
+          if len(my_list) == 1:
+              return my_list
+          mid_index = int(len(my_list)/2)
+          left = merge_sort(my_list[:mid_index])
+          right = merge_sort(my_list[mid_index:])
+      
+          return merge(left, right)
+      
+      original_list = [3, 1, 4, 2]
+      sorted_list = merge_sort(original_list)
+      print("Original: ", original_list)
+      print("Sorted: ", sorted_list)
+      
+      output:
+      Original:  [3, 1, 4, 2]
+      Sorted:  [1, 2, 3, 4]
+
+
 
 <a name="74"></a>
 ##### Bog O
 
+<a name="74"></a>
+##### Bog O
 
 <a name="75"></a>
 #### Quick Sort
@@ -1757,72 +2316,6 @@ output:
 
 
 
-
-
-<a name=""></a>
-##### Recursion
-
-<a name=""></a>
-###### Intro 
-
-**Recursion is a function that calls itself until it does not**. The example is opening a gift box through running a gift_box function, which returns either a ball or a smaller gift box and we run the function again … 
-
-Points:
-
-+ The process of opening each new box, in our example, is the same. In a general term, the process of whatever we do with recursion has to be the same 
-+ Each time we open a box, we make the problem smaller 
-+ You have to have a return in your recursive function to make sure that at some point the recursive function finally does not call itself. 
-+ When we open the box and it contains the ball this is what we call our base case this is when we are going to stop opening boxes or the function will stop calling itself, so the base case is when we stop calling the recursive function. This is very important to have the if statement for the base case b/c otherwise the function gets called again and again … which is called stack overflow so I do need to have a base case where this will at some point stop calling itself. 
-+ The statement of the base case has to be true at some point to prevent infinite looping through creating a stack overflow. So if you get a stack overflow in a recursive function this is one of the places to go troubleshoot 
-+ Also if you have a print statement instead of a return statement, if the condition in the if statement is met there would be a print but b/c there is no return statement to cause us to stop running the code we will end up having a stack overflow. So it is very important o have a return statement in your code. 
-+ If the recursive function needs to call itself again, this is called a recursive case
-
-<a name=""></a>
-###### Call Stack
-
-We start taking a look at the call stack with the function that is not recursive to make sure we can understand it and then we look at how recursive functions go on the call stack. 
-
-What we learned in the data structure section on stack also applies here. So whatever function is at the top of the call stack is the only one that can run once that function is done running and you remove it then the next function can run and so on and so forth. 
-
-        def funcThree():
-            print("Three")
-        
-        def funcTwo():
-            funcThree()
-            print("Two")
-        
-        def funcOne():
-            funcTwo()
-            print("One")
-        
-        funcOne()
-        
-        
-        output:
-        Three
-        Two
-        One
-
-<a name=""></a>
-###### Factorial 
-
-In any course aimed to teach recursion, the factorial is used. 
-Some reminders:
-
-+ In a recursive function, I need to do the same thing over and over
-+ The problem needs to be getting smaller
- 
-Factorial function properly demonstrates these two and so that is why it is used most often to teach recursion. 
-
-        def factorial(n):
-            if n == 1:
-                return 1
-            return n * factorial(n-1)
-        
-        print(factorial(4))
-        
-        output:
-        24
 
 
 
