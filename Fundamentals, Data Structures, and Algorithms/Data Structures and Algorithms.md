@@ -1233,6 +1233,7 @@ HT: Big O quiz
 <a name="48"></a>
 ##### Graphs 
 
+
 <a name="49"></a>
 ###### Intro
 
@@ -1265,51 +1266,119 @@ HT: Big O quiz
 ##### Factorial
 
 <a name="59"></a>
+#### Basic Sorts
+
+<a name="60"></a>
+##### Bubble sort
+
+<a name="61"></a>
+###### Intro
+
+<a name="62"></a>
+###### Implementation
+
+<a name="63"></a>
+##### Selection sort
+
+<a name="64"></a>
+###### Intro
+
+<a name="65"></a>
+###### Implementation
+
+<a name="66"></a>
+##### Insertion sort
+
+<a name="67"></a>
+###### Intro
+
+<a name="68"></a>
+###### Implementation
+
+<a name="69"></a>
+###### Big O
+
+<a name="70"></a>
+#### Merge Sort
+
+<a name="71"></a>
+##### Overview
+
+<a name="72"></a>
 ##### Intro
-HERE
-4. [Recursion](#54)
-   1. [Recursion](#55)
-      1. [Intro](#56)
-      2. [Call stack](#57)
-      3. [Factorial](#58)
-   2. [Basic Sorts](#59)
-      1. [Bubble sort](#60)
-         1. [Intro](#61)
-         2. [Implementation](#62)
-      2. [Selection sort](#63)
-         1. [Intro](#64)
-         2. [Implementation](#65)
-      3.  [Insertion sort](#66)
-         1. [Intro](#67)
-         2. [Implementation](#68)
-         3. [Big O](#69)
-   3. [Merge Sort](#70)
-      1. [Overview](#71)
-      2. [Intro](#72)
-      3. [Implementation](#73)
-      4. [Bog O](#74)
-   4. [Quick Sort](#75)
-      1. [Quick Sort: Intro](#76)
-      2. [Pivot: Intro](#77)
-      3. [Pivot: Implementation](#78)
-      4. [Quick Sort: Implementation](#79)
-      5. [Big O](#80)
-   5. [Tree Traversal](#81)
-      1. [Intro](#82)
-      2. [Breadth First Search (BFS)](#83)
-         1. [Intro](#84)
-         2. [Implementation](#85)
-      4. [Depth First Search](#86)
-         1. [PreOrder](#87)
-            1. [Intro](#88)
-            2. [Implementation](#89)
-         3. [PostOrder](#90)
-            1. [Intro](#91)
-            2. [Implementation](#92)
-         5. [InOrder](#93)
-            1. [Intro](#94)
-            2. [Implementation](#95)
-5. [Reference](#96)
+
+<a name="73"></a>
+##### Implementation
+
+<a name="74"></a>
+##### Bog O
+
+
+<a name="75"></a>
+#### Quick Sort
+
+<a name="76"></a>
+##### Quick Sort: Intro
+
+<a name="77"></a>
+##### Pivot: Intro
+
+<a name="78"></a>
+##### Pivot: Implementation
+
+<a name="79"></a>
+##### Quick Sort: Implementation
+
+<a name="80"></a>
+##### Big O
+
+<a name="81"></a>
+#### Tree Traversal
+
+<a name="82"></a>
+##### Intro 
+
+<a name="83"></a>
+##### Breadth First Search (BFS)
+
+<a name="84"></a>
+###### Intro
+
+<a name="85"></a>
+###### Implementation
+
+<a name="86"></a>
+##### Depth First Search
+
+<a name="87"></a>
+###### PreOrder
+
+<a name="88"></a>
+###### Intro 
+
+
+<a name="89"></a>
+###### Implementation  
+
+<a name="90"></a>
+###### PostOrder
+
+<a name="91"></a>
+###### Intro 
+
+
+<a name="92"></a>
+###### Implementation  
+
+<a name="93"></a>
+###### InOrder
+
+<a name="94"></a>
+###### Intro 
+
+
+<a name="95"></a>
+###### Implementation  
 
 
 ### Algorithms: Tree Traversal 
