@@ -111,6 +111,7 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |87|1119| Remove Vowels from a String| Easy|
 |88|2744| Find Maximum Number of String Pairs| Easy|
 |89|760| Find Anagram Mappings| Easy|
+|90|1213| Intersection of Three Sorted Arrays| Easy|
 
 
 
