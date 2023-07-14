@@ -109,6 +109,8 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |85|1763| Longest Nice Substring| Easy|
 |86|541| Reverse String II| Easy|
 |87|1119| Remove Vowels from a String| Easy|
+|88|2744| Find Maximum Number of String Pairs| Easy|
+
 
 
 
