@@ -112,6 +112,8 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |88|2744| Find Maximum Number of String Pairs| Easy|
 |89|760| Find Anagram Mappings| Easy|
 |90|1213| Intersection of Three Sorted Arrays| Easy|
+|91|1725| Number Of Rectangles That Can Form The Largest Square| Easy|
+
 
 
 
