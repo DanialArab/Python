@@ -152,6 +152,7 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |18|2303| Calculate Amount Paid in Taxes|Easy| 
 |19|2078| Two Furthest Houses With Different Colors|Easy| 
 |20|575| Distribute Candies|Easy| 
+|21|2728| Count Houses in a Circular Street|Easy| 
 
 
 
