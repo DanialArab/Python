@@ -338,6 +338,7 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |7|2651|Calculate Delayed Arrival Time|Easy|
 |8|1863|Sum of All Subset XOR Totals|Easy|
 |9|2485|Find the Pivot Integer|Easy|
+|10|1180|Count Substrings with Only One Distinct Letter|Easy|
 
 
 
