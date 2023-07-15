@@ -330,5 +330,7 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |**Index**|**Question ID** | **Question title**|  **Difficulty level**|
 | -- | --|  -- | -- |
 |1|2469|Convert the Temperature|Easy|
+|2|2235|Add Two Integers|Easy|
 
+ 
 
