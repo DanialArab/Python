@@ -2350,13 +2350,7 @@ Again here the method is pretty similar to that of preorder and postorder but we
       [18, 21, 27, 47, 52, 76, 82]
 
 
-
-
-
-
-
-
-<a name="2"></a>
+<a name="98"></a>
 ### Reference:
 
 + <a href="https://www.udemy.com/course/data-structures-algorithms-python/">Python Data Structures & Algorithms + LEETCODE Exercises</a>
