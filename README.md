@@ -336,11 +336,11 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |5|2160|Minimum Sum of Four Digit Number After Splitting Digits|Easy|
 |6|2520|Count the Digits That Divide a Number|Easy|
 |7|2651|Calculate Delayed Arrival Time|Easy|
+|8|1863|Sum of All Subset XOR Totals|Easy|
 
 
 
 
  
-
 
 
