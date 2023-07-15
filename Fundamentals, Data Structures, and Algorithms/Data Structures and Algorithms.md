@@ -1873,24 +1873,93 @@ Space complexity here is O(n) b/c a list of n items need to be broken into n sep
 Time complexity: big o for breaking a list apart into separate lists with breaking lists in halves  sequentially is log n and then putting them back with merge function is O(n) so we have O(n log n) for merge sort. Reminder is that the other three sorting algorithms we already talked about, bubble, selection and insertion, are all of O(n^2) time complexity while merge sort is of (n log n), which is much more efficient. So n log n is the most efficient that you can make a sorting algorithm that is going to sort multiple types of data. There are certain efficiencies and sorting only numbers and there are some sorting algorithms that can run more efficient than this BUT you can only sort numbers with them. 
 
 <a name="77"></a>
-#### Quick Sort
-
-HERE 
+#### Quick Sort 
 
 <a name="78"></a>
 ##### Quick Sort: Intro
 
+We start with a pivot point that is to be going to the first item, at index 0 I mean, initially. Then we compare each of the items after the pivot point with the pivot point to see if they are less than or greater than that. So long as we reach to the item which is less than the pivot point we swap it with the first item which was greater than the pivot point. At the end of this round we have all the items that are greater than the pivot point are grouped together and also all the items that are less than that are grouped together. Then in the next step, we swap the pivot item with the last item in the less than group items. Two points:
+
+1. The pivot item which is swapped with the last item in the less than group is now sorted.
+2. And everything less than that item now is in its left side and everything greater than that item is now in its right side. 
+
+Now we run quick sort again on both items (i.e., less than and greater than items).  We keep doing this until we have only one item left which means it is already sorted. Now we have a completely sorted list. 
+
 <a name="79"></a>
 ##### Pivot: Intro
+
+It is a helper function for the quick sort. Similar to the merge function that we already used as the helper function in the merge sort. 
+What we do in the pivot function is to pick the pivot point and then having all the values less than the pivot value on one side of the pivot value and all the greater values on the other side. The pivot function does two things: rearrange the items in the list and also returns the swap index (not its value but its index). The reason that we return the swap index is that for the next time we want to run the quick sort function we want to run it on the side starting from beginning up to the item before the swap index, not including the swap index, on one side and also on the other side from the item after the swap index up to the end. That is why we need to return the index. 
 
 <a name="80"></a>
 ##### Pivot: Implementation
 
+      def swap(my_list, index1, index2):
+          temp = my_list[index1]
+          my_list[index1] = my_list[index2]
+          my_list[index2] = temp
+      
+      def pivot(my_list, pivot_index, end_index):
+          swap_index = pivot_index
+          for i in range(pivot_index + 1, end_index+1):
+              if my_list[i] < my_list[pivot_index]:
+                  swap_index += 1
+                  swap(my_list, index1=swap_index, index2=i)
+          swap(my_list, pivot_index, swap_index)
+          return swap_index
+      
+      my_list = [4, 6, 1, 7, 3, 2, 5]
+      print(my_list)
+      print(pivot(my_list, 0, 6))
+      print(my_list) 
+      
+      output:
+      [4, 6, 1, 7, 3, 2, 5]
+      3
+      [2, 1, 3, 4, 6, 7, 5]
+
+Again be aware that the pivot function only returns the swap index. 
+
 <a name="81"></a>
 ##### Quick Sort: Implementation
 
+The quick sort function recursively runs pivot function on each side of the swap index. Be mindful of creating a base case to make sure that you can stop calling the function at some point in a recursion. 
+I need to pass the leftmost and the rightmost indexes to the quick_sort function, which are zero and len(my_list) – 1 respectively. With the helper function I defined at the end we don’t need to pass these two and just need to pass the list to the quick sort function. Brilliant idea. 
+
+      def swap(my_list, index1, index2):
+          temp = my_list[index1]
+          my_list[index1] = my_list[index2]
+          my_list[index2] = temp
+      
+      def pivot(my_list, pivot_index, end_index):
+          swap_index = pivot_index
+          for i in range(pivot_index+1, end_index+1):
+              if my_list[i] < my_list[pivot_index]:
+                  swap_index += 1
+                  swap(my_list, swap_index, i)
+          swap(my_list, pivot_index, swap_index)
+          return swap_index
+      
+      def quick_sort_helper(my_list, left, right):
+          if left < right:
+              pivot_index = pivot(my_list, left, right)
+              quick_sort_helper(my_list, left, pivot_index-1)
+              quick_sort_helper(my_list, pivot_index+1, right)
+          return my_list
+      
+      def quick_sort(my_list):
+          return quick_sort_helper(my_list, left=0, right=len(my_list)-1)
+      
+      my_list = [4, 6, 1, 7, 3, 2, 5]
+      print(quick_sort(my_list))
+      
+      output:
+      [1, 2, 3, 4, 5, 6, 7]
+
 <a name="82"></a>
 ##### Big O
+
+The first step is to run the pivot function where we have a for loop, which loops all the way through the list looking at each item, which is of O(n). But the recursive part of the quick sort function is O(log n) based on that the big o of quick sort is n log n like the merge sort BUT this is for the best case and average case and not for the worst case. The worst case is when we already have a sorted list in this case we only have item on the right of the pivot value and when running pivot function again the big o would be O(n) and not log n, and so the big o would be O(n^2). So the big o of quick sort is n squared and so long as you don’t have a sorted data you can count on the quick sort running on n log n but if you have a sorted data it might be better to use something like insertion sort which has generally O(n^2) but the best possible scenario for insertion sort is O(n). So you want to consider these things when looking at sorting algorithms big O. 
 
 <a name="83"></a>
 #### Tree Traversal
@@ -1898,17 +1967,87 @@ HERE
 <a name="84"></a>
 ##### Intro 
 
+Tree traversal is when we are going to visit every node in the tree and we want to take the values and put them in a list then will return that list. 
+Tree traversal is more complicated compared to doing something like with a linked list b/c in a linked list it is just linear so to traverse it we just start at the beginning and go through the list but with the tree there are multiple ways to visit each node one approach is breadth first search another way is depth first search. We look at different ways of DFS in the followings. 
+
 <a name="85"></a>
 ##### Breadth First Search (BFS)
 
 <a name="86"></a>
 ###### Intro
 
+We start at the top of the tree then we do the second row and then the third row and so on and so forth. We will create two lists: queue and results, results is the one that will be returned with all the nodes’ values in it. The queue is the one where we include the entire node meaning its value and its left and right. But in the results we are only storing the values and not the entire node. The loop only runs as long as we have items in the queue list like as long as the queue is empty it means that we have visited every item in the tree and the only thing left to do is to return the results list.  
+
 <a name="87"></a>
 ###### Implementation
 
+The BFS is a method in our binary search tree we defined previously: 
+
+       class Node:
+           def __init__(self, value):
+               self.value = value
+               self.left = None
+               self.right = None
+      
+       class BinarySearchTree:
+           def __init__(self):
+               self.root = None
+      
+           def insert(self, value):
+               new_node = Node(value)
+      
+               if self.root is None:
+                   self.root = new_node
+                   return True
+      
+               temp = self.root
+               while True:
+                   if new_node.value == temp.value:
+                       return False
+                   if new_node.value < temp.value:
+                       if temp.left is None:
+                           temp.left = new_node
+                           return True
+                       temp = temp.left
+                   else:
+                       if temp.right is None:
+                           temp.right = new_node
+                           return True
+                       temp = temp.right
+      
+           def BFS(self):
+               current_node = self.root
+               queue = []
+               results = []
+               queue.append(current_node)
+      
+               while len(queue) > 0:
+                   current_node = queue.pop(0)
+                   results.append(current_node.value)
+                   if current_node.left:
+                       queue.append(current_node.left)
+                   if current_node.right:
+                       queue.append(current_node.right)
+               return results
+      
+       my_tree = BinarySearchTree()
+       my_tree.insert(47)
+       my_tree.insert(21)
+       my_tree.insert(76)
+       my_tree.insert(18)
+       my_tree.insert(27)
+       my_tree.insert(52)
+       my_tree.insert(82)
+       print(my_tree.BFS())
+      
+      output:
+      
+       [47, 21, 76, 18, 27, 52, 82]
+
 <a name="88"></a>
 ##### Depth First Search
+
+There are three types of depth first search: preorder, postorder, and inorder.
 
 <a name="89"></a>
 ###### PreOrder
@@ -1916,322 +2055,218 @@ HERE
 <a name="90"></a>
 ###### Intro 
 
+The order by which we add the items to the list is we start at the top then we keep moving to the left until we reach to point which is as far as we can go to the left then we go up and go right until we reach to the point that we looked at everything to the left of the top node then we go to the right and then we go to the left and then right …. 
 
 <a name="91"></a>
 ###### Implementation  
 
+Again the DFS preorder is a method in our BinarySearchTree class. Inside the method we have a recursive function, we have not seen such a thing before:
+
+      class Node:
+        def __init__(self, value):
+            self.value = value
+            self.left = None
+            self.right = None
+      
+      class BinarySearchTree:
+        def __init__(self):
+            self.root = None
+      
+        def insert(self, value):
+            new_node = Node(value)
+      
+            if self.root is None:
+                self.root = new_node
+                return True
+      
+            temp = self.root
+            while True:
+                if new_node.value == temp.value:
+                    return False
+                if new_node.value < temp.value:
+                    if temp.left is None:
+                        temp.left = new_node
+                        return True
+                    temp = temp.left
+                else:
+                    if temp.right is None:
+                        temp.right = new_node
+                        return True
+                    temp = temp.right
+      
+        def BFS(self):
+            current_node = self.root
+            queue = []
+            results = []
+      
+            queue.append(current_node)
+      
+            while len(queue) > 0:
+                current_node = queue.pop(0)
+                results.append(current_node.value)
+                if current_node.left:
+                    queue.append(current_node.left)
+                if current_node.right:
+                    queue.append(current_node.right)
+            return results
+      
+        def dfs_pre_order(self):
+            results = []
+      
+            def traverse(current_node):
+                results.append(current_node.value)
+                if current_node.left:
+                    traverse(current_node.left)
+                if current_node.right:
+                    traverse(current_node.right)
+      
+            traverse(self.root)
+            return results
+      
+      my_tree = BinarySearchTree()
+      my_tree.insert(47)
+      my_tree.insert(21)
+      my_tree.insert(76)
+      my_tree.insert(18)
+      my_tree.insert(27)
+      my_tree.insert(52)
+      my_tree.insert(82)
+      print(my_tree.dfs_pre_order())
+      
+      output:
+      
+      [47, 21, 18, 27, 76, 52, 82]
+    
 <a name="92"></a>
 ###### PostOrder
 
 <a name="93"></a>
 ###### Intro 
 
+Just like the other tree traversal we start at the top what is different here is that we are just going to visit the self.root node we are not going to write that value to the results list yet, then we are going to go to the left then visit that node and then we go to the left again until there is no node to the left and right only then finally we write the value of the last node, which does not have any left or right, to the results list so the order is that we look left then right if there is nothing on the left and right we write the node’s value to the results list. Then we come back up and go to right … the last node which will be written to the results list is the self.root node. 
 
 <a name="94"></a>
 ###### Implementation  
 
+The method for the dfs_post_order is exactly the same as of dfs_pre_order but we append at the end:
+
+      class Node:
+        def __init__(self, value):
+            self.value = value
+            self.left = None
+            self.right = None
+      
+      class BinarySearchTree:
+        def __init__(self):
+            self.root = None
+      
+        def insert(self, value):
+            new_node = Node(value)
+      
+            if self.root is None:
+                self.root = new_node
+                return True
+      
+            temp = self.root
+            while True:
+                if new_node.value == temp.value:
+                    return False
+                if new_node.value < temp.value:
+                    if temp.left is None:
+                        temp.left = new_node
+                        return True
+                    temp = temp.left
+                else:
+                    if temp.right is None:
+                        temp.right = new_node
+                        return True
+                    temp = temp.right
+      
+        def BFS(self):
+            current_node = self.root
+            queue = []
+            results = []
+      
+            queue.append(current_node)
+      
+            while len(queue) > 0:
+                current_node = queue.pop(0)
+                results.append(current_node.value)
+                if current_node.left:
+                    queue.append(current_node.left)
+                if current_node.right:
+                    queue.append(current_node.right)
+            return results
+      
+        def dfs_pre_order(self):
+            results = []
+      
+            def traverse(current_node):
+                results.append(current_node.value)
+                if current_node.left:
+                    traverse(current_node.left)
+                if current_node.right:
+                    traverse(current_node.right)
+      
+            traverse(self.root)
+            return results
+      
+        def dfs_post_order(self):
+            results = []
+      
+            def traverse(current_node):
+                if current_node.left:
+                    traverse(current_node.left)
+                if current_node.right:
+                    traverse(current_node.right)
+                results.append(current_node.value)
+            traverse(self.root)
+            return results
+      
+      my_tree = BinarySearchTree()
+      my_tree.insert(47)
+      my_tree.insert(21)
+      my_tree.insert(76)
+      my_tree.insert(18)
+      my_tree.insert(27)
+      my_tree.insert(52)
+      my_tree.insert(82)
+      print(my_tree.dfs_post_order())
+      
+      output:
+      
+      [18, 27, 21, 52, 82, 76, 47]
 <a name="95"></a>
 ###### InOrder
 
 <a name="96"></a>
 ###### Intro 
 
+We start at the top node, we go to the left, then again go to the left until there is nothing to the left then we write that last node to the results list then we go to the right and so on and so forth. In this case we write the lowest value first to the results list then the second lowest value and all the way we add the nodes’ values in numerical order to the results list. 
+
 
 <a name="97"></a>
 ###### Implementation  
 
-
-### Algorithms: Tree Traversal 
-
-#### Intro
-
-Tree traversal is when we are going to visit every node in the tree and we want to take the values and put them in a list then will return that list. 
-Tree traversal is more complicated compared to doing something like with a linked list b/c in a linked list it is just linear so to traverse it we just start at the beginning and go through the list but with the tree there are multiple ways to visit each node one approach is breadth first search another way is depth first search. We look at different ways of DFS in the followings. 
-
-#### Breadth First Search (BFS)
-
-##### Intro 
-
-We start at the top of the tree then we do the second row and then the third row and so on and so forth. We will create two lists: queue and results, results is the one that will be returned with all the nodes’ values in it. The queue is the one where we include the entire node meaning its value and its left and right. But in the results we are only storing the values and not the entire node. The loop only runs as long as we have items in the queue list like as long as the queue is empty it means that we have visited every item in the tree and the only thing left to do is to return the results list.  
-
-##### Code 
-
-The BFS is a method in our binary search tree we defined previously: 
-
-    class Node:
-        def __init__(self, value):
-            self.value = value
-            self.left = None
-            self.right = None
-
-    class BinarySearchTree:
-        def __init__(self):
-            self.root = None
-
-        def insert(self, value):
-            new_node = Node(value)
-
-            if self.root is None:
-                self.root = new_node
-                return True
-
-            temp = self.root
-            while True:
-                if new_node.value == temp.value:
-                    return False
-                if new_node.value < temp.value:
-                    if temp.left is None:
-                        temp.left = new_node
-                        return True
-                    temp = temp.left
-                else:
-                    if temp.right is None:
-                        temp.right = new_node
-                        return True
-                    temp = temp.right
-
-        def BFS(self):
-            current_node = self.root
-            queue = []
-            results = []
-            queue.append(current_node)
-
-            while len(queue) > 0:
-                current_node = queue.pop(0)
-                results.append(current_node.value)
-                if current_node.left:
-                    queue.append(current_node.left)
-                if current_node.right:
-                    queue.append(current_node.right)
-            return results
-
-    my_tree = BinarySearchTree()
-    my_tree.insert(47)
-    my_tree.insert(21)
-    my_tree.insert(76)
-    my_tree.insert(18)
-    my_tree.insert(27)
-    my_tree.insert(52)
-    my_tree.insert(82)
-    print(my_tree.BFS())
-
-output:
-
-    [47, 21, 76, 18, 27, 52, 82]
-
-#### Depth First Search HERE
-Breadth First Search (BFS)
-There are three types of depth first search: preorder, postorder, and inorder.
-
-##### PreOrder 
-
-###### Intro 
-
-The order by which we add the items to the list is we start at the top then we keep moving to the left until we reach to point which is as far as we can go to the left then we go up and go right until we reach to the point that we looked at everything to the left of the top node then we go to the right and then we go to the left and then right …. 
-
-###### Code 
-Again the DFS preorder is a method in our BinarySearchTree class. Inside the method we have a recursive function, we have not seen such a thing before:
-
-    class Node:
-        def __init__(self, value):
-            self.value = value
-            self.left = None
-            self.right = None
-
-    class BinarySearchTree:
-        def __init__(self):
-            self.root = None
-
-        def insert(self, value):
-            new_node = Node(value)
-
-            if self.root is None:
-                self.root = new_node
-                return True
-
-            temp = self.root
-            while True:
-                if new_node.value == temp.value:
-                    return False
-                if new_node.value < temp.value:
-                    if temp.left is None:
-                        temp.left = new_node
-                        return True
-                    temp = temp.left
-                else:
-                    if temp.right is None:
-                        temp.right = new_node
-                        return True
-                    temp = temp.right
-
-        def BFS(self):
-            current_node = self.root
-            queue = []
-            results = []
-
-            queue.append(current_node)
-
-            while len(queue) > 0:
-                current_node = queue.pop(0)
-                results.append(current_node.value)
-                if current_node.left:
-                    queue.append(current_node.left)
-                if current_node.right:
-                    queue.append(current_node.right)
-            return results
-
-        def dfs_pre_order(self):
-            results = []
-
-            def traverse(current_node):
-                results.append(current_node.value)
-                if current_node.left:
-                    traverse(current_node.left)
-                if current_node.right:
-                    traverse(current_node.right)
-
-            traverse(self.root)
-            return results
-
-    my_tree = BinarySearchTree()
-    my_tree.insert(47)
-    my_tree.insert(21)
-    my_tree.insert(76)
-    my_tree.insert(18)
-    my_tree.insert(27)
-    my_tree.insert(52)
-    my_tree.insert(82)
-    print(my_tree.dfs_pre_order())
-
-output:
-
-    [47, 21, 18, 27, 76, 52, 82]
-
-##### PostOrder 
-
-###### Intro 
-
-Just like the other tree traversal we start at the top what is different here is that we are just going to visit the self.root node we are not going to write that value to the results list yet, then we are going to go to the left then visit that node and then we go to the left again until there is no node to the left and right only then finally we write the value of the last node, which does not have any left or right, to the results list so the order is that we look left then right if there is nothing on the left and right we write the node’s value to the results list. Then we come back up and go to right … the last node which will be written to the results list is the self.root node. 
-
-###### Code
-
-The method for the dfs_post_order is exactly the same as of dfs_pre_order but we append at the end:
-
-    class Node:
-        def __init__(self, value):
-            self.value = value
-            self.left = None
-            self.right = None
-
-    class BinarySearchTree:
-        def __init__(self):
-            self.root = None
-
-        def insert(self, value):
-            new_node = Node(value)
-
-            if self.root is None:
-                self.root = new_node
-                return True
-
-            temp = self.root
-            while True:
-                if new_node.value == temp.value:
-                    return False
-                if new_node.value < temp.value:
-                    if temp.left is None:
-                        temp.left = new_node
-                        return True
-                    temp = temp.left
-                else:
-                    if temp.right is None:
-                        temp.right = new_node
-                        return True
-                    temp = temp.right
-
-        def BFS(self):
-            current_node = self.root
-            queue = []
-            results = []
-
-            queue.append(current_node)
-
-            while len(queue) > 0:
-                current_node = queue.pop(0)
-                results.append(current_node.value)
-                if current_node.left:
-                    queue.append(current_node.left)
-                if current_node.right:
-                    queue.append(current_node.right)
-            return results
-
-        def dfs_pre_order(self):
-            results = []
-
-            def traverse(current_node):
-                results.append(current_node.value)
-                if current_node.left:
-                    traverse(current_node.left)
-                if current_node.right:
-                    traverse(current_node.right)
-
-            traverse(self.root)
-            return results
-
-        def dfs_post_order(self):
-            results = []
-
-            def traverse(current_node):
-                if current_node.left:
-                    traverse(current_node.left)
-                if current_node.right:
-                    traverse(current_node.right)
-                results.append(current_node.value)
-            traverse(self.root)
-            return results
-
-    my_tree = BinarySearchTree()
-    my_tree.insert(47)
-    my_tree.insert(21)
-    my_tree.insert(76)
-    my_tree.insert(18)
-    my_tree.insert(27)
-    my_tree.insert(52)
-    my_tree.insert(82)
-    print(my_tree.dfs_post_order())
-
-output:
-
-    [18, 27, 21, 52, 82, 76, 47]
-
-
-##### InOrder 
-
-###### Intro
-
-We start at the top node, we go to the left, then again go to the left until there is nothing to the left then we write that last node to the results list then we go to the right and so on and so forth. In this case we write the lowest value first to the results list then the second lowest value and all the way we add the nodes’ values in numerical order to the results list. 
-
-###### Code
-
 Again here the method is pretty similar to that of preorder and postorder but we append the value after going to the left and before going to the right:
-
-    class Node:
+      
+      class Node:
         def __init__(self, value):
             self.value = value
             self.left = None
             self.right = None
-
-    class BinarySearchTree:
+      
+      class BinarySearchTree:
         def __init__(self):
             self.root = None
-
+      
         def insert(self, value):
             new_node = Node(value)
-
+      
             if self.root is None:
                 self.root = new_node
                 return True
-
+      
             temp = self.root
             while True:
                 if new_node.value == temp.value:
@@ -2246,14 +2281,14 @@ Again here the method is pretty similar to that of preorder and postorder but we
                         temp.right = new_node
                         return True
                     temp = temp.right
-
+      
         def BFS(self):
             current_node = self.root
             queue = []
             results = []
-
+      
             queue.append(current_node)
-
+      
             while len(queue) > 0:
                 current_node = queue.pop(0)
                 results.append(current_node.value)
@@ -2262,23 +2297,23 @@ Again here the method is pretty similar to that of preorder and postorder but we
                 if current_node.right:
                     queue.append(current_node.right)
             return results
-
+      
         def dfs_pre_order(self):
             results = []
-
+      
             def traverse(current_node):
                 results.append(current_node.value)
                 if current_node.left:
                     traverse(current_node.left)
                 if current_node.right:
                     traverse(current_node.right)
-
+      
             traverse(self.root)
             return results
-
+      
         def dfs_post_order(self):
             results = []
-
+      
             def traverse(current_node):
                 if current_node.left:
                     traverse(current_node.left)
@@ -2287,10 +2322,10 @@ Again here the method is pretty similar to that of preorder and postorder but we
                 results.append(current_node.value)
             traverse(self.root)
             return results
-
+      
         def dfs_in_order(self):
             results = []
-
+      
             def traverse(current_node):
                 if current_node.left:
                     traverse(current_node.left)
@@ -2299,20 +2334,20 @@ Again here the method is pretty similar to that of preorder and postorder but we
                     traverse(current_node.right)
             traverse(self.root)
             return results
-
-    my_tree = BinarySearchTree()
-    my_tree.insert(47)
-    my_tree.insert(21)
-    my_tree.insert(76)
-    my_tree.insert(18)
-    my_tree.insert(27)
-    my_tree.insert(52)
-    my_tree.insert(82)
-    print(my_tree.dfs_in_order())
-
-output:
-
-    [18, 21, 27, 47, 52, 76, 82]
+      
+      my_tree = BinarySearchTree()
+      my_tree.insert(47)
+      my_tree.insert(21)
+      my_tree.insert(76)
+      my_tree.insert(18)
+      my_tree.insert(27)
+      my_tree.insert(52)
+      my_tree.insert(82)
+      print(my_tree.dfs_in_order())
+      
+      output:
+      
+      [18, 21, 27, 47, 52, 76, 82]
 
 
 
