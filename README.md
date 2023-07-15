@@ -15,7 +15,7 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 9. [Binary Tree](#9)
 10. [Greedy](#10)
 11. [Recursion](#11)
-12. [Recursion](#12)
+12. [Math](#12)
 
 
 <a name="1"></a>
