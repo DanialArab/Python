@@ -333,6 +333,8 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |2|2235|Add Two Integers|Easy|
 |3|2413|Smallest Even Multiple|Easy|
 |4|2769|Find the Maximum Achievable Number|Easy|
+|5|2160|Minimum Sum of Four Digit Number After Splitting Digits|Easy|
+
 
  
 
