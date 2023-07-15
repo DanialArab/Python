@@ -331,6 +331,8 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 | -- | --|  -- | -- |
 |1|2469|Convert the Temperature|Easy|
 |2|2235|Add Two Integers|Easy|
+|3|2413|Smallest Even Multiple|Easy|
 
  
+
 
