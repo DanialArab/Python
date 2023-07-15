@@ -335,6 +335,9 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |4|2769|Find the Maximum Achievable Number|Easy|
 |5|2160|Minimum Sum of Four Digit Number After Splitting Digits|Easy|
 |6|2520|Count the Digits That Divide a Number|Easy|
+|7|2651|Calculate Delayed Arrival Time|Easy|
+
+
 
 
  
