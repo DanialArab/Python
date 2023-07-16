@@ -340,6 +340,7 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |9|2485|Find the Pivot Integer|Easy|
 |10|1180|Count Substrings with Only One Distinct Letter|Easy|
 |11|1266|Minimum Time Visiting All Points|Easy|
+|12|2427|Number of Common Factors|Easy|
 
 
 
