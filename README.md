@@ -344,8 +344,10 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |13|1134|Armstrong Number|Easy|
 |14|1252|Cells with Odd Values in a Matrix|Easy|
 |15|1688|Count of Matches in Tournament|Easy|
+|16|728|Self Dividing Numbers|Easy|
 
  
+
 
 
 
