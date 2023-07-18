@@ -348,8 +348,10 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |16|728|Self Dividing Numbers|Easy|
 |17|1837|Sum of Digits in Base K|Easy|
 |18|1085|Sum of Digits in the Minimum Number|Easy|
+|19|2169|Count Operations to Obtain Zero|Easy|
 
  
+
 
 
 
