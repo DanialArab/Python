@@ -351,8 +351,10 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |19|2169|Count Operations to Obtain Zero|Easy|
 |20|1217|Minimum Cost to Move Chips to The Same Position|Easy|
 |21|2578|Split With Minimum Sum|Easy|
+|22|2544|Alternating Digit Sum|Easy|
 
  
+
 
 
 
