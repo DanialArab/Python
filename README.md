@@ -349,8 +349,10 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |17|1837|Sum of Digits in Base K|Easy|
 |18|1085|Sum of Digits in the Minimum Number|Easy|
 |19|2169|Count Operations to Obtain Zero|Easy|
+|20|1217|Minimum Cost to Move Chips to The Same Position|Easy|
 
  
+
 
 
 
