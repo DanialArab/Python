@@ -353,6 +353,7 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |21|2578|Split With Minimum Sum|Easy|
 |22|2544|Alternating Digit Sum|Easy|
 |23|762|Prime Number of Set Bits in Binary Representation|Easy|
+|24|258|Add Digits|Easy|
 
  
 
