@@ -115,6 +115,8 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |90|1213| Intersection of Three Sorted Arrays| Easy|
 |91|1725| Number Of Rectangles That Can Form The Largest Square| Easy|
 |92|1796|  Second Largest Digit in a String| Easy|
+|93|2716|  Minimize String Length| Easy|
+
 
 
 
