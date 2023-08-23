@@ -118,6 +118,7 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |93|2716|  Minimize String Length| Easy|
 |94|2828| Check if a String Is an Acronym of Words| Easy|
 |95|2810| Faulty Keyboard| Easy|
+|96|1370| Increasing Decreasing String| Easy|
 
 
 
