@@ -121,7 +121,7 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |96|1370| Increasing Decreasing String| Easy|
 |97|2788| Split Strings by Separator| Easy|
 |98|2696| Minimum String Length After Removing Substrings| Easy|
-
+|99|1065| Index Pairs of a String| Easy|
 
 
 
