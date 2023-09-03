@@ -368,6 +368,8 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 |25|1025|Divisor Game|Easy|
 |26|1925|Count Square Sum Triples|Easy|
 |27|1716|Calculate Money in Leetcode Bank|Easy|
+|28|268|Missing Number|Easy|
+
 
 
 
