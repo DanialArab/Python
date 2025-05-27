@@ -43,3 +43,30 @@ Here are a few common scenarios where two pointers are used:
 + Fast and slow pointers: In some scenarios, you might need to traverse a linked list or an array at different speeds. You can use a fast pointer that moves faster than a slow pointer to perform operations such as cycle detection, finding middle elements, or partitioning.
 
 These are just a few examples of how two pointers can be used in programming. The technique is versatile and can be adapted to various problem-solving situations to optimize algorithms and improve efficiency.
+
+## Private helper function 
+
+A private helper method in Python is a method intended to be used only inside the class,  not from outside code. It’s a way to organize code by breaking down complex functions into smaller reusable parts, but signaling to users of the class that this method is "internal" and not part of the public API. Python doesn’t enforce privacy strictly, but by convention:
+- Methods or attributes prefixed with a single underscore _ are considered private or internal.
+- This is just a naming convention to tell other developers: "Hey, don’t use this method directly unless you know what you’re doing.
+
+    def _get_cleaned_subset(self, column_name, use_clean): 
+        if self.data is None:
+            raise ValueError("Data not loaded. Use `load_data()` first.")
+
+        if use_clean:
+            idx = self.clean_data(column_name)
+            print(f"Using cleaned data subset for column: {column_name}")
+
+        else:
+            print(f"Using raw data (no cleaning) for column: {column_name}")
+            idx = self.data.index
+
+        df_sub = self.data.loc[idx]
+        values = df_sub[column_name].fillna('').tolist()
+
+        ids = df_sub['Id'].tolist()
+        names = df_sub['Name'].tolist()
+
+        print(f"Data subset was prepared for embedding generation.")
+        return df_sub, values, ids, names
