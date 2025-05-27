@@ -50,23 +50,24 @@ A private helper method in Python is a method intended to be used only inside th
 - Methods or attributes prefixed with a single underscore _ are considered private or internal.
 - This is just a naming convention to tell other developers: "Hey, don’t use this method directly unless you know what you’re doing.
 
-    def _get_cleaned_subset(self, column_name, use_clean): 
-        if self.data is None:
-            raise ValueError("Data not loaded. Use `load_data()` first.")
-
-        if use_clean:
-            idx = self.clean_data(column_name)
-            print(f"Using cleaned data subset for column: {column_name}")
-
-        else:
-            print(f"Using raw data (no cleaning) for column: {column_name}")
-            idx = self.data.index
-
-        df_sub = self.data.loc[idx]
-        values = df_sub[column_name].fillna('').tolist()
-
-        ids = df_sub['Id'].tolist()
-        names = df_sub['Name'].tolist()
-
-        print(f"Data subset was prepared for embedding generation.")
-        return df_sub, values, ids, names
+        def _get_cleaned_subset(self, column_name, use_clean):
+      
+            if self.data is None:
+                raise ValueError("Data not loaded. Use `load_data()` first.")
+    
+            if use_clean:
+                idx = self.clean_data(column_name)
+                print(f"Using cleaned data subset for column: {column_name}")
+    
+            else:
+                print(f"Using raw data (no cleaning) for column: {column_name}")
+                idx = self.data.index
+    
+            df_sub = self.data.loc[idx]
+            values = df_sub[column_name].fillna('').tolist()
+    
+            ids = df_sub['Id'].tolist()
+            names = df_sub['Name'].tolist()
+    
+            print(f"Data subset was prepared for embedding generation.")
+            return df_sub, values, ids, names
