@@ -1174,6 +1174,61 @@ Point: the hash method takes a key to determine the address where we store the k
         5: None
         6: None
 
+the __hash method above is a **Python private method.**
+
+Private methods in Python are methods that are **intended for internal use within a class**. They are **not meant to be accessed directly from outside the class**. Python does not enforce true privacy like some other languages, but it uses a convention of name mangling to indicate private methods.
+
+###### How to define a private method
+
+A private method is defined by **prefixing the method name with double underscores __.** For example: 
+
+      class MyClass:
+          def __private_method(self):
+              print("This is a private method.")
+
+###### How to call a private method
+
+Private methods are intended to be called **from within the class itself.**
+
+
+      class MyClass:
+          def __private_method(self):
+              print("This is a private method.")
+          
+          def public_method(self):
+              self.__private_method() # Calling private method from inside the class
+      
+      obj = MyClass()
+      obj.public_method() # Output: This is a private method.
+
+###### Name Mangling
+
+Python uses name mangling to make private methods less accessible from outside the class. When a method name starts with double underscores, the Python interpreter changes its name to **_ClassName__methodname**. This makes it **harder to accidentally access a private method from outside the class.**
+
+
+      class MyClass:
+          def __private_method(self):
+              print("This is a private method.")
+      
+      obj = MyClass()
+
+###### Trying to access the method directly will result in an AttributeError
+
+      #obj.__private_method() # This would cause an error
+
+###### However, we can access it using the mangled name
+
+      obj._MyClass__private_method() # Output: This is a private method.
+
+###### Purpose of private methods
+
+Private methods are used to:
+
+- **Encapsulate internal logic**: They hide implementation details from the outside world.
+- **Prevent accidental overriding**: They reduce the risk of child classes unintentionally overriding methods that are not meant to be overridden.
+- **Break down complex tasks**: They allow you to break down complex methods into smaller, more manageable parts.
+
+
 Implementation of methods Set, Get, and Keys: 
   
       class HashTable:
