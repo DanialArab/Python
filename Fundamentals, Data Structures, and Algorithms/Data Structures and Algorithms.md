@@ -871,6 +871,11 @@ In summary, when working with immutable objects like integers, assigning one var
 + Child nodes can also be parent nodes 
 + A node that does not have any children is called leaf 
 
+
+![](https://github.com/DanialArab/images/blob/main/Python/BT_types.png)
+
+reference: https://medium.com/data-science/5-types-of-binary-tree-with-cool-illustrations-9b335c430254
+
 <a name="36"></a>
 ###### Binary search tree (BST)
 
