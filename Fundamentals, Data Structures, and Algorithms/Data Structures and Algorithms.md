@@ -1255,6 +1255,17 @@ Implementation of methods Set, Get, and Keys:
                           return self.data_map[index][i][1]
                   return None
 
+          # def get_item(self, key): # this is my version which found to be better by chatGPT:
+          # Your Version is better unless you explicitly need the index for other purposes (e.g., modifying the list in-place or tracking position). It's: More Pythonic, Easier to               # read and maintain, less error-prone. So go with your Version for clarity and best practice.
+          #     index = self.__hash(key)
+          #     if self.data_map[index] is None:
+          #         return None 
+          #     for item in self.data_map[index]:
+          #         if item [0] == key:
+          #             return item[1]
+          #     return None 
+
+
           def keys(self):
               all_keys = []
               for i in range(len(self.data_map)):
