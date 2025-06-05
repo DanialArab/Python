@@ -1360,6 +1360,11 @@ HT: Big O quiz
 We do have:
 + a vertex or node, the proper to say that is vertex, the plural would be vertices
 + between vertices we have edge or connection, the proper to say it is edge
++ hop: A hop is a step or traversal from one node (vertex) to another via an edge.
+     - 1-hop means directly connected (A → B).
+     - 2-hops means there's an intermediate node (A → B → C).
+     - N-hops refers to paths that require N edge traversals.
+      
 + there is no limit to how many other vertices that a vertex can connect to
 + two concepts here:
    + with graphs you may have weighted edges, you are not going to have it always, but you can have. You may use something like this in a maps app to address traffics for example. Another example would be with network routing protocols like it is better to have an extra hop and have two very fast links than one very slow link. Again the edges can be weighted or NOT weighted  
