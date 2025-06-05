@@ -1440,7 +1440,7 @@ Because our constructor in our class Graph is pretty simple Scott did not devote
       True
       A : []
 
-**Add Edge **
+**Add Edge**
 
       class Graph:
           def __init__(self):
