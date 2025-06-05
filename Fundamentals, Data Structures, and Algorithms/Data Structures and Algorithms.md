@@ -1422,8 +1422,8 @@ Because our constructor in our class Graph is pretty simple Scott did not devote
           def __init__(self):
               self.adj_list = {}
       
-          def add_vertex(self, vertex):
-              if vertex not in self.adj_list:
+          def add_vertex(self, vertex): 
+              if vertex not in self.adj_list: # If not checking this and vertex already exists in self.adj_list, we will overwrite the existing adjacency list of that vertex — potentially deleting existing edges.
                   self.adj_list[vertex] = []
                   return True
               return False
