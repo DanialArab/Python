@@ -53,6 +53,9 @@
         3. [Adjacency List](#51)
         4. [Big O](#52)
         5. [Implementation](#53)
+   8. [Heaps](#54)
+      1. [Intro](#55)
+      2. 
 4. [Algorithms](#54)
    1. [Recursion](#55)
       1. [Intro](#56)
@@ -1716,6 +1719,18 @@ In the big o section, we already mentioned that there could be an efficiency tha
 
 Quiz 
 + Graphs are the go-to data structure when you need to represent entities and the relationships between them: True. 
+
+
+<a name="54"></a>
+##### Heaps 
+
+
+
+<a name="55"></a>
+###### Intro 
+
+
+
 
 <a name="54"></a>
 ### Algorithms
