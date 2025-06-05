@@ -1377,7 +1377,7 @@ We do have:
 
 We have two ways to represent a graph:
 + adjacency matrix
-+ + adjacency list
++ adjacency list
 
 the following is an example of an adjacency matrix: 
 
