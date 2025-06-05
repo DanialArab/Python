@@ -1383,7 +1383,7 @@ the following is an example of an adjacency matrix:
 
 ![](https://github.com/DanialArab/images/blob/main/Python/adjacency%20matrix.png)
 
-Scott mentioned each vertex cannot have an edge with itself and that’s why we always have a 45 degree line of zeros (BUT in the above image I took from net it is like vertex D has edge with itself!). 
+The course mentioned each vertex cannot have an edge with itself and that’s why we always have a 45 degree line of zeros (I think this is n ot accurate like in the above image I took from internet it is like vertex D has an edge with itself!). 
 
 In a bi-directional matrix we always have a mirror image on each side of the 45 degree line, if it is directional it would not be like that and we lose the symmetry. 
 Also if our edges are weighted we also store these weights in the matrix like instead of having ones in the matrix, like in an above fig., we have the weights associated with each edge. 
