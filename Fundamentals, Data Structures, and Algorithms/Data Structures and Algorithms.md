@@ -1755,21 +1755,17 @@ Other than having a maximum (or minimum) value on the top, there is **no other g
 
 So there's also a huge difference in how we store a Heap versus how we stored our BST. We're going to **store a Heap in a list, and we will not be creating a node class.** And this list, the only thing it stores is **integers.**
 
-So the value of the root will go here.
-
-And then we just go line by line.
-
-So there are **two common ways of storing the heap in a list:**
+There are **two common ways of storing the heap in a list:**
 
 - The first way is to store the first item at the index of zero.
-- But it's also very common to see heaps where the first index is the index of one, much cleaner from a math point of view: we can get the index of the left and right children through simple formula
+- But it's also very common to see heaps where the first index is the index of one, much easier from a math point of view: we can get the index of the left and right children and also the parents' indecies through a simple formula below. 
 
-  left_chid = 2 * parent_index
-  right_child = 2 * pranet_index + 1
+        left_chid_index   = 2 * parent_index
+        right_child_index = 2 * pranet_index + 1
 
-Also, we can get the index of parents through integer division and dividing the index by 2: parent for the index of 6: 6/2 = 3 and for the index of 7: 7 /2 = 3.5 nut since it is integer division it would be 3. So the parent index for the nodes 6 and 7 is a node at index 3. 
+A quick emphasis is that the tree needs to be a complete tree. So, from the perspective of a list, that means we don't have **any gaps in the list.** All of the values in the heap will be a contiguous range of numbers.
 
-  
+Also, we can get the index of parents through **integer division and dividing the index by 2**: parent for the index of 6: 6/2 = 3 and for the index of 7: 7 /2 = 3.5, but since it is integer division, it would be 3. So the parent index for the nodes 6 and 7 is a node at index 3. 
 
 <a name="54"></a>
 ### Algorithms
