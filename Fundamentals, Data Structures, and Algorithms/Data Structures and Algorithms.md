@@ -1745,7 +1745,9 @@ Quiz
 <a name="55"></a>
 ###### Intro 
 
-Heaps are very similar to Binary Search Trees and it is a Binary tree. But, the numbers are **NOT distributed in the same way**. With a Heap each Node has a number, which is higher than all of its descendents, meaning the highest value will always be on the top. A key characteristic of a Heap is that it is a **complete tree** (a reminder on complete tree: the tree which is filled from left to right on each level with no gaps). One of the differences between a Heap and a BST is that a Heap can have **duplicates**. We have Max Heap (having the highest value on the top) and Min Heap (having the minimum value on the top, where all of the descendents are greater than or equal to the node value), see below: 
+Heaps are very similar to Binary Search Trees and it is a Binary tree. But, the numbers are **NOT distributed in the same way**. With a Heap each Node has a number, which is higher than all of its descendents, meaning the highest value will always be on the top. A key characteristic of a Heap is that it is a **complete tree** (a reminder on complete tree: the tree which is filled from left to right on each level with no gaps). One of the other things we talked about in the BST section is that the height of a tree, when it's a perfect tree, it is log n. In other words, for the perfect tree with 3 levels, we have approximately eight nodes, and the log eight with a base of 2 is 3. So the height of the tree is 3. And this will be an important concept to understand when understanding the big O of heaps. And we'll talk about the big O of heaps in the priority queue video.
+
+One of the differences between a Heap and a BST is that a Heap can have **duplicates**. We have Max Heap (having the highest value on the top) and Min Heap (having the minimum value on the top, where all of the descendents are greater than or equal to the node value), see below: 
 
 ![](https://github.com/DanialArab/images/blob/main/Python/MinHeapAndMaxHeap.png)
 
