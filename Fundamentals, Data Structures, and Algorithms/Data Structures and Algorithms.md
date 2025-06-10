@@ -1771,8 +1771,16 @@ Also, we can get the index of parents through **integer division and dividing th
 <a name="56"></a>
 ###### Insert 
 
+Three points here:
 
+1. We will always start out by inserting the value into the **next open space** without **being worried about the order**. The reason for this is that the tree needs to remain complete. The next open space is the place where we would put this to **make the tree complete.**
+2. Once we put the value in the next open space, we **then** bubble it up to the appropriate spot by comparing its value with its parent's value. So we need a while loop to move this up. 
+3. We have 2 conditions that can break us out of the while loop:
+a. The first one is if we reach the top of the heap.
+b. Second condition: when the value is not larger than the parent's value (a quick note: this is for Max Heap, for Min Heap the value should be less than the parent's value to move otherwise we are done)
+And once we get to this point, we have a valid heap.
 
+A useful tip for implementation: we can use the simple formula above for finding the parents' indices to perform the above comparisons and swapping.  
 
 <a name="54"></a>
 ### Algorithms
