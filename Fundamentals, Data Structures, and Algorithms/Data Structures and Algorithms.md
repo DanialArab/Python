@@ -55,7 +55,7 @@
         5. [Implementation](#53)
    8. [Heaps](#54)
       1. [Intro](#55)
-      2. 
+      2. [Insert](#56)
 4. [Algorithms](#54)
    1. [Recursion](#55)
       1. [Intro](#56)
