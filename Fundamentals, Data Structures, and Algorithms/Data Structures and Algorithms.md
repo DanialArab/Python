@@ -1784,6 +1784,11 @@ And once we get to this point, we have a valid heap.
 
 A useful tip for implementation: we can use the simple formula above for finding the parents' indices to perform the above comparisons and swapping.  
 
+
+
+
+
+
 <a name="54"></a>
 ### Algorithms
 
