@@ -1760,7 +1760,7 @@ There are **two common ways of storing the heap in a list:**
 - The first way is to store the first item at the index of zero.
 - But it's also very common to see heaps where the first index is the index of one, much easier from a math point of view: we can get the index of the left and right children and also the parents' indecies through a simple formula below. 
 
-        left_chid_index   = 2 * parent_index
+        left_child_index   = 2 * parent_index
         right_child_index = 2 * pranet_index + 1
 
 A quick emphasis is that the tree needs to be a complete tree. So, from the perspective of a list, that means we don't have **any gaps in the list.** All of the values in the heap will be a contiguous range of numbers.
