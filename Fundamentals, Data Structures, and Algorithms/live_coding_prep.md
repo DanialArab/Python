@@ -1,5 +1,4 @@
 
-Great resource: https://www.youtube.com/watch?v=0K_eZGS5NsU
 
 Some points learbed from the above reference:
 
@@ -13,6 +12,8 @@ Some points learbed from the above reference:
 - nested functions
 - nonlocal value
 
-Great resource for prep:
 
-https://neetcode.io/
+
+Great resource: https://www.youtube.com/watch?v=0K_eZGS5NsU
+
+Great resource for prep: https://neetcode.io/
