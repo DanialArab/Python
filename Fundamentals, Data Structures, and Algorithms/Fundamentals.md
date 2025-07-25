@@ -71,3 +71,16 @@ A private helper method in Python is a method intended to be used only inside th
     
             print(f"Data subset was prepared for embedding generation.")
             return df_sub, values, ids, names
+
+
+- In Python, variables are dynamically typed
+- arrays are called list in python
+- custom sort like arr=['bbb', 'alice', 'jane'] then arr.sort(key=lambda x: len(x))
+- from collections import deque 
+- HashSet: mySet = set()
+- HashMap or dict: myMap = {} 
+- import heapq:   heaps are good for finding min and max of a set of values frequently , under the hood they are arrays 
+- nested functions
+- nonlocal value
+
+- 
