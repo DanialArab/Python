@@ -1,7 +1,5 @@
 + <a href="https://codewithmosh.com/p/python-programming-course-beginners">Complete Python Mastery</a>
 
-
-
 ## Zip Function
 
 If we have two lists and we want to combine them as a list of tuples let’s say, here we cannot use map function or list comprehension because they both work with a single list and so here we need built-in zip function, which returns a zip object which is also iterable and can be converted to a list like:
@@ -72,6 +70,8 @@ A private helper method in Python is a method intended to be used only inside th
             print(f"Data subset was prepared for embedding generation.")
             return df_sub, values, ids, names
 
+
+Some points learned from https://www.youtube.com/watch?v=0K_eZGS5NsU:
 
 - In Python, variables are dynamically typed
 - arrays are called list in python
