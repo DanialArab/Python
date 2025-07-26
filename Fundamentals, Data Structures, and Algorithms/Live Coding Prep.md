@@ -1,3 +1,8 @@
+My Plan:
+- Take a look at the DS and Algo course and have a plan
+- have a plan for daily coding practice from Leetcode and Neetcode
+
+
 
 Some tips:
 - Always begin by asking clarifying questions about the prompt.
