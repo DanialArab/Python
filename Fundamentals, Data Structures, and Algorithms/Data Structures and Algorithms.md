@@ -1,6 +1,6 @@
 # Python Data Structures and Algorithms 
 
-1. [Time and Space Complexities ](#1) 
+1. [Time and Space Complexities ](#1)  
    1. [Overview](#2)
    2. [Big O: Intro ](#3)
        1. [Time complexity](#4)
