@@ -9,6 +9,7 @@
        1. [Omega](#7)
        2. [Theta](#8)
        3. [Omicron](#9)
+       4. [Amortized complexity](#10)
    4. [Big O](#10)
        1. [Big O: O(n) (or proportional)](#11)
        2. [Big O: Drop Constants](#12)
@@ -146,6 +147,26 @@ The average case scenario.
 The worst-case scenario. 
 
 When we are talking about big O we always talk about the worst case. 
+
+<a name="10"></a>
+##### Amortized complexity
+
+Amortized complexity gives the average time per operation over a sequence of operations, guaranteeing the worst-case performance over the entire sequence, not just a single operation.
+
+Why does it matter?
+
+Some operations can be expensive occasionally, but if they're rare and other operations are cheap, the average cost per operation remains low.
+
+Real Example: Dynamic Array (e.g., Python list.append)
+
+When appending to a dynamic array:
+
+- Most append operations are O(1) (constant time).
+- But sometimes, the array becomes full and needs to resize, which involves copying all elements to a new array — this is O(n).
+
+Despite occasional expensive operations, amortized time for each append is still O(1).
+
+
 
 <a name="10"></a>
 #### Big O 
