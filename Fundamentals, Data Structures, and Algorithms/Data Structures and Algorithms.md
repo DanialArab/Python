@@ -1339,7 +1339,9 @@ Implementation of methods Set, Get, and Keys:
 ######  HT: Interview Question
 A very common interview question:
 We want to determine whether 2 lists have an item in common.
- Approach 1, which is the naïve approach: 
+
+Approach 1, which is the naïve approach: 
+
  
    def item_in_common(list1, list2):
        for i in list1:
@@ -1353,6 +1355,7 @@ We want to determine whether 2 lists have an item in common.
    print(item_in_common(list1, list2))
 
 This approach is of O(n^2) b/c of having nested for loops. This approach is inefficient! 
+
 Approach 2, which is desired by the interviewer:
 
    def item_in_common(list1, list2):
