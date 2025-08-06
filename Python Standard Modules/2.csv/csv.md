@@ -39,3 +39,35 @@ When to use DictReader:
 
 
 ### csv.writer()
+
+        def data_saver(self, output_file, data_to_write):
+            with open (output_file, mode = 'w', encoding='utf-8', newline = '') as f:
+                fieldnames = data_to_write[0].keys()
+                writer = csv.DictWriter(f, fieldnames=fieldnames)
+                writer.writeheader()
+                writer.writerows(data_to_write)
+
+
+### When to use newline=''?
+
+It's typically used when working with:
+
+- CSV files (especially on Windows), to handle newline characters correctly when writing or reading rows.
+
+        import csv
+        with open('data.csv', mode='r', newline='', encoding='utf-8') as f:
+        reader = csv.reader(f)
+
+- ❌ When not to use it?
+
+For JSON files, using newline='' doesn't help and can even cause problems on some platforms.
+
+JSON parsers handle line breaks themselves.
+
+| Function       | Direction                | Input Type           | Output Type          | Use Case Example                                                   |
+| -------------- | ------------------------ | -------------------- | -------------------- | ------------------------------------------------------------------ |
+| `json.load()`  | JSON **file** → Python   | File object          | Python `dict`/`list` | Reading JSON data from a `.json` file                              |
+| `json.loads()` | JSON **string** → Python | `str`                | Python `dict`/`list` | Reading/parsing JSON from an API response or string variable       |
+| `json.dump()`  | Python → JSON **file**   | Python `dict`/`list` | Writes to file       | Saving Python data into a `.json` file                             |
+| `json.dumps()` | Python → JSON **string** | Python `dict`/`list` | `str`                | Converting Python object to string for logging or sending over API |
+
