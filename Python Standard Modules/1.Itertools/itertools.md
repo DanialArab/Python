@@ -4,4 +4,5 @@ These are good pointes to remember:
 - I can get all combinations of parameters using itertools.product
 - itertools.compress(data, selectors) filters data, returning only those items where the corresponding value in selectors is truthy (non-zero).
 - zip() is a built-in Python function that combines multiple iterables (like lists, tuples, etc.) element-wise into tuples. zip() returns an iterator in Python 3 — which means you need to convert it to a list or loop over it to see the values.
-
+- iter() is a built-in Python function that turns something (usually a list or any iterable) into an iterator.
+- itertools.islice: Think of islice(iterable, start, stop) like slicing, but it works on iterators, not just lists. It does not modify the original list and is lazy (efficient for large data).
