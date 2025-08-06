@@ -25,3 +25,17 @@
         - : hyphen
 
         7890 : exactly 4 digits
+
+breakdown: 
+
+| Part    | Meaning                                      |
+| ------- | -------------------------------------------- |
+| `^`     | Start of string                              |
+| `\(`    | Literal `(` (escaped because `(` is special) |
+| `\d{3}` | Exactly 3 digits                             |
+| `\)`    | Literal `)`                                  |
+| `' '`   | A space                                      |
+| `\d{3}` | Exactly 3 digits                             |
+| `-`     | A hyphen                                     |
+| `\d{4}` | Exactly 4 digits                             |
+| `$`     | End of string                                |
