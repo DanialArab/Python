@@ -82,11 +82,19 @@ class CsvParser:
         sorted_res =  [k for k, v in sorted(res.items(), key = lambda x:x[1], reverse = True)][:top_k]
         return sorted_res
 
+    def data_saver(self, output_file, data_to_write):
+        with open (output_file, mode = 'w', encoding='utf-8', newline = '') as f:
+            fieldnames = data_to_write[0].keys()
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+            writer.writerows(data_to_write)
+
 csv_obj = CsvParser()
 # print (csv_obj.data_loader('text.csv'))
-csv_obj.data_loader('text.csv')
+data = csv_obj.data_loader('text.csv')
 
 # print (csv_obj.word_fre_per_row())
 # print(csv_obj.doc_identifier('Ai'))
 # print (csv_obj.inverted_list())
 print (csv_obj.top_doc_retriever('the', 2))
+csv_obj.data_saver('saved_data.csv', data)
