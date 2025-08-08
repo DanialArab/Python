@@ -17,7 +17,6 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 11. [Recursion](#11)
 12. [Math](#12)
 
-
 <a name="1"></a>
 ## 1: String 
 
