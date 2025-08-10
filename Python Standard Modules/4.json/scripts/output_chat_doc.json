@@ -1,0 +1,12 @@
+[
+    {"id": "1", "text": "Welcome to Workday", "tags": ["intro", "workday"]}, 
+    {"id": "2", "text": "RAG combines retrieval and generation", "tags": ["rag", "retrieval", "generation"]}, 
+    {"id": "3", "text": "Vector databases store embeddings", "tags": ["rag", "vector", "database", "embeddings"]}, 
+    {"id": "4", "text": "rag Tokenization splits text into tokens", "tags": ["nlp", "tokenization"]}, 
+    {"id": "5", "text": "Transformer models enable better understanding of context", "tags": ["transformer", "nlp"]}, 
+    {"id": "6", "text": "Workday allows employee self-service", "tags": ["workday", "hr"]}, 
+    {"id": "7", "text": "LangChain simplifies chaining LLM calls", "tags": ["langchain", "llm"]}, 
+    {"id": "8", "text": "Semantic search improves with dense vectors", "tags": ["search", "semantic", "vector"]}, 
+    {"id": "9", "text": "Embeddings represent meaning in vector space", "tags": ["embeddings", "vector"]}, 
+    {"id": "10", "text": "Fine-tuning improves model performance", "tags": ["fine-tuning", "model"]}
+]
