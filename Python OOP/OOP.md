@@ -1,6 +1,7 @@
 Python OOP from https://neetcode.io/
 
 1. [Classes and Objects ](#1)
+2. [Encapsulation](#2)
    
 <a name="1"></a>
 # Classes and Objects 
@@ -441,3 +442,5 @@ For heal(), increase self.health by 10 and print a message about healing.
 To create a hero: hero1 = SuperHero("Hero Name", "Superpower", 100)
 Remember to remove pass when you add code to a method.
 
+<a name="2"></a>
+# Encapsulation
