@@ -92,7 +92,7 @@ Some points learned from https://www.youtube.com/watch?v=0K_eZGS5NsU:
         s = 'Hello'
 
 
-Double-quoted strings:
+2. Double-quoted strings:
 
     s = "World"
 
