@@ -1,18 +1,19 @@
 Python OOP from https://neetcode.io/
 
 Intro to Classes
+
 Imagine you're a game developer creating a superhero game. You start by defining individual heroes:
 
-hero_1_name = "Iron Man"
-hero_1_power = "repulsor beams"
-hero_1_health = 100
-hero_1_speed = 80
+        hero_1_name = "Iron Man"
+        hero_1_power = "repulsor beams"
+        hero_1_health = 100
+        hero_1_speed = 80
 
-hero_2_name = "Spider Man"
-hero_2_power = "web slinging"
-hero_2_health = 90
-hero_2_speed = 95
-This approach has a few problems:
+    hero_2_name = "Spider Man"
+    hero_2_power = "web slinging"
+    hero_2_health = 90
+    hero_2_speed = 95
+    This approach has a few problems:
 
 Repetition: You have to define each hero individually.
 Messy code: It's hard to keep track of all the hero attributes and their values.
