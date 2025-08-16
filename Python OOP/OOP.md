@@ -11,6 +11,7 @@ Python OOP from https://neetcode.io/
    8. [Init Method](#9)
    9. [Docstrings](#10)
 2. [Encapsulation](#11)
+3. [Class attributes]
    
 <a name="1"></a>
 # Classes and Objects 
@@ -620,3 +621,9 @@ Use the __ prefix to make the attributes private
 Use @property to create getter properties
 Use @property_name.setter to create setter properties
 The validation logic stays the same as in the original getter/setter methods
+
+
+<a name="1"></a>
+# Class attributes
+
+here, up ti here i took notes
