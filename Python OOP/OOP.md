@@ -363,7 +363,7 @@ print(SuperHero.__doc__)
 # Get help on the whole class (includes docstrings of class and methods)
 help(SuperHero)
 
-# Print a method's docstring
+# Print a method's docstring 
 print(SuperHero.take_damage.__doc__)
 By adding docstrings, you make your code more understandable for future users, including yourself.
 
