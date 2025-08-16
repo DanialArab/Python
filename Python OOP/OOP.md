@@ -1,6 +1,11 @@
 Python OOP from https://neetcode.io/
 
-Intro to Classes
+1. [Classes and Objects ](#1)
+   
+<a name="1"></a>
+# Classes and Objects 
+
+## Intro to Classes
 
 Imagine you're a game developer creating a superhero game. You start by defining individual heroes:
 
@@ -51,7 +56,8 @@ Class names in Python use PascalCase convention, meaning each word starts with a
 
 
 
-What are Objects?
+## What are Objects?
+
 An object is an instance of a class. It's a specific item created using the blueprint defined by the class.
 
 Creating Objects
@@ -105,7 +111,8 @@ In the incorrect example, the order of attributes is mismatched. Be careful, Pyt
 
 
 
-Object Attributes
+## Object Attributes
+
 Attributes are the properties that define or belong to an object. In our superhero example, we have the following attributes for a superhero: name, power, health, and speed.
 
 Accessing Attributes
@@ -152,7 +159,8 @@ Modify: pet_object.attribute = new_value or pet_object.attribute += value
 Print: f"Attributes: {pet_object.name} ({pet_object.species}) - Hunger: {pet_object.hunger}, Energy: {pet_object.energy}"
 
 
-Object Methods
+## Object Methods
+
 Methods are functions that belong to a class or object. They define the behavior of the class or object.
 
 Defining methods in a class
@@ -209,7 +217,8 @@ Method vs Function
 Methods are just functions that are defined inside a class. A function defined outside of a class is not a method.
 
 
-Self Parameter
+## Self Parameter
+
 When we create a superhero or call a method, how does Python know which superhero we're talking about? This is where self comes in!
 
 self is how Python refers to the specific object being created or acted upon. It allows each superhero to have their own set of attributes and use their own powers.
@@ -249,7 +258,8 @@ Think about the role of self in class methods.
 Consider how instance attributes are accessed within a method.
 
 
-Init Method
+## Init Method
+
 The __init__ method we've been using is a special method in Python classes, also known as a constructor. Its job is to initialize the attributes of a new object when it's created.
 
 The __init__ method is technically not a constructor in Python, but it's often referred to as one. The __new__ method is the actual constructor in Python.
@@ -294,7 +304,8 @@ Attributes outside of __init__
 - Attributes outside of __init__ are instance attributes. - Within methods, instance attributes are accessed using the self keyword. - Instance attributes are unique to each instance of a class. - Instance attributes are defined outside of any methods in the class, but can also be defined inside the __init__ method using the self keyword.
 
 
-Docstrings
+## Docstrings
+
 Docstrings are string literals that describe functions, methods, classes, or modules. They serve as documentation for our code.
 
 Let's see an example:
@@ -401,4 +412,32 @@ Hints
 In the __init__ method, remember to use self to assign the attributes. For example: self.attribute_name = value
 To create a hero: hero1 = SuperHero("Hero Name", "Superpower", 100)
 To print hero info: print(f"{hero1.name} has the power of {hero1.power} and {hero1.health} health.")
+
+
+Add Superhero Abilities
+In this challenge, you'll extend the SuperHero class by adding new ability methods. The class and its attributes have already been defined in the provided code. Your tasks are outlined below:
+
+1. Enhance the SuperHero class:
+
+Add methods attack() and heal() to the SuperHero class.
+2. Implement the ability methods:
+
+attack(): Should print a string in the format "{name} attacks with {power}!"
+heal(): Should increase the superhero's health attribute by 10 points and print "{name} heals 10 points. New health: {health}."
+3. Create a superhero instance:
+
+Create a superhero with the name "Catwoman", power "Agility", and health 120.
+4. Use the abilities:
+
+Call the attack() and heal() methods for each superhero.
+Expected Output
+Catwoman attacks with Agility!
+Catwoman heals 10 points. New health: 130.
+
+Hints
+Remember, when defining methods in a class, always include self as the first parameter. For example: def method_name(self):.
+In the attack() method, use print() to show a message like "[name] attacks with [power]!"
+For heal(), increase self.health by 10 and print a message about healing.
+To create a hero: hero1 = SuperHero("Hero Name", "Superpower", 100)
+Remember to remove pass when you add code to a method.
 
