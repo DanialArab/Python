@@ -88,6 +88,7 @@ Some points learned from https://www.youtube.com/watch?v=0K_eZGS5NsU:
 
 1. Single-quoted strings
 
+
     s = 'Hello'
 
 
