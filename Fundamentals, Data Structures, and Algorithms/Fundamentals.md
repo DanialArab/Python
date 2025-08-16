@@ -94,57 +94,56 @@ Some points learned from https://www.youtube.com/watch?v=0K_eZGS5NsU:
 
 2. Double-quoted strings:
 
-    s = "World"
+        s = "World"
 
 
 Single and double quotes are interchangeable; use whichever makes it easier to include quotes inside the string.
 
-Triple-quoted strings (for multi-line strings or docstrings):
+3. Triple-quoted strings (for multi-line strings or docstrings):
 
-    s = '''This is
-    a multi-line
-    string'''
+        s = '''This is
+        a multi-line
+        string'''
 
 
 or
 
-    s = """This is
-    another multi-line
-    string"""
+        s = """This is
+        another multi-line
+        string"""
 
 
-Raw strings (ignore escape sequences like \n):
+4. Raw strings (ignore escape sequences like \n):
 
-    s = r"C:\Users\Danial\Documents"
-    print(s)  # prints C:\Users\Danial\Documents
-
-
-f-strings (formatted string literals, Python 3.6+):
-
-    name = "Alice"
-    age = 25
-    s = f"My name is {name} and I am {age} years old."
-    print(s)  # My name is Alice and I am 25 years old.
+        s = r"C:\Users\Danial\Documents"
+        print(s)  # prints C:\Users\Danial\Documents
 
 
-Byte strings (prefix b, used for binary data):
+5. f-strings (formatted string literals, Python 3.6+):
 
-    b = b"Hello"
+        name = "Alice"
+        age = 25
+        s = f"My name is {name} and I am {age} years old."
+        print(s)  # My name is Alice and I am 25 years old.
+
+
+6. Byte strings (prefix b, used for binary data):
+
+        b = b"Hello"
 
 Escape Sequences
 
 String literals can include special characters using a backslash \:
 
-    s = "Line1\nLine2\tTabbed"
-    print(s)
+        s = "Line1\nLine2\tTabbed"
+        print(s)
 
 
 Output:
 
-    Line1
-    Line2    Tabbed
+        Line1
+        Line2    Tabbed
 
 
 In short, a string literal is just how you write a string directly in your Python code.
 
-If you want, I can make a quick visual table showing all string literal types and examples for easier reference. Do you want me to do that?
