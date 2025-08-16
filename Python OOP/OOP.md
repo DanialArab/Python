@@ -324,3 +324,123 @@ By adding docstrings, you make your code more understandable for future users, i
 
 <a name="11"></a>
 # Encapsulation
+
+Public Attribute and Method
+In Python, public attributes or methods can be accessed and modified directly from outside the class. By default, all attributes and methods in Python are public.
+
+class SuperHero:
+    def __init__(self, name: str, power_level: int):
+        self.name = name                # public attribute
+        self.power_level = power_level  # public attribute
+    
+    # Public method
+    def display_power_level(self) -> None:
+        print(f"{self.name} has a power level of {self.power_level}")
+When an attribute or method is public, we can:
+
+Access it directly using dot notation
+Modify the attribute from outside the class
+Call the method from outside the class
+Let's see public attributes in action:
+
+# Creating a superhero
+spider_man = SuperHero("Spider-Man", 85)
+
+# Accessing public attributes/methods
+print(spider_man.name)
+spider_man.display_power_level()
+
+# Modifying public attributes
+spider_man.power_level = 90
+Public attributes are suitable when:
+
+The attribute doesn't need validation
+Direct access won't compromise the object's integrity
+You want to keep the code simple and straightforward
+Don't worry about the above for now, we will cover validation and integrity later.
+
+Challenge
+You are given starter code for a simple shop system where items are displayed with their names and prices. Your tasks are:
+
+Add public attributes for name and price
+Access the attributes of the chips object and display them. Use this format: Item: [name] - Price: $[price] for printing.
+class StoreItem:
+    def __init__(self):
+        pass  # Add: name, price
+
+chips = StoreItem("Chips", 1.99)
+Expected Output
+
+Chips
+1.99
+
+Hints
+Remember to initialize attributes in the init method
+Use descriptive names for your attributes
+Public attributes can be accessed using dot notation
+Use the print function to display the attributes
+
+What is Encapsulation?
+Encapsulation is the concept of wrapping data and methods that work on the data within one unit, called a class. In addition, it restricts access to some of the object's components.
+The purpose is to hide the internal details of an object and only expose the necessary parts of the object to the outside world.
+A real world analogy is a car. The car is a complex system with many moving parts. However, as a driver, you don't need to know how the car works internally. You only need to know how to operate the car.
+
+Key Points About Public Attributes
+Public attributes are accessible from anywhere in the code
+They're defined without any special naming convention
+They offer direct access to object properties
+They're suitable for simple, straightforward data storage
+No special methods are needed to access or modify them
+
+
+Protected Attribute and Method
+In Python, protected attributes and methods are class members that should not be accessed directly from outside the class. However, they can be accessed within the class and in child classes (see below for more on child classes).
+
+Protected attributes are denoted by prefixing the attribute/method name with a single underscore _.
+
+class SuperHero:
+    def __init__(self, name: str, power_level: int):
+        self._name = name                # protected attribute
+        self._power_level = power_level  # protected attribute
+        
+    def get_name(self) -> str: # public method
+        return self._name
+
+    def _some_protected_method(self) -> None: # protected method
+        pass
+
+    def some_public_method(self) -> None:
+        self._some_protected_method() 
+Unlike other languages, Python doesn't enforce access control for protected attributes. We can still access them directly, but it's not recommended. Using an underscore prefix is a convention to signal to other developers that these attributes shouldn't be accessed directly from outside.
+Below is the recommended way to access protected attributes and methods:
+
+spider_man = SuperHero("Spider-Man", 85)
+
+print(spider_man._name)      # Allowed but discouraged
+print(spider_man.get_name()) # Recommended
+
+spider_man._some_protected_method() # Allowed but discouraged
+spider_man.some_public_method()     # Recommended
+To access protected attributes, use the public methods.
+To access protected methods, use the public methods.
+Challenge
+You are given code for a simple banking system. Your task is to:
+
+Initialize two attributes, "title" a public attribute and "_balance" a protected attribute
+Use a public method display_balance to display the balance.
+Expected Output
+
+Balance: $1000
+
+Hints
+Use underscore prefix for protected attributes during initialization
+Remember you can access protected attributes within the class.
+Remember protected attributes are still accessible but shouldn't be accessed directly
+
+What's a child class?
+A child class is a class that inherits attributes and methods from another class (called the parent class). We'll cover inheritance in detail in upcoming lessons, but for now, just know that protected members are not accessible outside of a class or its child classes.
+
+Remember
+Python doesn't enforce protection through technical restrictions, protected attributes (prefixed with _) act as a convention - similar to a yellow traffic light. They warn other developers: You can access this, but you probably shouldn't
+
+
