@@ -293,4 +293,82 @@ Use init to set initial values for the object's attributes.
 Attributes outside of __init__
 - Attributes outside of __init__ are instance attributes. - Within methods, instance attributes are accessed using the self keyword. - Instance attributes are unique to each instance of a class. - Instance attributes are defined outside of any methods in the class, but can also be defined inside the __init__ method using the self keyword.
 
-- 
+
+Docstrings
+Docstrings are string literals that describe functions, methods, classes, or modules. They serve as documentation for our code.
+
+Let's see an example:
+
+class SuperHero:
+    """
+    A class to represent a superhero.
+
+    Attributes:
+        name (str): The superhero's name
+        health (int): The superhero's health points
+    """
+
+    def __init__(self, name: str, health: int) -> None:
+        """Initialize a new SuperHero instance."""
+        self.name = name
+        self.health = health
+
+    def take_damage(self, amount: int) -> None:
+        """
+        Reduce the superhero's health by the given amount.
+
+        Args:
+            amount (int): The amount of damage to inflict
+        """
+        self.health -= amount
+        print(f"{self.name} takes {amount} damage.")
+We have three docstrings in this class:
+
+The class docstring describes the class and its attributes.
+The __init__ method docstring describes the method and its parameters.
+The take_damage method docstring describes the method and its parameters.
+Writing Docstrings
+For both classes and methods:
+
+Use triple quotes (""") to enclose the docstring
+Place the docstring immediately after the class or method definition
+Follow a consistent style (e.g., Google-style)
+For classes:
+
+Describe the purpose of the class
+List and explain attributes
+For methods:
+
+Use a one-line description for simple methods
+For complex methods:
+Describe what the method does
+List and explain parameters (Args:)
+Describe the return value (Returns:)
+Mention any exceptions raised (Raises:)
+Using Docstrings
+# Print the class docstring
+print(SuperHero.__doc__)
+
+# Get help on the whole class (includes docstrings of class and methods)
+help(SuperHero)
+
+# Print a method's docstring
+print(SuperHero.take_damage.__doc__)
+By adding docstrings, you make your code more understandable for future users, including yourself.
+
+Challenge
+When you run the code, you'll see None printed for each docstring because they don't exist yet. Your tasks are as follows:
+
+Write a class docstring describing what the Pet class represents.
+Add a brief docstring to the __init__ method.
+Add a docstring to the make_sound method explaining what it does.
+Remember to use triple quotes for your docstrings.
+Expected Output
+A class to represent a pet.
+
+    Attributes:
+        name (str): The pet's name
+        animal_type (str): The pet's type
+    
+Initialize a new Pet instance.
+Return the sound the pet makes based on its type.
