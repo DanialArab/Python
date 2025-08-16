@@ -4,10 +4,10 @@ Intro to Classes
 
 Imagine you're a game developer creating a superhero game. You start by defining individual heroes:
 
-hero_1_name = "Iron Man"
-hero_1_power = "repulsor beams"
-hero_1_health = 100
-hero_1_speed = 80
+    hero_1_name = "Iron Man"
+    hero_1_power = "repulsor beams"
+    hero_1_health = 100
+    hero_1_speed = 80
 
     hero_2_name = "Spider Man"
     hero_2_power = "web slinging"
