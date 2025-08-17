@@ -514,9 +514,10 @@ The above method not only sets the value of the private attribute, but **also va
 **This ensures we never set an invalid value for the power level. This is another reason we prefer using methods to access and modify private attributes.**
 
 Alternatively, we could have raised an error using raise ValueError("Power level must be between 0 and 100!") instead of printing an error message.
-      Example Usage
-      hero.set_power_level(90)   # Changes to 90
-      hero.set_power_level(150)  # Error: Power level must be between 0 and 100!
+      
+         Example Usage
+         hero.set_power_level(90)   # Changes to 90
+         hero.set_power_level(150)  # Error: Power level must be between 0 and 100!
 
 
 Best Practices
