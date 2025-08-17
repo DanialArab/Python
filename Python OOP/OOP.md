@@ -11,7 +11,15 @@ Python OOP from https://neetcode.io/
    8. [Init Method](#9)
    9. [Docstrings](#10)
 2. [Encapsulation](#11)
-3. [Class attributes]
+   1. [Public Attribute and Method]
+   2. [What is Encapsulation?]
+   3. [Protected Attribute and Method]
+   4. [Private Attribute and Method]
+   5. [Getter and Setter Methods]
+   6. [Property and Setter Decorator]
+      1. [Why use @property and @setter?]
+   7. [How to access properties] 
+4. [Class attributes]
    
 <a name="1"></a>
 # Classes and Objects 
@@ -585,6 +593,68 @@ Some hints:
 - Use @property to create getter properties
 - Use @property_name.setter to create setter properties
 - The validation logic stays the same as in the original getter/setter methods
+
+<a name="19"></a>
+## How to access properties 
+
+The key point is that in Python, **properties are accessed like attributes, not like methods.**
+
+Let’s break it down:
+
+1. Without @property
+
+Normally, if you wrote a getter method like:
+
+      def get_name(self):
+          return self.__name
+
+
+then you would call it with parentheses:
+
+      hero.get_name()
+
+
+and to set, you’d need a separate setter method, e.g., set_name("Superman").
+
+2. With @property
+
+The @property decorator **transforms a method into something that acts like an attribute, even though it’s really calling a method under the hood.**
+
+So this:
+
+      @property
+      def name(self):
+          return self.__name
+
+
+lets you write:
+
+      hero.name  # instead of hero.name()
+
+
+And with the setter:
+
+      @name.setter
+      def name(self, new_name: str):
+          ...
+
+
+you can write:
+
+      hero.name = "Superman"   # instead of hero.set_name("Superman")
+
+3. Why not hero.name() = "Superman"?
+
+Because hero.name() means “call the getter function”, which returns the current string. Strings are immutable, so "Superman" can’t be assigned to the return value.
+
+hero.name = "Superman" works because the property system intercepts assignment and calls the setter method.
+
+So the magic of @property is:
+
+- hero.name → calls the getter method.
+- hero.name = "Superman" → calls the setter method.
+
+You never use () unless you defined it as a normal method.
 
 
 <a name="1"></a>
