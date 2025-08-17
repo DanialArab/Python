@@ -11,6 +11,9 @@
 11. [Exploratory Tests](#11)
 12. [Python libraries for testing](#12)
     1. [Pydantic](#13)
+13. [How to write tests]()
+    1. [How to write unit tests ]
+
 
 <a name="1"><a>
 # Unit Tests
@@ -219,3 +222,11 @@ In the Testing Pyramid:
 
 Think of it as:
 - “If Pydantic says the data is valid, my tests can focus on logic instead of type-checking.”
+
+
+<a name=""><a>
+# How to write tests
+
+<a name=""><a>
+## How to write unit tests 
+HERE 
