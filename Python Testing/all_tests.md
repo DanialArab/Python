@@ -9,7 +9,7 @@
 9. [Database Testing](#9)
 10. [Security Tests](#10)
 11. [Exploratory Tests](#11)
-12 [Python libraries for testing](#12)
+12. [Python libraries for testing](#12)
     1. [Pydantic](#13)
 
 <a name="1"><a>
