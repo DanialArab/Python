@@ -326,301 +326,264 @@ By adding docstrings, you make your code more understandable for future users, i
 <a name="11"></a>
 # Encapsulation
 
-Public Attribute and Method
-In Python, public attributes or methods can be accessed and modified directly from outside the class. By default, all attributes and methods in Python are public.
+<a name="12"></a>
+## Public Attribute and Method
 
-class SuperHero:
-    def __init__(self, name: str, power_level: int):
-        self.name = name                # public attribute
-        self.power_level = power_level  # public attribute
-    
-    # Public method
-    def display_power_level(self) -> None:
-        print(f"{self.name} has a power level of {self.power_level}")
+In Python, public attributes or methods can be accessed and modified directly from outside the class. **By default, all attributes and methods in Python are public.**
+
+      class SuperHero:
+          def __init__(self, name: str, power_level: int):
+              self.name = name                # public attribute
+              self.power_level = power_level  # public attribute
+          
+          # Public method
+          def display_power_level(self) -> None:
+              print(f"{self.name} has a power level of {self.power_level}")
+              
 When an attribute or method is public, we can:
 
-Access it directly using dot notation
-Modify the attribute from outside the class
-Call the method from outside the class
+- Access it directly using dot notation
+- Modify the attribute from outside the class
+- Call the method from outside the class
+
 Let's see public attributes in action:
 
-# Creating a superhero
-spider_man = SuperHero("Spider-Man", 85)
-
-# Accessing public attributes/methods
-print(spider_man.name)
-spider_man.display_power_level()
-
-# Modifying public attributes
-spider_man.power_level = 90
+      # Creating a superhero
+      spider_man = SuperHero("Spider-Man", 85)
+      
+      # Accessing public attributes/methods
+      print(spider_man.name)
+      spider_man.display_power_level()
+      
+      # Modifying public attributes
+      spider_man.power_level = 90
+      
 Public attributes are suitable when:
 
-The attribute doesn't need validation
-Direct access won't compromise the object's integrity
-You want to keep the code simple and straightforward
+- The attribute doesn't need validation
+- Direct access won't compromise the object's integrity
+- You want to keep the code simple and straightforward
+
 Don't worry about the above for now, we will cover validation and integrity later.
 
-Challenge
-You are given starter code for a simple shop system where items are displayed with their names and prices. Your tasks are:
-
-Add public attributes for name and price
-Access the attributes of the chips object and display them. Use this format: Item: [name] - Price: $[price] for printing.
-class StoreItem:
-    def __init__(self):
-        pass  # Add: name, price
-
-chips = StoreItem("Chips", 1.99)
-Expected Output
-
-Chips
-1.99
-
 Hints
-Remember to initialize attributes in the init method
-Use descriptive names for your attributes
-Public attributes can be accessed using dot notation
-Use the print function to display the attributes
+- Remember to initialize attributes in the init method
+- Use descriptive names for your attributes
+- Public attributes can be accessed using dot notation
+- Use the print function to display the attributes
 
-What is Encapsulation?
-Encapsulation is the concept of wrapping data and methods that work on the data within one unit, called a class. In addition, it restricts access to some of the object's components.
-The purpose is to hide the internal details of an object and only expose the necessary parts of the object to the outside world.
+<a name="13"></a>
+## What is Encapsulation?
+
+**Encapsulation is the concept of wrapping data and methods that work on the data within one unit, called a class**. In addition, it restricts access to some of the object's components.
+
+**The purpose is to hide the internal details of an object and only expose the necessary parts of the object to the outside world.**
+
 A real world analogy is a car. The car is a complex system with many moving parts. However, as a driver, you don't need to know how the car works internally. You only need to know how to operate the car.
 
 Key Points About Public Attributes
-Public attributes are accessible from anywhere in the code
-They're defined without any special naming convention
-They offer direct access to object properties
-They're suitable for simple, straightforward data storage
-No special methods are needed to access or modify them
+- Public attributes are accessible from anywhere in the code
+- They're defined without any special naming convention
+- They offer direct access to object properties
+- They're suitable for simple, straightforward data storage
+- No special methods are needed to access or modify them
 
 
-Protected Attribute and Method
-In Python, protected attributes and methods are class members that should not be accessed directly from outside the class. However, they can be accessed within the class and in child classes (see below for more on child classes).
+<a name="14"></a>
+## Protected Attribute and Method
 
-Protected attributes are denoted by prefixing the attribute/method name with a single underscore _.
+**In Python, protected attributes and methods are class members that should not be accessed directly from outside the class. However, they can be accessed within the class and in child classes (see below for more on child classes).**
 
-class SuperHero:
-    def __init__(self, name: str, power_level: int):
-        self._name = name                # protected attribute
-        self._power_level = power_level  # protected attribute
-        
-    def get_name(self) -> str: # public method
-        return self._name
+Protected attributes are denoted by prefixing the attribute/method name with a **single underscore _.**
 
-    def _some_protected_method(self) -> None: # protected method
-        pass
+      class SuperHero:
+          def __init__(self, name: str, power_level: int):
+              self._name = name                # protected attribute
+              self._power_level = power_level  # protected attribute
+              
+          def get_name(self) -> str: # public method
+              return self._name
+      
+          def _some_protected_method(self) -> None: # protected method
+              pass
+      
+          def some_public_method(self) -> None:
+              self._some_protected_method() 
 
-    def some_public_method(self) -> None:
-        self._some_protected_method() 
-Unlike other languages, Python doesn't enforce access control for protected attributes. We can still access them directly, but it's not recommended. Using an underscore prefix is a convention to signal to other developers that these attributes shouldn't be accessed directly from outside.
+Unlike other languages, Python doesn't enforce access control for protected attributes. We can still access them directly, but it's not recommended. Using an underscore prefix is a **convention to signal to other developers that these attributes shouldn't be accessed directly from outside.**
+
 Below is the recommended way to access protected attributes and methods:
 
-spider_man = SuperHero("Spider-Man", 85)
-
-print(spider_man._name)      # Allowed but discouraged
-print(spider_man.get_name()) # Recommended
-
-spider_man._some_protected_method() # Allowed but discouraged
-spider_man.some_public_method()     # Recommended
-To access protected attributes, use the public methods.
-To access protected methods, use the public methods.
-Challenge
-You are given code for a simple banking system. Your task is to:
-
-Initialize two attributes, "title" a public attribute and "_balance" a protected attribute
-Use a public method display_balance to display the balance.
-Expected Output
-
-Balance: $1000
+      spider_man = SuperHero("Spider-Man", 85)
+      
+      print(spider_man._name)      # Allowed but discouraged
+      print(spider_man.get_name()) # Recommended
+      
+      spider_man._some_protected_method() # Allowed but discouraged
+      spider_man.some_public_method()     # Recommended
+      
+- To access protected attributes, use the public methods.
+- To access protected methods, use the public methods.
 
 Hints
-Use underscore prefix for protected attributes during initialization
-Remember you can access protected attributes within the class.
-Remember protected attributes are still accessible but shouldn't be accessed directly
+- Use underscore prefix for protected attributes during initialization
+- Remember you can access protected attributes within the class.
+- Remember protected attributes are still accessible but shouldn't be accessed directly
 
 What's a child class?
-A child class is a class that inherits attributes and methods from another class (called the parent class). We'll cover inheritance in detail in upcoming lessons, but for now, just know that protected members are not accessible outside of a class or its child classes.
+
+A child class is a class that inherits attributes and methods from another class (called the parent class). We'll cover inheritance in detail in upcoming lessons, but for now, just know that **protected members are not accessible outside of a class or its child classes.**
 
 Remember
-Python doesn't enforce protection through technical restrictions, protected attributes (prefixed with _) act as a convention - similar to a yellow traffic light. They warn other developers: You can access this, but you probably shouldn't
+- Python doesn't enforce protection through technical restrictions, protected attributes (prefixed with _) act as a convention - similar to a yellow traffic light. They warn other developers: You can access this, but you probably shouldn't
 
 
-Private Attribute and Method
+<a name="15"></a>
+## Private Attribute and Method
+
 Private attributes and methods are class members that should not be accessed from outside the class. They are denoted by prefixing the attribute/method name with double underscores (__).
 
-Unlike protected attributes, they are not accessible from child classes. We will learn about child classes in the inheritance chapter.
+**Unlike protected attributes, they are not accessible from child classes.** We will learn about child classes in the inheritance chapter.
 
-class SuperHero:
-    def __init__(self, name: str, power_level: int):
-        self.__name = name                # private attribute
-        self.__power_level = power_level  # private attribute
-    
-    # private method
-    def __secret_power(self) -> str:        
-        return f"Using {self.__name}'s secret power!"
-        
-    # public method to access private method
-    def use_power(self) -> str:             
-        return self.__secret_power()
-    
-    # public method to access private attribute
-    def get_power_level(self) -> int: 
-        return self.__power_level
+      class SuperHero:
+          def __init__(self, name: str, power_level: int):
+              self.__name = name                # private attribute
+              self.__power_level = power_level  # private attribute
+          
+          # private method
+          def __secret_power(self) -> str:        
+              return f"Using {self.__name}'s secret power!"
+              
+          # public method to access private method
+          def use_power(self) -> str:             
+              return self.__secret_power()
+          
+          # public method to access private attribute
+          def get_power_level(self) -> int: 
+              return self.__power_level
+              
 In the above code, the __name and __power_level attributes are private, meaning they cannot be accessed directly from outside the class. The same goes for the __secret_power method. Though we can access them using the public methods get_power_level and use_power.
 
 When an attribute/method is private:
 
-It should not be directly accessed using normal dot notation from outside the class.
-It's meant to be used only within the class itself.
-It provides the strongest form of information hiding in Python.
-Challenge
-You are given the code for the PasswordManager class. Your task is to:
-
-Add a private attribute for storing the password, which should be a string initialized in the constructor.
-Implement a public method verify_password that takes an input password and returns True if it matches the stored password, otherwise return False.
-Expected Output
-
-True
-False
+- It should not be directly accessed using normal dot notation from outside the class.
+- It's meant to be used only within the class itself.
+- It provides the **strongest form of information hiding in Python.**
 
 Hints
-Use double underscores (__) for private attributes
-Remember private attributes can only be accessed within the class
+- Use double underscores (__) for private attributes
+- Remember private attributes can only be accessed within the class
 
 Key Points About Private Attributes
-Private attributes are denoted by double underscores (__)
-They should be accessed only through public methods
-They're ideal for sensitive information e.g passwords
+- Private attributes are denoted by double underscores (__)
+- They should be accessed only through public methods
+- They're ideal for sensitive information e.g passwords
 
 Summary
 - Public (no underscore): Accessible everywhere - Protected (single underscore `_` ): Should only be accessed within class and subclasses - Private (double underscore `__` ): Should only be accessed within the defining class
-Remember though, Python follows the we're all consenting adults philosophy - these are conventions rather than strict rules. Private/protected attributes can still be accessed, but doing so is strongly discouraged.
+- Remember though, Python follows the **we're all consenting adults philosophy** - these are conventions rather than strict rules. Private/protected attributes can still be accessed, but doing so is strongly discouraged.
 
-Getter and Setter Methods
-Solved 
+<a name="16"></a>
+## Getter and Setter Methods
+
 Remember our SuperHero class? We used a private attribute __power_level and accessed it through a method:
 
-class SuperHero:
-    def __init__(self, name: str, power_level: int):
-        self.__name = name                # private attribute
-        self.__power_level = power_level  # private attribute
-    
-    # method to get power_level
-    def get_power_level(self) -> int:      
-        return self.__power_level
-This method get_power_level() is what we call a getter - it's a method that returns (gets) the value of a private/protected attribute.
+      class SuperHero:
+          def __init__(self, name: str, power_level: int):
+              self.__name = name                # private attribute
+              self.__power_level = power_level  # private attribute
+          
+          # method to get power_level
+          def get_power_level(self) -> int:      
+              return self.__power_level
 
-Similarly, a setter is a method that sets (changes) the value of a private or protected attribute.
+This method get_power_level() is what we call a getter - it's a method that **returns (gets) the value of a private/protected attribute.**
+
+**Similarly, a setter is a method that sets (changes) the value of a private or protected attribute.**
 
 Let's add a setter method to our SuperHero class with validation:
 
-def set_power_level(self, new_level: int) -> None:  # method to set power_level
-    if 0 <= new_level <= 100:          # validation
-        self.__power_level = new_level
-    else:
-        print("Power level must be between 0 and 100!")
-The above method not only sets the value of the private attribute, but also validates the value. We specically check if the new value is in between 0 and 100 using 0 <= new_level <= 100 in the if statement. If the value is not in the range, we print an error message in the else block.
+      def set_power_level(self, new_level: int) -> None:  # method to set power_level
+          if 0 <= new_level <= 100:          # validation
+              self.__power_level = new_level
+          else:
+              print("Power level must be between 0 and 100!")
 
-This ensures we never set an invalid value for the power level. This is another reason we prefer using methods to access and modify private attributes.
+The above method not only sets the value of the private attribute, but **also validates the value**. We specically check if the new value is in between 0 and 100 using 0 <= new_level <= 100 in the if statement. If the value is not in the range, we print an error message in the else block.
+
+**This ensures we never set an invalid value for the power level. This is another reason we prefer using methods to access and modify private attributes.**
 
 Alternatively, we could have raised an error using raise ValueError("Power level must be between 0 and 100!") instead of printing an error message.
-Example Usage
-hero.set_power_level(90)   # Changes to 90
-hero.set_power_level(150)  # Error: Power level must be between 0 and 100!
-Challenge
-You are given a BankAccount class. Your task is to:
+      Example Usage
+      hero.set_power_level(90)   # Changes to 90
+      hero.set_power_level(150)  # Error: Power level must be between 0 and 100!
 
-Add a private attribute named __balance which is initialized in the constructor. It should store an integer value.
-Add a getter method for balance named get_balance() -> int that returns the balance.
-Add a setter method for balance named set_balance(new_balance: int) -> None that sets the value of balance if it is non-negative. If the balance is negative print Cannot set negative balance! and do not update the balance.
-Expected Output
-
-1000
-Cannot set negative balance!
-1000
-100
-0
-
-Hints
-Use double underscore for private balance
-Getter just returns the private balance
-Setter should check if new balance >= 0
 
 Best Practices
-Always use the name get_
-<
-attribute
->
- for getter methods
-Always use the name set_
-<
-attribute
->
- for setter methods
+- Always use the name get_ <attribute> for getter methods
+- Always use the name set_<attribute> for setter methods
 
 
-Property and Setter Decorator
+<a name="17"></a>
+##  Property and Setter Decorator
+
 Python provides a more idiomatic way to use getters and setters using the @property and @setter decorators.
 
-class Hero:
-    def __init__(self, name: str):
-        self.__name = name    # private attribute
+      class Hero:
+          def __init__(self, name: str):
+              self.__name = name    # private attribute
+      
+          # Getter
+          @property
+          def name(self) -> str:
+              return self.__name
+              
+          # Setter
+          @name.setter
+          def name(self, new_name: str) -> None:
+              if new_name != "":             
+                  self.__name = new_name
+              else:            
+                  print("Name cannot be empty!")
+                  
+In the above code, we have defined two methods with the same name as attribute name. But these are two different methods. We **use @property to define a getter method and @name.setter to define a setter method.** We also added validation logic in the setter method to prevent setting the name to an empty string.
 
-    # Getter
-    @property
-    def name(self) -> str:
-        return self.__name
-        
-    # Setter
-    @name.setter
-    def name(self, new_name: str) -> None:
-        if new_name != "":             
-            self.__name = new_name
-        else:            
-            print("Name cannot be empty!")
-In the above code, we have defined two methods with the same name as attribute name. But these are two different methods. We use @property to define a getter method and @name.setter to define a setter method. We also added validation logic in the setter method to prevent setting the name to an empty string.
-
-hero = Hero("Batman")
-
-# Getting name
-print(hero.name)        # this calls the getter method not the attribute
-# Setting name
-hero.name = "Superman"  # this calls the setter method not the attribute
-hero.name = ""         # Error: Name cannot be empty!
+      hero = Hero("Batman")
+      
+      # Getting name
+      print(hero.name)        # this calls the getter method not the attribute
+      # Setting name
+      hero.name = "Superman"  # this calls the setter method not the attribute
+      hero.name = ""         # Error: Name cannot be empty!
+      
 In the above code, we created an instance of the Hero class and accessed and modified the name attribute. But internally, accessing the name attribute calls the getter method name and modifying the name attribute calls the setter method name.
 
-Notice that the field name is __name but the method names for the getter and setter are still name.
-Why use @property and @setter?
-Makes code look cleaner
-Feels more natural (like using attributes)
-Still gives us control (validation, etc.)
-Challenge
-When you run the code on the right you will see an error that is expected. Convert this BankAccount class to use @property and @setter for the getter and setter methods.
+**Notice that the field name is __name but the method names for the getter and setter are still name.**
 
-Expected Output
-
-1000
-Balance cannot be negative!
+<a name="18"></a>
+### Why use @property and @setter?
+- Makes code look cleaner
+- Feels more natural (like using attributes)
+- Still gives us control (validation, etc.)
 
 Hints
-Use @property for the getter
-Use @balance.setter for the setter
-Remember to keep the name of the attribute the same for both the getter and setter methods
+- Use @property for the getter
+- Use @balance.setter for the setter
+- Remember to keep the name of the attribute the same for both the getter and setter methods
 
 Some hints:
 
-Use the __ prefix to make the attributes private
-Use the getter and setter methods to access the private attributes
-Use the get keyword to implement the getter methods
-Use the set keyword to implement the setter methods
-You can't print the private attributes directly use the getter methods to access them
+- Use the __ prefix to make the attributes private
+- Use the getter and setter methods to access the private attributes
+- Use the get keyword to implement the getter methods
+- Use the set keyword to implement the setter methods
+- You can't print the private attributes directly use the getter methods to access them
 
 Some hints:
-You can use the methods from the previous challenge remember to use the @property decorator for the getter methods and the @name.setter decorator for the setter methods
-Use the __ prefix to make the attributes private
-Use @property to create getter properties
-Use @property_name.setter to create setter properties
-The validation logic stays the same as in the original getter/setter methods
+- Use the __ prefix to make the attributes private
+- Use @property to create getter properties
+- Use @property_name.setter to create setter properties
+- The validation logic stays the same as in the original getter/setter methods
 
 
 <a name="1"></a>
