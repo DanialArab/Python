@@ -11,15 +11,15 @@ Python OOP from https://neetcode.io/
    8. [Init Method](#9)
    9. [Docstrings](#10)
 2. [Encapsulation](#11)
-   1. [Public Attribute and Method]
-   2. [What is Encapsulation?]
-   3. [Protected Attribute and Method]
-   4. [Private Attribute and Method]
-   5. [Getter and Setter Methods]
-   6. [Property and Setter Decorator]
-      1. [Why use @property and @setter?]
-   7. [How to access properties] 
-4. [Class attributes]
+   1. [Public Attribute and Method](#12)
+   2. [What is Encapsulation?](#13)
+   3. [Protected Attribute and Method](#14)
+   4. [Private Attribute and Method](#15)
+   5. [Getter and Setter Methods](#16)
+   6. [Property and Setter Decorator](#17)
+      1. [Why use @property and @setter?](#18)
+   7. [How to access properties](#19)
+4. [Class attributes](#20)
    
 <a name="1"></a>
 # Classes and Objects 
@@ -657,7 +657,7 @@ So the magic of @property is:
 You never use () unless you defined it as a normal method.
 
 
-<a name="1"></a>
+<a name="20"></a>
 # Class attributes
 
 here, up ti here i took notes
