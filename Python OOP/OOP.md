@@ -19,12 +19,12 @@ Python OOP from https://neetcode.io/
    6. [Property and Setter Decorator](#17)
       1. [Why use @property and @setter?](#18)
    7. [How to access properties](#19)
-4. [Class attributes](#20)
+3. [Class attributes](#20)
    1. [Class Attributes](#21)
    2. [Class vs Instance Attributes](#22)
    3. [Class Methods](#23)
    4. [Static Methods](#24)
-   
+4. [Inheritance](#25)
 <a name="1"></a>
 # Classes and Objects 
 
@@ -887,4 +887,7 @@ Hints
 Use the @staticmethod decorator to define the static method
 Don't pass self or cls as a parameter to the static method
 
+<a name="25"></a>
+# Inheritance
 
+Here
