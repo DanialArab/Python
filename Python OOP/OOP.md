@@ -702,100 +702,69 @@ Hints
 
 The below example shows a BankAccount class with class and instance attributes.
 
-class BankAccount:
-    total_accounts = 0    # Class attribute: Shared by ALL accounts
-    total_balance = 0     # Class attribute: Tracks bank's total money
-    
-    def __init__(self, name: str, balance: float):
-        self.name = name        # Instance: Each account has unique owner
-        self.balance = balance  # Instance: Each account has unique balance
-        BankAccount.total_accounts += 1
-        BankAccount.total_balance += balance
+      class BankAccount:
+          total_accounts = 0    # Class attribute: Shared by ALL accounts
+          total_balance = 0     # Class attribute: Tracks bank's total money
+          
+          def __init__(self, name: str, balance: float):
+              self.name = name        # Instance: Each account has unique owner
+              self.balance = balance  # Instance: Each account has unique balance
+              BankAccount.total_accounts += 1
+              BankAccount.total_balance += balance
+
 We use class attributes to track bank-wide information that is shared by all accounts, such as the total number of accounts and the total balance of all accounts.
 We use instance attributes to track information that is unique to each account, such as the account number and the balance of the account.
-Challenge
-Your task is to implement a BankAccount class that effectively uses both class and instance attributes.
-
-The attributes you need to track are:
-
-The total number of accounts in bank total_accounts
-The bank's total balance total_balance
-The individual account owner names name
-The individual account balances balance
-You tasks are:
-
-Decide which attributes should be class vs instance attributes and add them at their appropriate places
-Implement the BankAccount class
-Create two accounts, "Alice" and "Bob" with balances 1000 and 2000 respectively
-Print the information using the following format:
-print(f"Alice's balance: <Alice's balance>")
-print(f"Bob's balance: <Bob's balance>")
-print(f"Total Accounts: <Total Accounts>")
-print(f"Total Balance: <Total Balance>")
-Expected Output
-Alice's balance: $1000
-Bob's balance: $2000
-Total Accounts: 2
-Total Balance: $3000
 
 Hints
-Think: Does the attribute need to be shared across ALL accounts?
-Class attributes are defined outside __init__
-Instance attributes are defined inside __init__
-Remember to update class attributes when creating new accounts
-
+- Think: Does the attribute need to be shared across ALL accounts?
+- Class attributes are defined outside __init__
+- Instance attributes are defined inside __init__
+- Remember to update class attributes when creating new accounts
 
 <a name="23"></a>
 ## Class Methods
  
 So far the methods we have used were all related to the instance of the class. For example, we used use_power method which was used by a single superhero.
 
-Sometimes we need special methods that work with the entire class rather than individual instances. For example, we may want to upgrade the training level of all heroes at once. Let's see how we can do that using class methods.
+**Sometimes we need special methods that work with the entire class rather than individual instances**. For example, we may want to upgrade the training level of all heroes at once. Let's see how we can do that using class methods.
 
-class Superhero:
-    training_level = 1  # Class attribute
-    
-    def __init__(self, name: str, power: str):
-        self.name = name         # Instance attribute
-        self.power = power       # Instance attribute
-        
-    @classmethod
-    def upgrade_training(cls) -> None:
-        cls.training_level += 1
-        print(f"All heroes now at training level {cls.training_level}")
+      class Superhero:
+          training_level = 1  # Class attribute
+          
+          def __init__(self, name: str, power: str):
+              self.name = name         # Instance attribute
+              self.power = power       # Instance attribute
+              
+          @classmethod
+          def upgrade_training(cls) -> None:
+              cls.training_level += 1
+              print(f"All heroes now at training level {cls.training_level}")
+
 In the above Superhero class, the upgrade_training method is a class method.
 
-It uses @classmethod decorator to define the class method
-It uses cls as the first parameter instead of self
-It upgrades the training_level (a class attribute) by 1
-cls is used to access the class attribute instead of the class name Superhero
-The below code shows how the recommended way to call the class method:
+- It uses @classmethod decorator to define the class method
+- It uses cls as the first parameter instead of self
+- It upgrades the training_level (a class attribute) by 1
+- cls is used to access the class attribute instead of the class name Superhero
 
-Superhero.upgrade_training()     # Recommend way to use class method
-print(Superhero.training_level)  # 2
+The below code shows how the recommended way to call the class method:
+      
+      Superhero.upgrade_training()     # Recommend way to use class method
+      print(Superhero.training_level)  # 2
+
 The below code shows how the class method can be called using an instance of the class, which is not recommended:
 
-iron_man = Superhero("Iron Man", "Flying")
-iron_man.upgrade_training()     # Works but not recommended
-print(iron_man.training_level)  # 2
-Important: Class methods are similar to class attributes. They are shared by all instances of the class. This also means that they do not have access to instance attributes, which is why we don't use self in class methods. Class methods can be defined with additional parameters, after the cls parameter.
+      iron_man = Superhero("Iron Man", "Flying")
+      iron_man.upgrade_training()     # Works but not recommended
+      print(iron_man.training_level)  # 2
 
-Challenge
-Given the code for Library class, implement the following two class methods to manage book lending.
-
-lend_books that takes number as an argument and subtracts it from books_available
-return_books that takes number as an argument and adds it to books_available
-Expected Output
-
-Initial status: 100 books available
-After lending: 70 books available
-After return: 80 books available
+Important: **Class methods are similar to class attributes. They are shared by all instances of the class.** This also means that **they do not have access to instance attributes, which is why we don't use self in class methods. Class methods can be defined with additional parameters, after the cls parameter.**
 
 Hint
-Always pass cls as the first parameter to the class method
-Use cls.books_available to access the class attribute
-Use cls.books_available -= number to decrease the number of books available
-Use cls.books_available += number to increase the number of books available
+- Always pass cls as the first parameter to the class method
+- Use cls.books_available to access the class attribute
+- Use cls.books_available -= number to decrease the number of books available
+- Use cls.books_available += number to increase the number of books available
 
 
 <a name="24"></a>
