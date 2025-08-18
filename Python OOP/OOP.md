@@ -20,6 +20,10 @@ Python OOP from https://neetcode.io/
       1. [Why use @property and @setter?](#18)
    7. [How to access properties](#19)
 4. [Class attributes](#20)
+   1. [Class Attributes](#21)
+   2. [Class vs Instance Attributes](#22)
+   3. [Class Methods](#23)
+   4. [Static Methods](#24)
    
 <a name="1"></a>
 # Classes and Objects 
@@ -658,9 +662,10 @@ You never use () unless you defined it as a normal method.
 
 
 <a name="20"></a>
-# Class attributes
+# Class Attributes
 
-Class Attributes
+<a name="21"></a>
+## Class Attributes
  
 When assembling the Avengers to fight Thanos, certain information needs to be shared across all heroes. For instance, Nick Fury needs to track how many heroes we have ready for battle. This is where class attributes come in.
 
@@ -707,8 +712,9 @@ Active Devices: 1
 Hints
 Use className.attributeName = value to update the class attribute
 
-Class vs Instance Attributes
-Solved 
+<a name="22"></a>
+## Class vs Instance Attributes
+
 The below example shows a BankAccount class with class and instance attributes.
 
 class BankAccount:
@@ -754,8 +760,9 @@ Instance attributes are defined inside __init__
 Remember to update class attributes when creating new accounts
 
 
-Class Methods
-Solved 
+<a name="23"></a>
+## Class Methods
+ 
 So far the methods we have used were all related to the instance of the class. For example, we used use_power method which was used by a single superhero.
 
 Sometimes we need special methods that work with the entire class rather than individual instances. For example, we may want to upgrade the training level of all heroes at once. Let's see how we can do that using class methods.
@@ -806,7 +813,8 @@ Use cls.books_available -= number to decrease the number of books available
 Use cls.books_available += number to increase the number of books available
 
 
-Static Methods
+<a name="24"></a>
+## Static Methods 
 So far we've seen instance methods (using self) and class methods (using cls).
 
 There are also static methods which are similar to class methods but they don't have access to self or cls. They do not have access to instance attributes, but they can still access class attributes using the class name.
