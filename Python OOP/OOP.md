@@ -25,6 +25,16 @@ Python OOP from https://neetcode.io/
    3. [Class Methods](#23)
    4. [Static Methods](#24)
 4. [Inheritance](#25)
+   1. [Inheritance Basics](#26)
+   2. [Method Overriding](#27)
+   3. [Super Function](#28)
+   4. [Multiple Inheritance](#29)
+   5. [Diamond Problem and Method Resolution Order](#30)
+
+
+
+
+
 <a name="1"></a>
 # Classes and Objects 
 
@@ -815,7 +825,8 @@ Hints
 <a name="25"></a>
 # Inheritance
 
-Inheritance Basics
+<a name="26"></a>
+## Inheritance Basics
 Inheritance is a fundamental concept in object-oriented programming that allows you to create a new class based on an existing class. The new class, known as the child class or subclass, inherits properties and methods from the existing class, known as the parent class or superclass.
 
 Inheritance allows us to create new classes based on existing ones. Instead of modifying an existing class, inheritance lets us reuse its code while only writing the differences we need in the new class.
@@ -881,7 +892,9 @@ class StreetHero(Superhero):
 When each hero type fights differently, inheritance keeps the code clean by giving each type its own fight method, instead of using lots of if-elif statements.
 
 
-Method Overriding
+<a name="27"></a>
+## Method Overriding
+
 So far, we have seen how to inherit properties and methods from a parent class. But what if we want to change the behavior of a method in a child class? This is where method overriding comes in.
 
 Method overriding allows us to change the behavior of a method in a child class. This is useful when we want to change the behavior of a method that is inherited from a parent class.
@@ -927,7 +940,9 @@ class ChildClass(ParentClass):
     def method_name(self):
         # Child class code here
 
-Super Function
+<a name="28"></a>
+## Super Function
+
 super() is a built-in function in Python that allows you to call methods from a parent class. It's a powerful tool for working with inheritance.
 
 Why use super()?
@@ -1000,7 +1015,8 @@ Use the super().__init__(name, power) function to call the __init__ method of th
 Use the super().attack() function to call the attack method of the SuperHero class.
 
 
-Multiple Inheritance
+<a name="29"></a>
+## Multiple Inheritance
 Multiple inheritance is a feature in object-oriented programming where a class can inherit attributes and methods from more than one parent class. While powerful, it is generally considered an anti-pattern.
 
 Let's see an example:
@@ -1041,7 +1057,9 @@ Device is turning off
 Hint
 To create a class that inherits from multiple parent classes, you can pass the parent classes as arguments to the child class.
 
-Diamond Problem and Method Resolution Order
+<a name="30"></a>
+## Diamond Problem and Method Resolution Order
+
 Multiple inheritance is a powerful but complex feature. It is very important to use multiple inheritance carefully. If used incorrectly, you can encounter situations where methods are inherited from multiple parent classes, leading to ambiguous behavior known as the diamond problem.
 
 Understanding the Diamond Problem
@@ -1123,3 +1141,46 @@ Hulk
 1000
 Hulk lifts 1000 pounds!
 
+class Hero:
+    def __init__(self, name: str, power_level: int, health: int):
+        self.name = name
+        self.power_level = power_level
+        self.health = health
+    
+    def use_power(self) -> str:
+        return f"{self.name} uses their power!"
+
+
+# TODO: Implement the FlightHero and StrengthHero classes
+class FlightHero(Hero):
+    def __init__(self, name, power_level, health, flight_speed):
+        super().__init__(name, power_level, health)
+        self.flight_speed  = flight_speed 
+
+    def use_power(self) -> None:
+        return (f"{self.name} flies at {self.flight_speed} mph!")
+
+class StrengthHero(Hero):
+    def __init__(self, name, power_level, health, lifting_capacity):
+        super().__init__(name, power_level, health)
+        self.lifting_capacity = lifting_capacity 
+
+    def use_power(self) -> None:
+        return (f"{self.name} lifts {self.lifting_capacity} pounds!")
+
+
+# Don't change the code below
+flight_hero = FlightHero("Superman", 10, 100, 1000)
+strength_hero = StrengthHero("Hulk", 10, 100, 1000)
+
+print(flight_hero.name)
+print(flight_hero.power_level)
+print(flight_hero.health)
+print(flight_hero.flight_speed)
+print(flight_hero.use_power())
+
+print(strength_hero.name)
+print(strength_hero.power_level)
+print(strength_hero.health)
+print(strength_hero.lifting_capacity)
+print(strength_hero.use_power())
