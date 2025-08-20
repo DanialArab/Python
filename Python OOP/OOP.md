@@ -999,3 +999,127 @@ Hints
 Use the super().__init__(name, power) function to call the __init__ method of the SuperHero class.
 Use the super().attack() function to call the attack method of the SuperHero class.
 
+
+Multiple Inheritance
+Multiple inheritance is a feature in object-oriented programming where a class can inherit attributes and methods from more than one parent class. While powerful, it is generally considered an anti-pattern.
+
+Let's see an example:
+
+class Swimmer:
+    def swim(self):
+        print("Swimming")
+
+class Flyer:
+    def fly(self):
+        print("Flying")
+
+# Ducks inherits from both Swimmer and Flyer
+class Duck(Swimmer, Flyer):  
+    pass
+In this example, the Duck class inherits from both the Swimmer and Flyer classes. This means that a Duck object will have access to both the swim and fly methods. The names of the parent classes are passed as arguments to the Duck class. Currently, we are only using the methods from the parent classes so we just use the pass keyword to indicate that we are not adding any new methods or attributes to the Duck class.
+
+Below, we create an instance of the Duck class and call the swim and fly methods.
+
+duck = Duck() 
+duck.swim() # Should print "Swimming"
+duck.fly()  # Should print "Flying"
+Be careful with multiple inheritance. It can be useful in scenarios where a class needs to inherit behavior from multiple sources. However, it can also lead to complex class hierarchies, and it's important to ensure that the inheritance is logical and avoids conflicts.
+
+In most cases, you should not use multiple inheritance. But you may see code like this in the wild.
+Basic Syntax
+class ChildClass(ParentClass1, ParentClass2, ...):
+    # Class body
+Challenge
+You are given the code for ElectronicDevice and HealthDevice classes. Your task is to create a SmartWatch class that inherits from both ElectronicDevice and HealthDevice. Use the pass keyword to indicate that we are not adding any new methods or attributes to the SmartWatch class.
+
+Expected Output:
+
+Device is turning on
+Measuring heart rate
+Device is turning off
+
+Hint
+To create a class that inherits from multiple parent classes, you can pass the parent classes as arguments to the child class.
+
+Diamond Problem and Method Resolution Order
+Multiple inheritance is a powerful but complex feature. It is very important to use multiple inheritance carefully. If used incorrectly, you can encounter situations where methods are inherited from multiple parent classes, leading to ambiguous behavior known as the diamond problem.
+
+Understanding the Diamond Problem
+Let's see an example of a diamond problem:
+
+class A:
+    def print_method(self) -> None:
+        print("A")
+
+class B(A):
+    def print_method(self) -> None:
+        print("B")
+
+class C(A):
+    def print_method(self) -> None:
+        print("C")
+
+class D(B, C): 
+    pass
+
+d = D()
+d.print_method()  # Which method will be called?
+In the above code you can see that D is inheriting from B and C, and the B and C are inheriting from A. Now when you call d.print_method(), which method will be called? This ambiguity is known as the diamond problem.
+
+This inheritance structure creates a diamond shape, as illustrated below:
+
+   A
+  / \
+ B   C
+  \ /
+   D
+How Python Resolves Methods
+Python uses Method Resolution Order (MRO) to determine which method to call when dealing with multiple inheritance. Here's how it works:
+
+First, Python looks for the method in the current class D
+If not found, it checks the first parent class B as it is the first parent class passed to the D class
+Then the second parent class C as it is the second parent class passed to the D class
+Finally, it checks the base class A
+You can view this order using the __mro__ attribute:
+
+print(D.__mro__)
+# Output: [<class '__main__.D'>, <class '__main__.B'>, <class '__main__.C'>, <class '__main__.A'>, <class 'object'>]
+As you can see, the MRO is [D, B, C, A].
+
+Challenge
+Given the starter code on the right, the current MRO will print C. Modify the code and change the MRO to make it print B instead.
+
+Expected Output:
+
+B
+
+Hint
+The order of parent classes in class D's definition determines the MRO
+Use __mro__ to verify the method resolution order
+Try changing the order of B and C in class D's inheritance list
+
+Implement Superhero Game
+Given the code for the Hero class, your tasks are to:
+
+Create a FlightHero class that:
+Inherits from Hero class
+Adds a flight_speed instance attribute
+Overrides use_power() to return "{name} flies at {flight_speed} mph!"
+Create a StrengthHero class that:
+Inherits from Hero class
+Adds a lifting_capacity instance attribute
+Overrides use_power() to return "{name} lifts {lifting_capacity} pounds!"
+Don't forget to use the Hero class __init__ method to initialize the name, power_level, and health attributes in the child classes.
+
+Expected Output
+Superman
+10
+100
+1000
+Superman flies at 1000 mph!
+Hulk
+10
+100
+1000
+Hulk lifts 1000 pounds!
+
