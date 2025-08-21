@@ -147,3 +147,23 @@ Output:
 
 In short, a string literal is just how you write a string directly in your Python code.
 
+## XOR
+
+- XOR cancels duplicates: x ^ x = 0.
+- XOR with 0 does nothing: 0 ^ x = x.
+- So after XOR-ing all numbers, the number that appears only once is left.
+
+136. Single Number - Leetcode
+
+Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
+
+You must implement a solution with a linear runtime complexity and use only constant extra space.
+
+        - class Solution:
+            def singleNumber(self, nums: List[int]) -> int:
+        
+                res = 0 
+                for n in nums:
+                    res ^= n
+                    
+                return res 
