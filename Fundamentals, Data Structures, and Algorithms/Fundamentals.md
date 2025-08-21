@@ -167,3 +167,46 @@ You must implement a solution with a linear runtime complexity and use only cons
                     res ^= n
                     
                 return res 
+
+
+sorted() is a function
+
+You can pass any iterable (like str, list, tuple, dict keys, etc.) to it.
+
+It creates and returns a new sorted list, without changing the input.
+
+Example:
+
+s = "hello"
+print(sorted(s))   # ['e', 'h', 'l', 'l', 'o']
+print(s)           # "hello" (unchanged)
+
+2. .sort() is a list method
+
+It only works on lists (not strings, tuples, etc.).
+
+It sorts the list in place and returns None.
+
+Example:
+
+lst = [3, 1, 2]
+print(lst.sort())   # None
+print(lst)          # [1, 2, 3]
+
+3. Why you can pass str to sorted() but not use .sort()
+
+A str is an iterable of characters, so sorted("cat") works and gives ['a', 'c', 't'].
+
+But strings don’t have a .sort() method — because strings are immutable in Python.
+(You can’t rearrange the characters of a string in place.)
+
+That’s why this fails:
+
+"cat".sort()   # ❌ AttributeError: 'str' object has no attribute 'sort'
+
+
+✅ Rule of thumb:
+
+Use .sort() when you already have a list you want to modify.
+
+Use sorted() when you want a new sorted list from any iterable (string, list, tuple, etc.).
