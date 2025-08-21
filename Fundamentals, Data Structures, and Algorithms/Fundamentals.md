@@ -210,3 +210,7 @@ That’s why this fails:
 Use .sort() when you already have a list you want to modify.
 
 Use sorted() when you want a new sorted list from any iterable (string, list, tuple, etc.).
+
+
+The insert() method for Python lists, along with other in-place modifying list methods like append(), extend(), sort(), and reverse(), returns None.
+
