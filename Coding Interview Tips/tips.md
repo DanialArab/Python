@@ -1,8 +1,5 @@
 ## Coding Interview Tips and Tricks
 
-1. When we need a contiguous subarray, we need to think of a sliding window. for example, 
-2. When the question talks about subsequence, which is not contiguous, we may not need sliding window and maybe counter works.
-
 1- Contiguous subarrays → Sliding Window
 
 If a problem asks for a contiguous subarray of size k or with some sum/average/maximum property, sliding window is often the optimal approach.
