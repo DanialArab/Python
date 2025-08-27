@@ -7,6 +7,7 @@
 7. [Errors](#7)
 8. [ Naming Conventions](#8)
 9. [Dynamic Typing](#9)
+10. [Type Casting](#10)
 
 
 
@@ -275,3 +276,16 @@ Dynamic typing should generally be avoided when possible. This means you should 
 Static typing is employed by many languages on purpose. It can help catch errors early, make code easier to read, and improve performance.
 
 Each typing system has it's own advantages and disadvantages. Dynamic typing is flexible, but can be error-prone. Static typing is safer, but can be inflexible.
+
+<a name="9"></a>
+## Type Casting
+
+A variable in Python can be converted to a different type using type casting. For example, the following code will run without any errors:
+
+        variable = 10.9
+        print(int(variable))
+        This code will output:
+        
+        10
+        
+The variable variable is a floating-point number. The int() function converts it to an integer. The output is the integer part of the floating-point number, aka rounding the number down.
