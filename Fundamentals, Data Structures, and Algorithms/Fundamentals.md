@@ -289,3 +289,13 @@ A variable in Python can be converted to a different type using type casting. Fo
         10
         
 The variable variable is a floating-point number. The int() function converts it to an integer. The output is the integer part of the floating-point number, aka rounding the number down.
+
+#### Type Errors
+
+Even though variable types can change, there are still rules about what types of variables can be used together. For example, the following code will cause an error:
+
+        message = "Hello"
+        message = int(message)
+        
+We can't convert a string to an integer, unless the string is a number. This code will cause a ValueError.
+
