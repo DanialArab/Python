@@ -6,6 +6,7 @@
 6. [sort vs sorted](#6)
 7. [Errors](#7)
 8. [ Naming Conventions](#8)
+9. [Dynamic Typing](#9)
 
 
 
@@ -252,3 +253,17 @@ There are several different naming conventions such as:
 - Pascal Case: The first letter of each word is capitalized. For example, MyVariableName.
 
 In Python, we typically use snake case. This means we use underscores (_) to separate words in variable names.
+
+<a name="9"></a>
+## Dynamic Typing
+
+In Python a single variable's type can change throughout the code. This is called dynamic typing. For example, the following code will run without any errors:
+
+        variable = 10         # int type
+        variable = "Hello"    # str type
+        variable = [1, 2, 3]  # list type
+        
+Not all languages support dynamic typing. In some languages, a variable's type must be explicitly declared and cannot be changed. This is called static typing. For example, in Java, the following code will cause an error:
+
+        int variable = 10;
+        variable = "Hello";  // Error: incompatible types
