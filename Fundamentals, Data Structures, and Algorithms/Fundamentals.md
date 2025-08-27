@@ -182,8 +182,7 @@ You must implement a solution with a linear runtime complexity and use only cons
                     
                 return res 
 
-
-<a name=6"></a>
+<a name="6"></a>
 ## sort vs sorted
 
 #### sorted() is a function
@@ -227,7 +226,7 @@ Rule of thumb:
 - Use sorted() when you want a new sorted list from any iterable (string, list, tuple, etc.).
 - The insert() method for Python lists, along with other in-place modifying list methods like append(), extend(), sort(), and reverse(), returns None.
 
-<a name=7"></a>
+<a name="7"></a>
 ## Errors
 
 - Syntax errors occur when the code is not written correctly according to the rules of the programming language. It's not so different from a spelling or grammar error in a human language, except that computers are much less forgiving.
