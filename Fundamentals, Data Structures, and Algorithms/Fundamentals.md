@@ -1,5 +1,15 @@
-+ <a href="https://codewithmosh.com/p/python-programming-course-beginners">Complete Python Mastery</a>
+1. [Zip Function](#1)
+2. [Two Pointers](#2)
+3. [Private helper function](#3)
+4. [Types of String Literals](#4)
+5. [XOR](#5)
+6. [sort vs sorted](#6)
+7. [Errors](#7)
+8. 
 
+
+
+<a name="1"></a>
 ## Zip Function
 
 If we have two lists and we want to combine them as a list of tuples let’s say, here we cannot use map function or list comprehension because they both work with a single list and so here we need built-in zip function, which returns a zip object which is also iterable and can be converted to a list like:
@@ -26,6 +36,7 @@ the output would be:
 
     [('a', 1, 10), ('b', 2, 20), ('c', 3, 30)]
 
+<a name="2"></a>
 ## Two Pointers
 
 In programming, "two pointers" refers to a technique where you use two references or indices to traverse or manipulate elements in a data structure. These pointers are typically used to track different positions within the data structure simultaneously.
@@ -42,6 +53,7 @@ Here are a few common scenarios where two pointers are used:
 
 These are just a few examples of how two pointers can be used in programming. The technique is versatile and can be adapted to various problem-solving situations to optimize algorithms and improve efficiency.
 
+<a name="3"></a>
 ## Private helper function 
 
 A private helper method in Python is a method intended to be used only inside the class,  not from outside code. It’s a way to organize code by breaking down complex functions into smaller reusable parts, but signaling to users of the class that this method is "internal" and not part of the public API. Python doesn’t enforce privacy strictly, but by convention:
@@ -84,6 +96,7 @@ Some points learned from https://www.youtube.com/watch?v=0K_eZGS5NsU:
 - nonlocal value
 
 
+<a name="4"></a>
 ## Types of String Literals
 
 1. Single-quoted strings
@@ -147,6 +160,7 @@ Output:
 
 In short, a string literal is just how you write a string directly in your Python code.
 
+<a name="5"></a>
 ## XOR
 
 - XOR cancels duplicates: x ^ x = 0.
@@ -169,7 +183,10 @@ You must implement a solution with a linear runtime complexity and use only cons
                 return res 
 
 
-sorted() is a function
+<a name=6"></a>
+## sort vs sorted
+
+#### sorted() is a function
 
 You can pass any iterable (like str, list, tuple, dict keys, etc.) to it.
 
@@ -177,11 +194,11 @@ It creates and returns a new sorted list, without changing the input.
 
 Example:
 
-s = "hello"
-print(sorted(s))   # ['e', 'h', 'l', 'l', 'o']
-print(s)           # "hello" (unchanged)
+        s = "hello"
+        print(sorted(s))   # ['e', 'h', 'l', 'l', 'o']
+        print(s)           # "hello" (unchanged)
 
-2. .sort() is a list method
+#### .sort() is a list method
 
 It only works on lists (not strings, tuples, etc.).
 
@@ -189,11 +206,11 @@ It sorts the list in place and returns None.
 
 Example:
 
-lst = [3, 1, 2]
-print(lst.sort())   # None
-print(lst)          # [1, 2, 3]
+        lst = [3, 1, 2]
+        print(lst.sort())   # None
+        print(lst)          # [1, 2, 3]
 
-3. Why you can pass str to sorted() but not use .sort()
+#### Why you can pass str to sorted() but not use .sort()
 
 A str is an iterable of characters, so sorted("cat") works and gives ['a', 'c', 't'].
 
@@ -202,17 +219,15 @@ But strings don’t have a .sort() method — because strings are immutable in P
 
 That’s why this fails:
 
-"cat".sort()   # ❌ AttributeError: 'str' object has no attribute 'sort'
+        "cat".sort()   # ❌ AttributeError: 'str' object has no attribute 'sort'
 
 
-✅ Rule of thumb:
+Rule of thumb:
+- Use .sort() when you already have a list you want to modify.
+- Use sorted() when you want a new sorted list from any iterable (string, list, tuple, etc.).
+- The insert() method for Python lists, along with other in-place modifying list methods like append(), extend(), sort(), and reverse(), returns None.
 
-Use .sort() when you already have a list you want to modify.
-
-Use sorted() when you want a new sorted list from any iterable (string, list, tuple, etc.).
-
-The insert() method for Python lists, along with other in-place modifying list methods like append(), extend(), sort(), and reverse(), returns None.
-
+<a name=7"></a>
 ## Errors
 
 - Syntax errors occur when the code is not written correctly according to the rules of the programming language. It's not so different from a spelling or grammar error in a human language, except that computers are much less forgiving.
