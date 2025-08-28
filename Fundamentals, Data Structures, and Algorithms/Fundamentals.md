@@ -8,6 +8,7 @@
 8. [ Naming Conventions](#8)
 9. [Dynamic Typing](#9)
 10. [Type Casting](#10)
+11. [Parameter vs. argument](#11)
 
 
 
@@ -299,3 +300,17 @@ Even though variable types can change, there are still rules about what types of
         
 We can't convert a string to an integer, unless the string is a number. This code will cause a ValueError.
 
+<a name="10"></a>
+## Parameter vs. argument
+
+What is the difference between a parameter and an argument?
+
+        def greet(name):
+            msg = "Hello, " + name
+            print(msg)
+        
+        greet("Alice")  # This will print "Hello, Alice"
+
+A parameter is a variable in a function definition. When a function is called, the arguments are the data you pass into the function's parameters. In the example above, the parameter is name and the argument is "Alice".
+
+If we next call the function by passing in "Bob" as the argument, the parameter is still name, but the argument is now "Bob".
