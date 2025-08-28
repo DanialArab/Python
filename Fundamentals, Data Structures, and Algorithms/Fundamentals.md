@@ -278,7 +278,7 @@ Static typing is employed by many languages on purpose. It can help catch errors
 
 Each typing system has it's own advantages and disadvantages. Dynamic typing is flexible, but can be error-prone. Static typing is safer, but can be inflexible.
 
-<a name="9"></a>
+<a name="10"></a>
 ## Type Casting
 
 A variable in Python can be converted to a different type using type casting. For example, the following code will run without any errors:
@@ -300,7 +300,7 @@ Even though variable types can change, there are still rules about what types of
         
 We can't convert a string to an integer, unless the string is a number. This code will cause a ValueError.
 
-<a name="10"></a>
+<a name="11"></a>
 ## Parameter vs. argument
 
 What is the difference between a parameter and an argument?
