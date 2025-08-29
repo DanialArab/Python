@@ -10,6 +10,7 @@
 10. [Type Casting](#10)
 11. [Parameter vs. argument](#11)
 12. [Type Hints](#12)
+13. [Scope](#13)
 
 
 
@@ -336,4 +337,26 @@ What if we had a function that did not return anything? The return type would be
 What if we explicitly return None?
 
 Whether we don't return anything from a function, or explicitly return None, or even have an empty return statement, **the return value will be None in all cases.**
+
+<a name="13"></a>
+## Scope
+
+Consider the following code:
+
+        n = 10
+        print(n)         # Output: 10
+        
+        def print_number(n):
+            print(n)
+        
+        print_number(11) # Output: 11
+
+        print(n)         # Output: 10
+        
+First n is assigned the value of 10 and printed.
+Next we call the function print_number and pass in the value 11. The name of the parameter for this function is also n. But this does not cause an error in Python.
+After the function call is complete, the value of the original n is printed and it's still 10.
+This can be explained by the concept of scope in programming.
+
+In programming, **the scope refers to the visibility or accessibility of variables within different parts of the code.** The value 11 passed into the print_number() function, is only accessible within the function. The function has its own scope, and the variable n inside the function is a different variable than the one outside the function. This is why the value of the original n is still 10 after the function call.
 
