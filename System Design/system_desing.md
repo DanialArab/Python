@@ -8,8 +8,6 @@
 <a name='1'></a>
 ## HTTP (Hypertext Transfer Protocol)
 
-
-HTTP (Hypertext Transfer Protocol)
 In our previous discussion, we concentrated primarily on application layer protocols, highlighting the central role they play in our work as developers.
 
 This chapter takes our exploration further, focusing on the client-server model, which we've touched upon in previous lessons, and remote procedure calls (RPC). A special emphasis is placed on two particular application layer protocols - HTTP and Web Sockets. Both of these protocols are crucial in system design interviews and thus warrant a comprehensive understanding.
