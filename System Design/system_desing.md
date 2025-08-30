@@ -3,19 +3,27 @@
 2. []
 3. [API]
    1. [HTTP (Hypertext Transfer Protocol)]
-   2. 
+   2. [Client-Server Model]
+      1. [Client]
+      2. [Server]
+   3. 
 
 <a name='1'></a>
 ## HTTP (Hypertext Transfer Protocol)
 
 In our previous discussion, we concentrated primarily on application layer protocols, highlighting the central role they play in our work as developers.
 
-This chapter takes our exploration further, focusing on the client-server model, which we've touched upon in previous lessons, and remote procedure calls (RPC). A special emphasis is placed on two particular application layer protocols - HTTP and Web Sockets. Both of these protocols are crucial in system design interviews and thus warrant a comprehensive understanding.
+This chapter takes our exploration further, focusing on the client-server model, which we've touched upon in previous lessons, and remote procedure calls (RPC). A special emphasis is placed on two particular application layer protocols 
+- HTTP and
+- Web Sockets.
 
-Client-Server Model
+Both of these protocols are crucial in system design interviews and thus warrant a comprehensive understanding.
+
+## Client-Server Model
+
 The client-server model, as we've discussed so far, often presents the client as a user utilizing a web browser to issue a request to a server. The server, typically another computer, responds to these requests. However, it's crucial to understand that the client in a client-server model doesn't necessarily have to be a web browser.
 
-Client: The client is an application or system that accesses a service made available by a server. The client can be a web browser, an email software, an app on your phone, or any other software that needs to access some service. The term "client" can also refer to the device running this application. For example, your computer or smartphone can be a client when you're browsing the internet. The client typically initiates communication, sending a request to the server for specific information or services.
+- Client: The client is an application or system that accesses a service made available by a server. The client can be a web browser, an email software, an app on your phone, or any other software that needs to access some service. The term "client" can also refer to the device running this application. For example, your computer or smartphone can be a client when you're browsing the internet. The client typically initiates communication, sending a request to the server for specific information or services.
 Server: The server is a computer, device, or software that provides resources, data, services, or functionality to the client or other servers on a network. Servers wait for incoming requests from clients and respond by fulfilling those requests. For instance, a web server delivers web pages to clients, an email server handles sending and receiving emails, and a database server provides clients with access to database services.
 Based on context, the roles of client and server can interchange. For instance, a single machine can function both as a client, requesting resources, and a server, providing resources. This is observable when you enter a search query into Google, where google.com may request data from a third party, thereby assuming the role of a client. Peer-to-peer (P2P) networks offer another example, where a machine can simultaneously act as both a client and a server.
 
