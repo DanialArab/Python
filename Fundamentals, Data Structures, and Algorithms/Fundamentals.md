@@ -13,6 +13,7 @@
 13. [Scope](#13)
 14. [Global vs local scope](#14)
 15. [Default argument](#15)
+16. [If statement scope](#16)
 
 
 
@@ -426,4 +427,31 @@ We can also have multiple parameters with default values. **But the order of the
         def greet(greeting="Hello", name):
             print(greeting + ", " + name + "!")
 
-            
+<a name="16"></a>
+## If Statement Scope
+
+Unlike functions, **if statements do not create a new scope**. This means that variables defined inside an if statement are accessible outside of the if statement. Here's an example:
+
+        if True:
+            message = "Hello"
+        
+        print(message)  # This will print "Hello"
+
+They can also update variables that were defined outside of the if statement. Here's an example:
+
+        balance = -100
+        
+        if balance < 0:
+            balance = 0
+        
+        print(balance)  # This will print 0
+
+Within functions, if statements have the same scope as the function. This means that variables defined inside an if statement are accessible within that function, but not outside of it. Here's an example:
+
+        def is_balance_low(balance: int):
+            if balance <= 100:
+                message = "Warning: Low balance."
+            print(message)
+        
+        is_balance_low(50)  # This will print "Warning: Low balance."
+        print(message)  # This will cause an error
