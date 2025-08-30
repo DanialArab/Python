@@ -400,6 +400,10 @@ Note: We saw earlier, that **if the function has a parameter with the same name 
 - They can only be accessed within the function in which they are defined.
 - Local variables are created when the function is called and destroyed when the function exits.
 
+What is the scope of a while loop?
+
+The scope of a while loop is the same as an if statement, so just like if statements, loops do not create their own scope. All variables declared within the while loop are accessible outside of the loop. Loops share the same scope as the function they are in. Or the global scope if they are not in a function.
+
 <a name="15"></a>
 ## Default Arguments
 
