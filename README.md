@@ -18,7 +18,7 @@ This repo documents my solutions to Leetcode - programming questions, whose cate
 12. [Math](#12)
 
 <a name="1"></a>
-## 1: String 
+## 1: String
  
 |**Index**|**Question ID** | **Question title**|  **Difficulty level**| 
 | -- | --|  -- | -- | 
