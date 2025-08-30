@@ -500,3 +500,11 @@ A value is truthy if it is:
             print("x is not zero")
 
 As a beginner, it may be fine for you to prefer the second form, as it is more explicit. But be aware that the first form is more idiomatic in Python (more common and the intended way to use Python).
+
+What other boolean contexts are there?
+
+Besides the condition in an if statement, there are other contexts where a value is evaluated as a boolean. For example, when using the logical operators and, or, and not, the values are evaluated as booleans.
+
+The boolean context is also used in loops, which we will cover soon.
+
+
