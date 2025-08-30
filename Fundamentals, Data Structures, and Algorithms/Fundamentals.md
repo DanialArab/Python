@@ -15,6 +15,7 @@
 15. [Default argument](#15)
 16. [If statement scope](#16)
 17. [Truthy and falsy](#17)
+18. [Control Flow](#18)
 
 
 <a name="1"></a>
@@ -510,4 +511,47 @@ Besides the condition in an if statement, there are other contexts where a value
 
 The boolean context is also used in loops, which we will cover soon.
 
+<a name="18"></a>
+## Control Flow
 
+Python provides control statements to alter the execution of loops.
+
+- break: Exits the loop immediately.
+- continue: Skips the remaining code inside the loop for the current iteration and moves to the next iteration.
+- pass: Acts as a placeholder and does nothing. We cannot have empty loops, so we use pass to avoid errors. It can also be used in conditional statements and functions.
+
+Here's an example demonstrating pass:
+
+        for i in range(1, 8):
+            pass
+        
+        if True:
+            pass
+        
+        def unfinsished_function():
+            pass
+None of the above code will actually do anything, but it also won't cause an error.
+
+Here's an example demonstrating the break and continue control statements:
+
+        for i in range(1, 8):
+            if i == 3:
+                continue  
+            elif i == 6 :
+                break  
+            print(i)
+The output would be:
+
+        1
+        2
+        4
+        5
+Notice that the output is missing some numbers?
+
+Thats because when i was equal to 3 the if statements block of code executed **causing the loop to continue to the next iteration of the loop, before reaching the print(i) line.**
+
+When number was equal to 6 the loop exited, because the break statement executed.
+
+For the numbers where neither condition executed, the print(i) line was reached.
+
+Control flow statements are commonly used, but they are not usually required. They are generally used to make code more readable.
