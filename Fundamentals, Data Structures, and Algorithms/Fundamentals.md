@@ -20,6 +20,7 @@
 20. [Set](#20)
 21. [Dictionaries](#21)
 22. [Reading Stdin](#22)
+23. [Exception Handling](#23)
 
 
 <a name="1"></a>
@@ -731,4 +732,28 @@ Even though it's called the "newline" character, it's actually two characters: a
 By default, Python adds a newline character to the end of the string when it calls print() to the console.
 
 The input() function does not do this. It prints to the console without a newline character, so the next print statement will be on the same line.
+
+<a name="23"></a>
+## Exception Handling
+
+Try Except
+When an error occurs in a program, it usually causes the program to crash. And Python is no exception.
+
+        result = 10 / 0 # ZeroDivisionError: division by zero
+        
+        print("This will not be printed.")
+
+But there is a way we can handle these errors and prevent the program from crashing. This is done using the try and except blocks.
+
+        try:
+            # code that might cause an error
+            result = 10 / 0
+        except:
+            print("An error occurred!")
+        
+        print("This will be printed regardless.")
+
+**A try block is similar to an if-else statement. The code inside a try block is always executed, but if any line of code raises an error, the program will immediately jump to the except block. If no error occurs, the except block is skipped.**
+
+This is called exception handling.
 
