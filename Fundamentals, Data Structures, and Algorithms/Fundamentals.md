@@ -736,7 +736,8 @@ The input() function does not do this. It prints to the console without a newlin
 <a name="23"></a>
 ## Exception Handling
 
-Try Except
+### Try Except
+
 When an error occurs in a program, it usually causes the program to crash. And Python is no exception.
 
         result = 10 / 0 # ZeroDivisionError: division by zero
@@ -756,4 +757,16 @@ But there is a way we can handle these errors and prevent the program from crash
 **A try block is similar to an if-else statement. The code inside a try block is always executed, but if any line of code raises an error, the program will immediately jump to the except block. If no error occurs, the except block is skipped.**
 
 This is called exception handling.
+
+### Error Catching
+When an error occurs in a try block, it may be useful for us to know exactly what error occurred. This can allow us to better debug our code.
+
+        try:
+            result = 10 / 0
+        except Exception as error:
+            print("Error:", error)
+
+The above code will catch the error and place it inside a variable called error using the as keyword. We can then print this variable to see the error message, which would be:
+
+        Error: division by zero
 
