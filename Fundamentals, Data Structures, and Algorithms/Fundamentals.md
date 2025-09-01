@@ -641,7 +641,7 @@ If we used empty curly braces {}, it would not have declared a set. That's becau
 <a name="21"></a>
 ## Dictionaries
 
-Dict Operations
+### Dict Operations
 
 Dictionaries can't contain duplicate keys, just like sets.
 
@@ -676,4 +676,28 @@ The keys within a dictionary must be unique, but the values can be duplicated.
 Are key-value pairs in a dict ordered?
 
 In Python 3.7 and later, dictionaries are ordered by the order in which they were inserted. This means that the order of key-value pairs in a dictionary is preserved.
+
+### Dict Remove
+You can remove an item from a dictionary using the pop() function. This function takes a key as an argument and removes the key-value pair from the dictionary. If the key doesn't exist, it will raise a KeyError.
+
+        my_dict = {"a": 1, "b": 2, "c": 3}
+        
+        my_dict.pop("a")
+        
+        print(my_dict) # Output: {"b": 2, "c": 3}
+        
+        my_dict.pop("d") # Raises KeyError
+
+**If you don't want to worry about handling the KeyError, you can use the second argument of the pop() function. This argument is the default value that will be returned if the key doesn't exist.**
+
+        my_dict = {"a": 1, "b": 2, "c": 3}
+        
+        value = my_dict.pop("d", 0) # Returns 0, no error occurs
+        
+You can also use the **del keyword to remove a key-value pair from a dictionary**. This is a bit more concise than using the pop() function.
+
+        my_dict = {"a": 1, "b": 2, "c": 3}
+        
+        del my_dict["a"]
+
 
