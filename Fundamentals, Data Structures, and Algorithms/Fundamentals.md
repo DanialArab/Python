@@ -606,8 +606,32 @@ As you can see, a set can be created using curly braces {} with elements separat
         my_set.add(1)
         
         print(my_set)  # Output: {1, 2}
+
 Above we declared an empty set with set(). We then added the elements 1 and 2 to the set. When we tried to add 1 again, it was ignored because it was already in the set. This is because sets can not contain duplicate elements.
 
+Just like with lists, we can loop over elements within a set using for loops. **The difference is that we can't access elements by index because sets are unordered.** The order that we loop over a set is not guaranteed.
+
+        my_set = {1, 2, 3}
+        
+        for element in my_set:
+            print(element)
+
+We can also convert a list into a set by passing the list into the set() function. We can then convert the set back into a list by passing it into the list() function. **This is an easy way to remove duplicates from a list.**
+
+        my_list = [1, 2, 3, 4, 5, 1, 2, 5]
+        
+        my_set = set(my_list)
+        
+        print(my_set)  # Output: {1, 2, 3, 4, 5}
+        
+        my_list_no_duplicates = list(my_set)
+        
+Just like with lists, we can also use the in keyword to check if an element is present in a set.
+
+        my_set = {"Cat", "Dog", "Mouse"}
+        
+        contains_cat = "Cat" in my_set   # True
+        contains_lion = "Lion" in my_set # False
 
 Why can't we declare an empty set with curly braces?
 
