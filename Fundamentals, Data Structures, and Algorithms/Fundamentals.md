@@ -673,3 +673,7 @@ The keys within a dictionary must be unique, but the values can be duplicated.
         print("a" in my_dict) # Output: True
         print("d" in my_dict) # Output: False
 
+Are key-value pairs in a dict ordered?
+
+In Python 3.7 and later, dictionaries are ordered by the order in which they were inserted. This means that the order of key-value pairs in a dictionary is preserved.
+
