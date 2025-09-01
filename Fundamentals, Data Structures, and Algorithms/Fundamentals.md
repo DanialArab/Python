@@ -770,3 +770,26 @@ The above code will catch the error and place it inside a variable called error 
 
         Error: division by zero
 
+### Multiple Except Blocks
+
+Instead of having a single except block to handle all exceptions,
+
+        try:
+            n = 10 / 0
+        except Exception as error:
+            print("An error occurred:", error)
+
+you can have multiple except blocks to handle different types of exceptions.
+
+        try:
+            num1 = int(a)
+            num2 = int(b)
+            result = num1 / num2
+        except ValueError:
+            print("Error: Invalid value!")
+        except ZeroDivisionError:
+            print("Error: Division by zero!")    
+        except Exception as error:
+            print("An error occurred:", error)
+
+In the first example we catch all exceptions with Exception. In the second example, we have different blocks to handle different exceptions. The first except will catch a ValueError, the second will catch a ZeroDivisionError, and the third will catch any other exceptions. That means, if neither a ValueError nor a ZeroDivisionError occurs, the third block will still catch all other exceptions.
