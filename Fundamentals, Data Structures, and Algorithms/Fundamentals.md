@@ -793,3 +793,21 @@ you can have multiple except blocks to handle different types of exceptions.
             print("An error occurred:", error)
 
 In the first example we catch all exceptions with Exception. In the second example, we have different blocks to handle different exceptions. The first except will catch a ValueError, the second will catch a ZeroDivisionError, and the third will catch any other exceptions. That means, if neither a ValueError nor a ZeroDivisionError occurs, the third block will still catch all other exceptions.
+
+### What other types of exceptions are there?
+
+There are many built-in exceptions in Python. Some common ones include 
+- TypeError,
+- IndexError,
+- KeyError,
+- FileNotFoundError, and
+- ImportError.
+
+You can also create your own exceptions.
+
+You don't have to memorize all of them, but it's good to know that different types of exceptions exist. If needed, you can normally read logs to determine the type of exception that occurred. You can view a list of built-in exceptions in the Python documentation (https://docs.python.org/3/library/exceptions.html).
+
+
+
+
+
