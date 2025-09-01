@@ -18,6 +18,7 @@
 18. [Control Flow](#18)
 19. [Strings are Immutable](#19)
 20. [Set](#20)
+21. [Dictionaries](#21)
 
 
 <a name="1"></a>
@@ -636,3 +637,39 @@ Just like with lists, we can also use the in keyword to check if an element is p
 Why can't we declare an empty set with curly braces?
 
 If we used empty curly braces {}, it would not have declared a set. That's because Python uses curly braces to declare an empty dictionary. A dictionary is a data structure that stores key-value pairs. We will learn more about dictionaries soon.
+
+<a name="20"></a>
+## Dictionaries
+
+Dict Operations
+
+Dictionaries can't contain duplicate keys, just like sets.
+
+        my_dict = {"a": 1, "b": 2, "c": 3}
+        
+        print(my_dict["a"]) # Output: 1
+        
+        my_dict["a"] = 4
+        
+        print(my_dict["a"]) # Output: 4
+
+**As shown above, if we assign the same key a new value, the old value is overwritten.**
+
+The values within a dictionary can be of any type, including lists, sets, and even other dictionaries.
+
+        my_dict = {"a": [1, 2, 3], "b": {4, 5, 6}, "c": {"x": 7, "y": 8, "z": 9}}
+        
+        print(my_dict["a"]) # Output: [1, 2, 3]
+        print(my_dict["b"]) # Output: {4, 5, 6}
+        print(my_dict["c"]) # Output: {"x": 7, "y": 8, "z": 9}
+
+The keys within a dictionary must be unique, but the values can be duplicated.
+
+        my_dict = {"a": 1, "b": 1, "c": 1} # this is valid
+        To check if a dictionary contains a key, you can use the in keyword.
+        
+        my_dict = {"a": 1, "b": 2, "c": 3}
+        
+        print("a" in my_dict) # Output: True
+        print("d" in my_dict) # Output: False
+
