@@ -581,7 +581,7 @@ If we wanted to create a new string with the second character removed, we can ac
         new_message = before_second + after_second
 Above, we removed the second character from the string (which was the space " "), and concatenated the two parts together to create a new string.
 
-<a name="19"></a>
+<a name="20"></a>
 ## Intro to Sets
 In Python, a set is very similar to a list, but with a few key differences.
 
@@ -638,7 +638,7 @@ Why can't we declare an empty set with curly braces?
 
 If we used empty curly braces {}, it would not have declared a set. That's because Python uses curly braces to declare an empty dictionary. A dictionary is a data structure that stores key-value pairs. We will learn more about dictionaries soon.
 
-<a name="20"></a>
+<a name="21"></a>
 ## Dictionaries
 
 Dict Operations
