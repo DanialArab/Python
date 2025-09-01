@@ -19,6 +19,7 @@
 19. [Strings are Immutable](#19)
 20. [Set](#20)
 21. [Dictionaries](#21)
+22. [Reading Stdin](#22)
 
 
 <a name="1"></a>
@@ -700,4 +701,34 @@ You can also use the **del keyword to remove a key-value pair from a dictionary*
         
         del my_dict["a"]
 
+
+<a name="22"></a>
+## Reading Stdin
+
+So far we have only printed output to the console, but what if we want to take input from the console?
+
+In Python, the input() function is used to read input to the program while the program is running. This input comes from a stream of data called **standard input or stdin**. This can either mean the data a user types in manually into the terminal (console) or input that is supplied to the program before it is run.
+
+In this course, we will be directly supplying input to your program to simulate user input.
+
+        user_input = input("Enter some text: ") 
+        
+        print(user_input) # This will print the input to the console
+
+In the above code, input() will print the string "Enter some text: " to the console and read one line of input from stdin. The input will be in the form of a string and will be stored in the variable user_input.
+
+When input() prints text, the following print statement will be **on the same line as the prompt.** So if the input was "some text" in the above example, the output would be:
+
+        Enter some text: some text
+
+
+#### Why doesn't input print on a different line?
+
+There is a special character in programming called the newline character \n. This character is used to move the cursor to the next line, similar to how you would press the Enter key on your keyboard.
+
+Even though it's called the "newline" character, it's actually two characters: a backslash \ and the letter n. When you see \n in a string, it tells Python to move to the next line.
+
+By default, Python adds a newline character to the end of the string when it calls print() to the console.
+
+The input() function does not do this. It prints to the console without a newline character, so the next print statement will be on the same line.
 
