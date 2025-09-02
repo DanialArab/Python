@@ -63,12 +63,12 @@ Classes
 
 A class is a blueprint for creating objects. Here's the basic syntax for defining a class in Python:
 
-   class SuperHero:
-       def __init__(self, name: str, power: str, health: int, speed: int):
-           self.name = name
-           self.power = power
-           self.health = health
-           self.speed = speed
+      class SuperHero:
+          def __init__(self, name: str, power: str, health: int, speed: int):
+              self.name = name
+              self.power = power
+              self.health = health
+              self.speed = speed
 
 In Python, a class is defined with the keyword word class followed by the name of the class and a colon. The __init__ method is a special method that belongs to the class. It creates **an object** and **initializes it's attributes.**
 
