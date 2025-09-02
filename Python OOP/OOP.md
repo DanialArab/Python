@@ -454,7 +454,7 @@ Hints
 
 What's a child class?
 
-A child class is a class that inherits attributes and methods from another class (called the parent class). We'll cover inheritance in detail in upcoming lessons, but for now, just know that **protected members are not accessible outside of a class or its child classes.**
+A child class is a class that inherits attributes and methods from another class (called the parent class). We'll cover inheritance in detail in upcoming lessons, but for now, just know that **protected members are not accessible outside of a class or (outside of) its child classes.**
 
 Remember
 - Python doesn't enforce protection through technical restrictions, protected attributes (prefixed with _) act as a convention - similar to a yellow traffic light. They warn other developers: You can access this, but you probably shouldn't
