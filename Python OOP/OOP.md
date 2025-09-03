@@ -823,7 +823,7 @@ Hints
 - Don't pass self or cls as a parameter to the static method
 
 <a name="25"></a>
-# Inheritance
+# Inheritance HERE
 
 <a name="26"></a>
 ## Inheritance Basics
