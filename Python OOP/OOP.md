@@ -824,7 +824,7 @@ Hints
 
 <a name="25"></a>
 # Inheritance 
-
+ 
 <a name="26"></a>
 ## Inheritance Basics
 
