@@ -930,7 +930,7 @@ Hint
               # Child class code here
 
 <a name="28"></a>
-## Super Function
+## Super Function HERE
 
 super() is a **built-in function in Python that allows you to call methods from a parent class. It's a powerful tool for working with inheritance.**
 
