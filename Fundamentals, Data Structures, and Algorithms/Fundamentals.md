@@ -50,6 +50,77 @@ the output would be:
 
     [('a', 1, 10), ('b', 2, 20), ('c', 3, 30)]
 
+#### Understanding zip(*features) in Python
+
+1. What features looks like
+
+Typically, in ML or data processing, features is a list of rows, where each row is a list of feature values:
+
+        features = [
+            [13.2, 2.1, 2.5],   # row 0
+            [12.4, 1.8, 2.1],   # row 1
+            [11.9, 2.0, 2.3]    # row 2
+        ]
+
+
+Here, each inner list is one data point (wine), and each element inside it is a feature (like alcohol, acidity, etc.).
+
+2. Problem
+
+We often need to compute column-wise statistics (mean, std, min, max, etc.). But the data is row-oriented.
+
+        Column 0: [13.2, 12.4, 11.9]
+        
+        Column 1: [2.1, 1.8, 2.0]
+        
+        Column 2: [2.5, 2.1, 2.3]
+
+3. The trick: zip(*features)
+
+- *features unpacks the list of rows into separate arguments.
+- zip() groups the first elements together, then the second, and so on.
+
+Example:
+
+        list(zip(*features))
+        
+
+Output:
+
+        [
+            (13.2, 12.4, 11.9),   # column 0
+            (2.1, 1.8, 2.0),      # column 1
+            (2.5, 2.1, 2.3)       # column 2
+        ]
+
+
+So zip(*features) transposes the matrix: rows → columns.
+
+4. Why it’s useful
+
+Now you can easily do column-wise operations:
+
+        import statistics
+        
+        mean_per_col = [statistics.mean(col) for col in zip(*features)]
+        std_per_col  = [statistics.stdev(col) for col in zip(*features)]
+
+
+Result:
+
+        mean_per_col = [12.5, 1.966..., 2.3]
+        std_per_col  = [0.65, 0.15, 0.2]
+
+5. Quick mental model
+
+zip(rows...) → groups row elements together by index.
+
+zip(*features) → transposes rows into columns.
+
+✅ Key takeaway:
+
+zip(*features) is the Pythonic way to “flip” a row-based dataset into column groups, making it super easy to calculate statistics per feature.
+
 <a name="2"></a>
 ## Two Pointers
 
