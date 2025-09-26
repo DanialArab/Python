@@ -33,11 +33,8 @@ e) Mini-MLE tasks
 
 - Compute embeddings and store them.
 - Write a batch inference pipeline.
-- Implement a hash/feature generator (you’ve already done some of this at work 🚀).
+- Implement a hash/feature generator
 - Serialize models (pickle, joblib, MLflow).
 - Write unit tests (pytest).
-
-
-Computes word counts.
-
-Saves result as parquet.
+- Computes word counts.
+- Saves result as parquet.
