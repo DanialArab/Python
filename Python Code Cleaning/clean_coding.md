@@ -1,4 +1,4 @@
-1. Core Skills to Practice for Live Coding (MLE-focused)
+## Core Skills to Practice for Live Coding (MLE-focused)
 
 a) Data wrangling / manipulation
 
