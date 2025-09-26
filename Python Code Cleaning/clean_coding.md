@@ -20,7 +20,7 @@ c) Pydantic & validation
 - Define Pydantic models for structured data.
 - Enforce types (e.g., email, URL, date parsing).
 - Handle optional/missing fields.
-- Create transformations (@validator).
+- Create transformations (@field_validator).
 
 d) Code cleanup
 
