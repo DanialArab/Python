@@ -1,0 +1,3 @@
+WARNING: Skipping bad record {'date': '2023-01-02', 'email': 'USERTEST.COM'}: 1 validation error for Record
+email
+  value is not a valid email address: An email address must have an @-sign. [type=value_error, input_value='usertest.com', input_type=str]
