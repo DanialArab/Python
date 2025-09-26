@@ -1,0 +1,4 @@
+id,name,age,salary
+1,Alice,25,100000
+2,Bob,,90000
+3,Charlie,30,NaN
