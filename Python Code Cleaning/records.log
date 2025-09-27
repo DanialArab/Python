@@ -1,0 +1,6 @@
+WARNING: Skipping bad record {'user_id': 'abc', 'email': 'invalid.com', 'signup_date': '2021-05-03'}: 2 validation errors for Record
+user_id
+  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='abc', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/int_parsing
+email
+  value is not a valid email address: An email address must have an @-sign. [type=value_error, input_value='invalid.com', input_type=str]
